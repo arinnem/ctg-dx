@@ -37,10 +37,16 @@ const ArrowRightIcon = () => (
 const InitiativeCard: React.FC<InitiativeCardProps> = ({ imageUrl, title, summary, members, highlightResults, onViewDetails }) => {
   return (
     // Thẻ card chính, overflow-hidden để bo góc cho ảnh
-    <div className="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col h-full">
+    <div className="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col h-full group transition-all duration-300 hover:shadow-2xl">
       
       {/* 1. Hình ảnh */}
-      <img className="w-full h-48 object-cover" src={imageUrl} alt={`Hình ảnh của sáng kiến ${title}`} />
+      <div className="overflow-hidden">
+        <img 
+          className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110" 
+          src={imageUrl} 
+          alt={`Hình ảnh của sáng kiến ${title}`} 
+        />
+      </div>
 
       <div className="p-6 flex flex-col flex-grow">
         {/* 1. Tiêu đề */}

@@ -7,66 +7,87 @@ import RecognitionPost from '../components/RecognitionPostCard';
 const recognitionPostsData = [
   {
     id: 1,
-    recognitionPostAvatarUrl: 'https://randomuser.me/api/portraits/men/32.jpg',
-    postcardTitle: 'Vinh danh Chương trình thi đua năm 2024',
+    posterAvatarUrl: 'https://randomuser.me/api/portraits/men/32.jpg',
+    posterName: 'Phòng Truyền thông',
     timestamp: '2 giờ trước',
     content: '🎉 Năm 2024, các Chi nhánh đã rất tích cực tham gia vào chương trình thi đua năm 2024. 10 Chi nhánh đã đạt được thành tích và được BLĐ vinh danh tại Hội nghị tổng kết năm 2024.',
-    imageUrl: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800',
+    honorees: [
+      { avatarUrl: 'https://randomuser.me/api/portraits/men/32.jpg', name: 'Chi nhánh TP.HCM' },
+      { avatarUrl: 'https://randomuser.me/api/portraits/women/44.jpg', name: 'Chi nhánh Đà Nẵng' },
+      { avatarUrl: 'https://randomuser.me/api/portraits/men/55.jpg', name: 'Chi nhánh Hà Nội' },
+    ],
     likeCount: 156,
     commentCount: 23,
     type: 'branch'
   },
   {
     id: 2,
-    recognitionPostAvatarUrl: 'https://randomuser.me/api/portraits/women/44.jpg',
-    postcardTitle: 'Vinh danh các đội nhóm sáng kiến tích cực năm 2024',
+    posterAvatarUrl: 'https://randomuser.me/api/portraits/women/44.jpg',
+    posterName: 'Khối Công nghệ Thông tin',
     timestamp: '1 ngày trước',
     content: '🌟 Năm 2024, các đội nhóm đã rất tích cực triển khai xây dựng và thúc đẩy sáng kiến. 05 Sáng kiến đã đạt được thành tích và được BLĐ vinh danh tại Hội nghị tổng kết năm 2024.',
-    imageUrl: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800',
+    honorees: [
+      { avatarUrl: 'https://randomuser.me/api/portraits/men/45.jpg', name: 'Đội AI Chatbot' },
+      { avatarUrl: 'https://randomuser.me/api/portraits/women/33.jpg', name: 'Đội RPA' },
+      { avatarUrl: 'https://randomuser.me/api/portraits/men/67.jpg', name: 'Đội Mobile App' },
+    ],
     likeCount: 89,
     commentCount: 15,
     type: 'initiative'
   },
   {
     id: 3,
-    recognitionPostAvatarUrl: 'https://randomuser.me/api/portraits/men/55.jpg',
-    postcardTitle: 'Ban Chuyển đổi số',
+    posterAvatarUrl: 'https://randomuser.me/api/portraits/men/55.jpg',
+    posterName: 'Ban Chuyển đổi số',
     timestamp: '3 ngày trước',
     content: '🏆 Chi nhánh TP.HCM xứng đáng nhận được sự ghi nhận đặc biệt! Với việc triển khai thành công nền tảng đào tạo trực tuyến, chi nhánh đã đào tạo được hơn 1,000 nhân viên trong 3 tháng qua.',
-    imageUrl: 'https://images.unsplash.com/photo-1551434678-e076c223a692?w=800',
+    honorees: [
+      { avatarUrl: 'https://randomuser.me/api/portraits/women/76.jpg', name: 'Phòng Đào tạo' },
+      { avatarUrl: 'https://randomuser.me/api/portraits/men/23.jpg', name: 'Phòng Công nghệ' },
+    ],
     likeCount: 203,
     commentCount: 31,
     type: 'branch'
   },
   {
     id: 4,
-    recognitionPostAvatarUrl: 'https://randomuser.me/api/portraits/women/68.jpg',
-    postcardTitle: 'Phòng Kinh doanh',
+    posterAvatarUrl: 'https://randomuser.me/api/portraits/women/68.jpg',
+    posterName: 'Phòng Kinh doanh',
     timestamp: '1 tuần trước',
     content: '💡 Dự án "Hệ thống Báo cáo Thông minh" đã mang lại hiệu quả vượt trội! Với việc tự động hóa 100% quy trình báo cáo, dự án đã tiết kiệm 300 giờ làm việc mỗi tháng.',
-    imageUrl: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800',
+    honorees: [
+      { avatarUrl: 'https://randomuser.me/api/portraits/women/41.jpg', name: 'Đội Báo cáo' },
+      { avatarUrl: 'https://randomuser.me/api/portraits/men/88.jpg', name: 'Đội Phân tích' },
+    ],
     likeCount: 134,
     commentCount: 19,
     type: 'initiative'
   },
   {
     id: 5,
-    recognitionPostAvatarUrl: 'https://randomuser.me/api/portraits/men/88.jpg',
-    postcardTitle: 'Ban Điều hành',
+    posterAvatarUrl: 'https://randomuser.me/api/portraits/men/88.jpg',
+    posterName: 'Ban Điều hành',
     timestamp: '2 tuần trước',
     content: '🎯 Chi nhánh Đà Nẵng đã thể hiện xuất sắc trong việc áp dụng công nghệ RPA! Với dự án tự động hóa quy trình nội bộ, chi nhánh đã tăng 20% năng suất làm việc.',
-    imageUrl: 'https://images.unsplash.com/photo-1586953208448-3151cf794014?w=800',
+    honorees: [
+      { avatarUrl: 'https://randomuser.me/api/portraits/women/95.jpg', name: 'Chi nhánh Đà Nẵng' },
+      { avatarUrl: 'https://randomuser.me/api/portraits/men/12.jpg', name: 'Phòng Vận hành' },
+    ],
     likeCount: 178,
     commentCount: 27,
     type: 'branch'
   },
   {
     id: 6,
-    recognitionPostAvatarUrl: 'https://randomuser.me/api/portraits/women/95.jpg',
-    postcardTitle: 'Phòng Sản phẩm Số',
+    posterAvatarUrl: 'https://randomuser.me/api/portraits/women/95.jpg',
+    posterName: 'Phòng Sản phẩm Số',
     timestamp: '3 tuần trước',
     content: '🚀 Dự án "iPay & eFast" đã đạt được những thành tựu đáng tự hào! Ứng dụng đã thu hút 10% người dùng mới sau 3 tháng và lọt vào top 3 ứng dụng tài chính.',
-    imageUrl: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800',
+    honorees: [
+      { avatarUrl: 'https://randomuser.me/api/portraits/men/45.jpg', name: 'Đội Mobile' },
+      { avatarUrl: 'https://randomuser.me/api/portraits/women/33.jpg', name: 'Đội UX/UI' },
+      { avatarUrl: 'https://randomuser.me/api/portraits/men/67.jpg', name: 'Đội Backend' },
+    ],
     likeCount: 245,
     commentCount: 42,
     type: 'initiative'
@@ -93,7 +114,7 @@ const RecognitionPage = () => {
     const query = searchQuery.toLowerCase();
     return recognitionPostsData.filter(post => 
       post.content.toLowerCase().includes(query) ||
-      post.postcardTitle.toLowerCase().includes(query)
+      post.posterName.toLowerCase().includes(query)
     );
   }, [searchQuery]);
 
@@ -191,11 +212,11 @@ const RecognitionPage = () => {
               filteredPosts.map((post) => (
                 <RecognitionPost
                   key={post.id}
-                  recognitionPostAvatarUrl={post.recognitionPostAvatarUrl}
-                  postcardTitle={post.postcardTitle}
+                  posterAvatarUrl={post.posterAvatarUrl}
+                  posterName={post.posterName}
                   timestamp={post.timestamp}
                   content={post.content}
-                  imageUrl={post.imageUrl}
+                  honorees={post.honorees}
                   likeCount={post.likeCount}
                   commentCount={post.commentCount}
                   onLike={() => handleLike(post.id)}
@@ -223,18 +244,24 @@ const RecognitionPage = () => {
                 <div key={post.id} className="bg-white rounded-xl shadow-lg overflow-hidden">
                   <div className="flex flex-col md:flex-row">
                     <div className="md:w-1/3">
-                      <img 
-                        className="w-full h-48 md:h-full object-cover" 
-                        src={post.imageUrl} 
-                        alt="Hình ảnh vinh danh" 
-                      />
+                      <div className="p-4">
+                        <h4 className="font-semibold text-gray-700 mb-2">Ghi nhận và vinh danh</h4>
+                        <div className="flex space-x-4 overflow-x-auto pb-3 scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
+                          {post.honorees.map((honoree, index) => (
+                            <div key={index} className="flex-shrink-0 w-24 text-center">
+                              <img className="w-16 h-16 rounded-full mx-auto object-cover border-2 border-blue-200" src={honoree.avatarUrl} alt={honoree.name} />
+                              <p className="mt-2 text-sm font-semibold text-gray-800">{honoree.name}</p>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
                     </div>
                     <div className="md:w-2/3 p-6 flex flex-col justify-between">
                       <div>
                         <div className="flex items-center space-x-4 mb-4">
-                          <img className="w-12 h-12 rounded-full object-cover" src={post.recognitionPostAvatarUrl} alt={`Avatar của ${post.postcardTitle}`} />
+                          <img className="w-12 h-12 rounded-full object-cover" src={post.posterAvatarUrl} alt={`Avatar của ${post.posterName}`} />
                           <div>
-                            <p className="font-bold text-gray-800">{post.postcardTitle}</p>
+                            <p className="font-bold text-gray-800">{post.posterName}</p>
                             <p className="text-xs text-gray-500">{post.timestamp}</p>
                           </div>
                         </div>
