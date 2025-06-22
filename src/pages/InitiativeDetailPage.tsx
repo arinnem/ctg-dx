@@ -4,7 +4,8 @@ import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { initiativesData } from '../data/mockData';
 import QnAAccordion from '../components/QnAAccordion';
-import { Separator } from '../components/Separator';
+//import { Separator } from '../components/Separator';
+import TabButton from '../components/TabButton';
 
 // --- Child Components ---
 
@@ -68,9 +69,21 @@ const InitiativeDetailPage = () => {
             <div className="w-full">
               <div className="border-b border-gray-200">
                 <nav className="-mb-px flex space-x-8" aria-label="Tabs">
-                  <button onClick={() => setActiveTab('description')} className={`${activeTab === 'description' ? 'border-blue-500 text-blue-600' : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'} whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm`}>Mô tả</button>
-                  <button onClick={() => setActiveTab('results')} className={`${activeTab === 'results' ? 'border-blue-500 text-blue-600' : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'} whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm`}>Kết quả</button>
-                  <button onClick={() => setActiveTab('qa')} className={`${activeTab === 'qa' ? 'border-blue-500 text-blue-600' : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'} whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm`}>Hỏi & Đáp</button>
+                  <TabButton
+                    label="Mô tả"
+                    isActive={activeTab === 'description'}
+                    onClick={() => setActiveTab('description')}
+                  />
+                  <TabButton
+                    label="Kết quả"
+                    isActive={activeTab === 'results'}
+                    onClick={() => setActiveTab('results')}
+                  />
+                  <TabButton
+                    label="Hỏi & Đáp"
+                    isActive={activeTab === 'qa'}
+                    onClick={() => setActiveTab('qa')}
+                  />
                 </nav>
               </div>
               

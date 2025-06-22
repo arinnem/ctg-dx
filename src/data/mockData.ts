@@ -651,3 +651,89 @@ export const missionsData = [
 export const getItemsByIds = <T extends { id: number }>(items: T[], ids: number[]): T[] => {
   return items.filter(item => ids.includes(item.id));
 }
+
+// Dashboard data for initiatives
+export const dashboardData = {
+  '1': { // Giải ngân online
+    progressData: [
+      { month: 'T1', planned: 20, actual: 18 },
+      { month: 'T2', planned: 40, actual: 35 },
+      { month: 'T3', planned: 60, actual: 58 },
+      { month: 'T4', planned: 80, actual: 75 },
+      { month: 'T5', planned: 100, actual: 92 },
+    ],
+    kpiData: [
+      { name: 'Hiệu quả', value: 85, color: '#00C49F' },
+      { name: 'Chất lượng', value: 92, color: '#0088FE' },
+      { name: 'Tiến độ', value: 78, color: '#FFBB28' },
+      { name: 'Chi phí', value: 88, color: '#FF8042' },
+    ],
+    monthlyMetrics: [
+      { month: 'T1', users: 120, transactions: 450, revenue: 1250000 },
+      { month: 'T2', users: 180, transactions: 680, revenue: 1890000 },
+      { month: 'T3', users: 250, transactions: 920, revenue: 2560000 },
+      { month: 'T4', users: 320, transactions: 1150, revenue: 3240000 },
+      { month: 'T5', users: 380, transactions: 1380, revenue: 3890000 },
+    ],
+    summaryCards: {
+      totalUsers: 380,
+      totalTransactions: 1380,
+      totalRevenue: 3890000,
+      efficiency: 92
+    }
+  },
+  '2': { // iPay & eFast
+    progressData: [
+      { month: 'T1', planned: 25, actual: 24 },
+      { month: 'T2', planned: 50, actual: 48 },
+      { month: 'T3', planned: 75, actual: 72 },
+      { month: 'T4', planned: 100, actual: 100 },
+    ],
+    kpiData: [
+      { name: 'Hiệu quả', value: 95, color: '#00C49F' },
+      { name: 'Chất lượng', value: 98, color: '#0088FE' },
+      { name: 'Tiến độ', value: 100, color: '#FFBB28' },
+      { name: 'Chi phí', value: 92, color: '#FF8042' },
+    ],
+    monthlyMetrics: [
+      { month: 'T1', users: 200, transactions: 800, revenue: 2200000 },
+      { month: 'T2', users: 350, transactions: 1200, revenue: 3500000 },
+      { month: 'T3', users: 500, transactions: 1800, revenue: 4800000 },
+      { month: 'T4', users: 650, transactions: 2400, revenue: 6200000 },
+    ],
+    summaryCards: {
+      totalUsers: 650,
+      totalTransactions: 2400,
+      totalRevenue: 6200000,
+      efficiency: 96
+    }
+  },
+  '3': { // Tự động hoá quy trình BPM
+    progressData: [
+      { month: 'T1', planned: 15, actual: 14 },
+      { month: 'T2', planned: 30, actual: 28 },
+      { month: 'T3', planned: 45, actual: 42 },
+      { month: 'T4', planned: 60, actual: 55 },
+      { month: 'T5', planned: 75, actual: 68 },
+    ],
+    kpiData: [
+      { name: 'Hiệu quả', value: 78, color: '#00C49F' },
+      { name: 'Chất lượng', value: 85, color: '#0088FE' },
+      { name: 'Tiến độ', value: 72, color: '#FFBB28' },
+      { name: 'Chi phí', value: 82, color: '#FF8042' },
+    ],
+    monthlyMetrics: [
+      { month: 'T1', users: 80, transactions: 300, revenue: 800000 },
+      { month: 'T2', users: 120, transactions: 450, revenue: 1200000 },
+      { month: 'T3', users: 160, transactions: 600, revenue: 1600000 },
+      { month: 'T4', users: 200, transactions: 750, revenue: 2000000 },
+      { month: 'T5', users: 240, transactions: 900, revenue: 2400000 },
+    ],
+    summaryCards: {
+      totalUsers: 240,
+      totalTransactions: 900,
+      totalRevenue: 2400000,
+      efficiency: 79
+    }
+  }
+};
