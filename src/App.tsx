@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Link, useNavigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import DashboardHighlightCard from './components/DashboardHighlightCard';
 import NewsArticleCard from './components/NewArticleCard';
@@ -10,10 +10,12 @@ import MissionDetailPage from './pages/MissionDetailPage';
 import NewsUpdatePage from './pages/NewsUpdatePage';
 import RecognitionPage from './pages/RecognitionPage';
 import InitiativeDetailPage from './pages/InitiativeDetailPage';
+import InitiativeDashboard from './components/InitiativeDashboard';
 import ViewAllButton from './components/ViewAllButton';
 import InitiativeCard from './components/InitiativeCard';
 import MissionCard from './components/MissionCard';
 import Logo from './components/Logo';
+import { NavigationHeader } from './components/NavigationHeader';
 
 // Import mock data
 import { 
@@ -110,7 +112,7 @@ function HomePage() {
           <section className="mb-16">
             <div className="flex justify-between items-center mb-8">
               <h2 className="text-3xl font-semibold text-gray-900">Vinh danh & Ghi nhận</h2>
-              <ViewAllButton label="Xem tất cả" onClick={() => navigate('/recognition')} />
+              <ViewAllButton label="Xem tất cả vinh danh" onClick={() => navigate('/recognition')} />
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {featuredRecognitionPosts.map((post) => (
@@ -123,6 +125,7 @@ function HomePage() {
                   honorees={post.honorees}
                   likeCount={post.likeCount}
                   commentCount={post.commentCount}
+                  type={post.type}
                   onLike={() => handleLike(post.id)}
                   onComment={() => handleComment(post.id)}
                   onShare={() => handleShare(post.id)}
@@ -137,7 +140,7 @@ function HomePage() {
           <section className="mb-16">
             <div className="flex justify-between items-center mb-8">
               <h2 className="text-3xl font-semibold text-gray-900">Chương trình thi đua/Nhiệm vụ</h2>
-              <ViewAllButton label="Xem tất cả" onClick={() => navigate('/missions')} />
+              <ViewAllButton label="Xem tất cả chương trình" onClick={() => navigate('/missions')} />
             </div>
             <div className="relative">
               {activeMissions.length > 0 ? (
@@ -186,7 +189,7 @@ function HomePage() {
           <section className="mb-16">
             <div className="flex justify-between items-center mb-8">
               <h2 className="text-3xl font-semibold text-gray-900">Sáng kiến nổi bật</h2>
-              <ViewAllButton label="Xem tất cả" onClick={() => navigate('/initiatives')} />
+              <ViewAllButton label="Xem tất cả sáng kiến" onClick={() => navigate('/initiatives')} />
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
               {getItemsByIds(initiativesData, HOMEPAGE_CONFIG.featuredInitiatives).map((initiative) => (
@@ -198,6 +201,7 @@ function HomePage() {
                   summary={initiative.summary}
                   members={initiative.members}
                   highlightResults={initiative.highlightResults}
+                  status={initiative.status}
                   dashboardLink={initiative.dashboardLink}
                   onViewDetails={() => handleViewInitiative(initiative.id)}
                 />
@@ -239,52 +243,20 @@ function HomePage() {
   );
 }
 
-function Navigation() {
-  return (
-    <nav className="bg-white shadow-lg sticky top-0 z-50">
-      <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center h-16">
-          <div className="flex items-center space-x-8">
-            <Link to="/" className="text-xl font-bold text-blue-600">
-              <div className="flex justify-center lg:justify-center">
-                <Logo className="h-10 w-auto" />
-              </div>
-            </Link>
-            <Link to="/" className="text-gray-700 hover:text-blue-600 transition-colors">
-              Trang chủ
-            </Link>
-            <Link to="/initiatives" className="text-gray-700 hover:text-blue-600 transition-colors">
-              Sáng kiến
-            </Link>
-            <Link to="/missions" className="text-gray-700 hover:text-blue-600 transition-colors">
-              Chương trình thi đua/Nhiệm vụ
-            </Link>
-            <Link to="/newsupdate" className="text-gray-700 hover:text-blue-600 transition-colors">
-              Tin tức & Cập nhật
-            </Link>
-            <Link to="/recognition" className="text-gray-700 hover:text-blue-600 transition-colors">
-              Vinh danh
-            </Link>
-          </div>
-        </div>
-      </div>
-    </nav>
-  )
-}
-
 function App() {
   return (
     <Router>
       <div className="min-h-screen bg-gray-50">
-        <Navigation />
+        <NavigationHeader />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/initiatives" element={<InitiativesPage />} />
+          <Route path="/initiatives/:initiativeId" element={<InitiativeDetailPage />} />
+          <Route path="/initiatives/:initiativeId/dashboard" element={<InitiativeDashboard />} />
           <Route path="/missions" element={<MissionPage />} />
           <Route path="/missions/:missionId" element={<MissionDetailPage />} />
           <Route path="/newsupdate" element={<NewsUpdatePage />} />
           <Route path="/recognition" element={<RecognitionPage />} />
-          <Route path="/initiatives/:initiativeId" element={<InitiativeDetailPage />} />
         </Routes>
       </div>
     </Router>

@@ -1,9 +1,10 @@
 // src/pages/InitiativeDetailPage.tsx
 
-import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
 import { initiativesData } from '../data/mockData';
 import QnAAccordion from '../components/QnAAccordion';
+import { Separator } from '../components/Separator';
 
 // --- Child Components ---
 
@@ -21,8 +22,9 @@ const DocumentIcon = () => (
 // --- Main Page Component ---
 
 const InitiativeDetailPage = () => {
-  const [activeTab, setActiveTab] = useState('description');
   const { initiativeId } = useParams<{ initiativeId: string }>();
+  const navigate = useNavigate();
+  const [activeTab, setActiveTab] = useState('description');
   
   const initiative = initiativeId 
     ? initiativesData.find(i => i.id === parseInt(initiativeId, 10))
@@ -31,6 +33,11 @@ const InitiativeDetailPage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const handleDashboardClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    navigate(`/initiatives/${initiativeId}/dashboard`);
+  };
 
   if (!initiative) {
     return <div className="text-center py-20">Không tìm thấy thông tin sáng kiến.</div>;
@@ -122,7 +129,7 @@ const InitiativeDetailPage = () => {
                         <p><strong>Email:</strong> <a href={`mailto:${initiative.email}`} className="text-blue-600 hover:underline">{initiative.email}</a></p>
                         <p><strong>Group link:</strong> <a href={initiative.grouplink} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Link</a></p>
                         {initiative.dashboardLink && (
-                            <p><strong>Dashboard:</strong> <a href={initiative.dashboardLink} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Xem Dashboard</a></p>
+                            <p><strong>Dashboard:</strong> <button onClick={handleDashboardClick} className="text-blue-600 hover:underline">Xem Dashboard</button></p>
                         )}
                     </div>
                 </div>

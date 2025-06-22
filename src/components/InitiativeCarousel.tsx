@@ -8,6 +8,7 @@ interface Initiative {
   summary: string;
   members: { avatarUrl: string; name: string; role: 'IO' | 'Backup IO' | 'Thành viên' }[];
   highlightResults: { title: string; description: string }[];
+  status: string;
   dashboardLink?: string;
 }
 
@@ -67,6 +68,7 @@ const InitiativeCarousel: React.FC<InitiativeCarouselProps> = ({ initiatives, on
                       summary={initiative.summary}
                       members={initiative.members}
                       highlightResults={initiative.highlightResults}
+                      status={initiative.status}
                       dashboardLink={initiative.dashboardLink}
                       onViewDetails={onViewDetails}
                     />

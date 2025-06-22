@@ -12,11 +12,11 @@ interface NewsArticleCardProps {
 }
 
 // Icon mũi tên, giống như trong InitiativeCard để tạo sự đồng nhất
-const ArrowRightIcon = () => (
+/*const ArrowRightIcon = () => (
     <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
     </svg>
-);
+);*/
 
 
 const NewsArticleCard: React.FC<NewsArticleCardProps> = ({ imageUrl, category, title, summary, onReadMore }) => {
@@ -36,30 +36,29 @@ const NewsArticleCard: React.FC<NewsArticleCardProps> = ({ imageUrl, category, t
       </div>
 
       {/* Nội dung của thẻ */}
-      <div className="p-6 flex flex-col flex-grow">
+      <div className="p-4 flex flex-col flex-grow">
+        {/* Category */}
+        <span className="inline-block bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full mb-2 self-start">
+          {category}
+        </span>
         
-        {/* Danh mục và ngày đăng */}
-        <p className="text-sm font-semibold text-[#DD0031] mb-2">{category.toUpperCase()}</p>
-        
-        {/* Tiêu đề bài viết */}
-        <h3 className="text-lg font-bold text-gray-900 mb-3 flex-grow">
+        {/* Title */}
+        <h3 className="text-lg font-bold text-gray-800 mb-2 line-clamp-2 min-h-[2.5rem]">
           {title}
         </h3>
         
-        {/* Tóm tắt ngắn */}
-        <p className="text-gray-500 text-sm mb-4">
+        {/* Summary */}
+        <p className="text-gray-600 text-sm line-clamp-4 min-h-[4.5rem] flex-grow">
           {summary}
         </p>
         
-        {/* Liên kết đọc thêm */}
-        <div className="mt-auto pt-4 border-t border-gray-100">
-            <button
-                className="inline-flex items-center text-sm font-semibold text-[#005AAB] group-hover:text-[#DD0031]"
-            >
-                Đọc thêm
-                <ArrowRightIcon />
-            </button>
-        </div>
+        {/* Read More Button */}
+        <button
+          onClick={onReadMore}
+          className="mt-4 text-blue-600 hover:text-blue-800 font-medium text-sm transition-colors duration-300 self-start"
+        >
+          Đọc thêm →
+        </button>
       </div>
     </div>
   );

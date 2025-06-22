@@ -143,6 +143,7 @@ const InitiativesPage = () => {
                   summary={initiative.summary}
                   members={initiative.members}
                   highlightResults={initiative.highlightResults}
+                  status={initiative.status}
                   dashboardLink={initiative.dashboardLink}
                   onViewDetails={handleViewDetails}
                 />

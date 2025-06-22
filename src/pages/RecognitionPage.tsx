@@ -1,97 +1,98 @@
 // src/pages/RecognitionPage.tsx
 
 import { useState, useMemo, useEffect } from 'react';
+import { useSearchParams, useNavigate } from 'react-router-dom';
 import RecognitionPost from '../components/RecognitionPostCard';
 
 // --- Dữ liệu giả lập (Mock Data) ---
 const recognitionPostsData = [
   {
     id: 1,
-    posterAvatarUrl: 'https://randomuser.me/api/portraits/men/32.jpg',
-    posterName: 'Phòng Truyền thông',
+    posterAvatarUrl: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=150&h=150&fit=crop&crop=center',
+    posterName: 'Vinh danh Chi nhánh trong chương trình thi đua năm 2024',
     timestamp: '2 giờ trước',
     content: '🎉 Năm 2024, các Chi nhánh đã rất tích cực tham gia vào chương trình thi đua năm 2024. 10 Chi nhánh đã đạt được thành tích và được BLĐ vinh danh tại Hội nghị tổng kết năm 2024.',
     honorees: [
-      { avatarUrl: 'https://randomuser.me/api/portraits/men/32.jpg', name: 'Chi nhánh TP.HCM' },
-      { avatarUrl: 'https://randomuser.me/api/portraits/women/44.jpg', name: 'Chi nhánh Đà Nẵng' },
-      { avatarUrl: 'https://randomuser.me/api/portraits/men/55.jpg', name: 'Chi nhánh Hà Nội' },
+      { avatarUrl: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=150&h=150&fit=crop&crop=center', name: 'Chi nhánh TP.HCM' },
+      { avatarUrl: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=150&h=150&fit=crop&crop=center', name: 'Chi nhánh Đà Nẵng' },
+      { avatarUrl: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=150&h=150&fit=crop&crop=center', name: 'Chi nhánh Hà Nội' },
     ],
     likeCount: 156,
     commentCount: 23,
-    type: 'branch'
+    type: 'branch' as const,
   },
   {
     id: 2,
-    posterAvatarUrl: 'https://randomuser.me/api/portraits/women/44.jpg',
-    posterName: 'Khối Công nghệ Thông tin',
+    posterAvatarUrl: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=150&h=150&fit=crop&crop=center',
+    posterName: 'Vinh danh các đội nhóm sáng kiến tích cực năm 2024',
     timestamp: '1 ngày trước',
     content: '🌟 Năm 2024, các đội nhóm đã rất tích cực triển khai xây dựng và thúc đẩy sáng kiến. 05 Sáng kiến đã đạt được thành tích và được BLĐ vinh danh tại Hội nghị tổng kết năm 2024.',
     honorees: [
-      { avatarUrl: 'https://randomuser.me/api/portraits/men/45.jpg', name: 'Đội AI Chatbot' },
-      { avatarUrl: 'https://randomuser.me/api/portraits/women/33.jpg', name: 'Đội RPA' },
-      { avatarUrl: 'https://randomuser.me/api/portraits/men/67.jpg', name: 'Đội Mobile App' },
+      { avatarUrl: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=150&h=150&fit=crop&crop=center', name: 'Đội AI Chatbot' },
+      { avatarUrl: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=150&h=150&fit=crop&crop=center', name: 'Đội RPA' },
+      { avatarUrl: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=150&h=150&fit=crop&crop=center', name: 'Đội Mobile App' },
     ],
     likeCount: 89,
     commentCount: 15,
-    type: 'initiative'
+    type: 'team' as const,
   },
   {
     id: 3,
-    posterAvatarUrl: 'https://randomuser.me/api/portraits/men/55.jpg',
+    posterAvatarUrl: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=150&h=150&fit=crop&crop=center',
     posterName: 'Ban Chuyển đổi số',
     timestamp: '3 ngày trước',
     content: '🏆 Chi nhánh TP.HCM xứng đáng nhận được sự ghi nhận đặc biệt! Với việc triển khai thành công nền tảng đào tạo trực tuyến, chi nhánh đã đào tạo được hơn 1,000 nhân viên trong 3 tháng qua.',
     honorees: [
-      { avatarUrl: 'https://randomuser.me/api/portraits/women/76.jpg', name: 'Phòng Đào tạo' },
-      { avatarUrl: 'https://randomuser.me/api/portraits/men/23.jpg', name: 'Phòng Công nghệ' },
+      { avatarUrl: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=150&h=150&fit=crop&crop=center', name: 'Phòng Đào tạo' },
+      { avatarUrl: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=150&h=150&fit=crop&crop=center', name: 'Phòng Công nghệ' },
     ],
     likeCount: 203,
     commentCount: 31,
-    type: 'branch'
+    type: 'branch' as const,
   },
   {
     id: 4,
-    posterAvatarUrl: 'https://randomuser.me/api/portraits/women/68.jpg',
+    posterAvatarUrl: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=150&h=150&fit=crop&crop=center',
     posterName: 'Phòng Kinh doanh',
     timestamp: '1 tuần trước',
     content: '💡 Dự án "Hệ thống Báo cáo Thông minh" đã mang lại hiệu quả vượt trội! Với việc tự động hóa 100% quy trình báo cáo, dự án đã tiết kiệm 300 giờ làm việc mỗi tháng.',
     honorees: [
-      { avatarUrl: 'https://randomuser.me/api/portraits/women/41.jpg', name: 'Đội Báo cáo' },
-      { avatarUrl: 'https://randomuser.me/api/portraits/men/88.jpg', name: 'Đội Phân tích' },
+      { avatarUrl: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=150&h=150&fit=crop&crop=center', name: 'Đội Báo cáo' },
+      { avatarUrl: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=150&h=150&fit=crop&crop=center', name: 'Đội Phân tích' },
     ],
     likeCount: 134,
     commentCount: 19,
-    type: 'initiative'
+    type: 'team' as const,
   },
   {
     id: 5,
-    posterAvatarUrl: 'https://randomuser.me/api/portraits/men/88.jpg',
-    posterName: 'Ban Điều hành',
+    posterAvatarUrl: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=150&h=150&fit=crop&crop=center',
+    posterName: 'Ban Lãnh đạo',
     timestamp: '2 tuần trước',
-    content: '🎯 Chi nhánh Đà Nẵng đã thể hiện xuất sắc trong việc áp dụng công nghệ RPA! Với dự án tự động hóa quy trình nội bộ, chi nhánh đã tăng 20% năng suất làm việc.',
+    content: '🎯 Chi nhánh Cần Thơ đã xuất sắc hoàn thành chỉ tiêu kinh doanh quý 4/2024 với mức tăng trưởng 25% so với cùng kỳ năm trước.',
     honorees: [
-      { avatarUrl: 'https://randomuser.me/api/portraits/women/95.jpg', name: 'Chi nhánh Đà Nẵng' },
-      { avatarUrl: 'https://randomuser.me/api/portraits/men/12.jpg', name: 'Phòng Vận hành' },
+      { avatarUrl: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=150&h=150&fit=crop&crop=center', name: 'Chi nhánh Cần Thơ' },
+      { avatarUrl: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=150&h=150&fit=crop&crop=center', name: 'Phòng Kinh doanh' },
     ],
-    likeCount: 178,
-    commentCount: 27,
-    type: 'branch'
+    likeCount: 167,
+    commentCount: 28,
+    type: 'branch' as const,
   },
   {
     id: 6,
-    posterAvatarUrl: 'https://randomuser.me/api/portraits/women/95.jpg',
-    posterName: 'Phòng Sản phẩm Số',
+    posterAvatarUrl: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=150&h=150&fit=crop&crop=center',
+    posterName: 'Phòng Công nghệ',
     timestamp: '3 tuần trước',
-    content: '🚀 Dự án "iPay & eFast" đã đạt được những thành tựu đáng tự hào! Ứng dụng đã thu hút 10% người dùng mới sau 3 tháng và lọt vào top 3 ứng dụng tài chính.',
+    content: '🚀 Đội phát triển ứng dụng di động đã hoàn thành xuất sắc dự án "VietinBank Mobile 2.0" với hơn 1 triệu lượt tải xuống trong tháng đầu tiên.',
     honorees: [
-      { avatarUrl: 'https://randomuser.me/api/portraits/men/45.jpg', name: 'Đội Mobile' },
-      { avatarUrl: 'https://randomuser.me/api/portraits/women/33.jpg', name: 'Đội UX/UI' },
-      { avatarUrl: 'https://randomuser.me/api/portraits/men/67.jpg', name: 'Đội Backend' },
+      { avatarUrl: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=150&h=150&fit=crop&crop=center', name: 'Đội Mobile Dev' },
+      { avatarUrl: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=150&h=150&fit=crop&crop=center', name: 'Đội UI/UX' },
+      { avatarUrl: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=150&h=150&fit=crop&crop=center', name: 'Đội QA' },
     ],
     likeCount: 245,
     commentCount: 42,
-    type: 'initiative'
-  }
+    type: 'team' as const,
+  },
 ];
 
 // --- Component Trang Vinh danh ---
@@ -99,24 +100,72 @@ const recognitionPostsData = [
 const RecognitionPage = () => {
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [searchQuery, setSearchQuery] = useState('');
+  const [searchParams] = useSearchParams();
+  const navigate = useNavigate();
+
+  // Get type filter from URL parameters
+  const typeFilter = searchParams.get('type');
 
   // Scroll to top when component mounts
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  // Filter recognition posts based on search query
+  // Clear type filter
+  const clearTypeFilter = () => {
+    navigate('/recognition');
+  };
+
+  // Filter recognition posts based on search query and type filter
   const filteredPosts = useMemo(() => {
-    if (!searchQuery.trim()) {
-      return recognitionPostsData;
+    let filtered = recognitionPostsData;
+
+    // Apply type filter first
+    if (typeFilter === 'branch' || typeFilter === 'team') {
+      filtered = filtered.filter(post => post.type === typeFilter);
     }
-    
-    const query = searchQuery.toLowerCase();
-    return recognitionPostsData.filter(post => 
-      post.content.toLowerCase().includes(query) ||
-      post.posterName.toLowerCase().includes(query)
-    );
-  }, [searchQuery]);
+
+    // Then apply search query
+    if (searchQuery.trim()) {
+      const query = searchQuery.toLowerCase();
+      filtered = filtered.filter(post => 
+        post.content.toLowerCase().includes(query) ||
+        post.posterName.toLowerCase().includes(query)
+      );
+    }
+
+    return filtered;
+  }, [searchQuery, typeFilter]);
+
+  // Get page title based on filter
+  const getPageTitle = () => {
+    if (typeFilter === 'branch') {
+      return 'Vinh danh Chi nhánh';
+    } else if (typeFilter === 'team') {
+      return 'Vinh danh Đội nhóm';
+    }
+    return 'Vinh danh & Ghi nhận';
+  };
+
+  // Get page description based on filter
+  const getPageDescription = () => {
+    if (typeFilter === 'branch') {
+      return 'Ghi nhận thành tích xuất sắc của các chi nhánh trên toàn quốc';
+    } else if (typeFilter === 'team') {
+      return 'Tôn vinh các đội nhóm có đóng góp đột phá cho các sáng kiến';
+    }
+    return 'Chia sẻ những thành tựu và sự đổi mới của VietinBank';
+  };
+
+  // Get filter badge color
+  const getFilterBadgeColor = () => {
+    if (typeFilter === 'branch') {
+      return 'bg-green-100 text-green-800 border-green-200';
+    } else if (typeFilter === 'team') {
+      return 'bg-blue-100 text-blue-800 border-blue-200';
+    }
+    return '';
+  };
 
   // Handle post interactions
   const handleLike = (postId: number) => {
@@ -171,10 +220,24 @@ const RecognitionPage = () => {
 
             {/* Center - Page Title */}
             <div className="flex-1 text-center sm:text-left">
-              <h1 className="text-3xl font-bold text-gray-900">Vinh danh & Ghi nhận</h1>
+              <h1 className="text-3xl font-bold text-gray-900">{getPageTitle()}</h1>
               <p className="mt-1 text-gray-500">
-                Chia sẻ những thành tựu và sự đổi mới của VietinBank
+                {getPageDescription()}
               </p>
+              {/* Filter indicator */}
+              {typeFilter && (
+                <div className="mt-2 flex items-center justify-center sm:justify-start space-x-2">
+                  <div className={`inline-flex items-center space-x-1 px-2 py-1 rounded-full text-xs font-medium border ${getFilterBadgeColor()}`}>
+                    <span>Đang lọc: {typeFilter === 'branch' ? 'Chi nhánh' : 'Đội nhóm'}</span>
+                  </div>
+                  <button
+                    onClick={clearTypeFilter}
+                    className="text-xs text-gray-500 hover:text-gray-700 underline"
+                  >
+                    Xóa bộ lọc
+                  </button>
+                </div>
+              )}
             </div>
 
             {/* Right side - Search Box */}
@@ -219,6 +282,7 @@ const RecognitionPage = () => {
                   honorees={post.honorees}
                   likeCount={post.likeCount}
                   commentCount={post.commentCount}
+                  type={post.type}
                   onLike={() => handleLike(post.id)}
                   onComment={() => handleComment(post.id)}
                   onShare={() => handleShare(post.id)}

@@ -1,7 +1,8 @@
 // src/components/InitiativeCard.tsx
 
 import React from 'react';
-import { Separator } from './Separator';
+import { useNavigate } from 'react-router-dom';
+//import { Separator } from './Separator';
 
 // Định nghĩa kiểu dữ liệu cho một thành viên
 interface Member {
@@ -18,6 +19,7 @@ interface InitiativeCardProps {
   summary: string;
   members: Member[];
   highlightResults: { title: string; description: string }[];
+  status: string;
   dashboardLink?: string;
   onViewDetails: (id: number) => void;
 }
@@ -36,7 +38,14 @@ const DashboardIcon = () => (
     </svg>
 );
 
-const InitiativeCard: React.FC<InitiativeCardProps> = ({ id, imageUrl, title, summary, members, highlightResults, dashboardLink, onViewDetails }) => {
+const InitiativeCard: React.FC<InitiativeCardProps> = ({ id, imageUrl, title, summary, members, highlightResults, status, dashboardLink, onViewDetails }) => {
+  const navigate = useNavigate();
+
+  const handleDashboardClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    navigate(`/initiatives/${id}/dashboard`);
+  };
+
   return (
     // Thẻ card chính, overflow-hidden để bo góc cho ảnh
     <div className="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col h-full group transition-all duration-300 hover:shadow-2xl">
@@ -56,13 +65,13 @@ const InitiativeCard: React.FC<InitiativeCardProps> = ({ id, imageUrl, title, su
           onClick={() => onViewDetails(id)}
           className="text-center w-full group"
         >
-          <h3 className="text-xl font-bold text-[#005AAB] mb-4 group-hover:text-[#DD0031] transition-colors duration-300 cursor-pointer text-center">
+          <h3 className="text-xl font-bold text-[#005AAB] mb-4 group-hover:text-[#DD0031] transition-colors duration-300 cursor-pointer text-center line-clamp-2 min-h-[3rem]">
             {title}
           </h3>
         </button>
 
         {/* 2. Tóm tắt */}
-        <p className="text-gray-600 text-sm">{summary}</p>
+        <p className="text-gray-600 text-sm line-clamp-4 min-h-[4.5rem]">{summary}</p>
         
         {/* Vách ngăn */}
         <hr className="my-4" />
@@ -75,19 +84,20 @@ const InitiativeCard: React.FC<InitiativeCardProps> = ({ id, imageUrl, title, su
             {members.map((member, index) => (
               <div key={index} className="flex-shrink-0 w-24 text-center">
                 <img className="w-16 h-16 rounded-full mx-auto object-cover" src={member.avatarUrl} alt={member.name} />
-                <p className="mt-2 text-sm font-semibold text-gray-800">{member.name}</p>
+                <p className="mt-2 text-sm font-semibold text-gray-800 line-clamp-2 min-h-[2.5rem]">{member.name}</p>
                 <p className="text-xs text-gray-500">{member.role}</p>
               </div>
             ))}
           </div>
         </div>
 
-        <Separator />
+        {/* Vách ngăn */}
+        <hr className="my-4" />
 
         {/* 4. Kết quả nổi bật */}
         <div>
             <h4 className="font-semibold text-gray-700 mb-2">Kết quả nổi bật</h4>
-            <ul className="space-y-2">
+            <ul className="space-y-2 line-clamp-4 min-h-[6rem]">
                 {highlightResults.map((result, index) => (
                     <li key={index} className="flex items-start text-justify">
                         <svg
@@ -110,19 +120,29 @@ const InitiativeCard: React.FC<InitiativeCardProps> = ({ id, imageUrl, title, su
         {/* Sử dụng flex-grow để đẩy phần link xuống dưới cùng */}
         <div className="flex-grow"></div>
         
-        {/* 5. Link xem chi tiết và Dashboard - ĐÃ CẬP NHẬT */}
+        {/* 5. Link xem chi tiết, Dashboard và Status - ĐÃ CẬP NHẬT */}
         <div className="mt-4 flex justify-between items-center">
+            {/* Status Badge */}
+            <span className={`px-2 py-1 rounded-full text-xs font-medium ${
+              status === 'Thí điểm' || status === 'Triển khai rộng'
+                ? 'bg-green-100 text-green-800' 
+                : 'bg-gray-100 text-gray-800'
+            }`}>
+              {status}
+            </span>
+
+            {/* Dashboard Link */}
             {dashboardLink && (
-                <a
-                    href={dashboardLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                <button
+                    onClick={handleDashboardClick}
                     className="group inline-flex items-center space-x-1.5 text-sm font-semibold text-blue-600 hover:text-blue-800 transition-colors duration-300"
                 >
                     <DashboardIcon />
                     <span>Dashboard</span>
-                </a>
+                </button>
             )}
+
+            {/* View Details Button */}
             <button
                 onClick={() => onViewDetails(id)}
                 className="group inline-flex items-center space-x-1.5 text-sm font-semibold text-[#005AAB] hover:text-[#DD0031] transition-colors duration-300"
