@@ -1,14 +1,23 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import InitiativeCard from './InitiativeCard';
 
+interface Initiative {
+  id: number;
+  imageUrl: string;
+  title: string;
+  summary: string;
+  members: { avatarUrl: string; name: string; role: 'IO' | 'Backup IO' | 'Thành viên' }[];
+  highlightResults: { title: string; description: string }[];
+  dashboardLink?: string;
+}
+
 interface InitiativeCarouselProps {
-  initiatives: any[];
+  initiatives: Initiative[];
   onViewDetails: (id: number) => void;
 }
 
 const InitiativeCarousel: React.FC<InitiativeCarouselProps> = ({ initiatives, onViewDetails }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const carouselRef = useRef<HTMLDivElement>(null);
   
   // Calculate how many slides we need (2 initiatives per slide)
   const initiativesPerSlide = 2;
@@ -30,19 +39,9 @@ const InitiativeCarousel: React.FC<InitiativeCarouselProps> = ({ initiatives, on
     setCurrentIndex(index);
   };
 
-  // Get initiatives for current slide
-  const getCurrentSlideInitiatives = () => {
-    const startIndex = currentIndex * initiativesPerSlide;
-    return initiatives.slice(startIndex, startIndex + initiativesPerSlide);
-  };
-
   return (
-    <div className="relative w-full max-w-6xl mx-auto">
-      {/* Carousel Container */}
-      <div 
-        ref={carouselRef}
-        className="relative overflow-hidden rounded-xl"
-      >
+    <div className="relative max-w-7xl mx-auto px-4">
+      <div className="overflow-hidden">
         <div 
           className="flex transition-transform duration-500 ease-in-out"
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
@@ -62,12 +61,14 @@ const InitiativeCarousel: React.FC<InitiativeCarouselProps> = ({ initiatives, on
                   {slideInitiatives.map((initiative) => (
                     <InitiativeCard
                       key={initiative.id}
+                      id={initiative.id}
                       imageUrl={initiative.imageUrl}
                       title={initiative.title}
                       summary={initiative.summary}
                       members={initiative.members}
                       highlightResults={initiative.highlightResults}
-                      onViewDetails={() => onViewDetails(initiative.id)}
+                      dashboardLink={initiative.dashboardLink}
+                      onViewDetails={onViewDetails}
                     />
                   ))}
                 </div>

@@ -5,11 +5,14 @@ import NewsArticleCard from './components/NewArticleCard';
 import RecognitionPost from './components/RecognitionPostCard';
 import { Separator } from './components/Separator';
 import InitiativesPage from './pages/InitiativesPage';
+import MissionPage from './pages/MissionPage';
+import MissionDetailPage from './pages/MissionDetailPage';
 import NewsUpdatePage from './pages/NewsUpdatePage';
 import RecognitionPage from './pages/RecognitionPage';
 import InitiativeDetailPage from './pages/InitiativeDetailPage';
 import ViewAllButton from './components/ViewAllButton';
 import InitiativeCard from './components/InitiativeCard';
+import MissionCard from './components/MissionCard';
 import Logo from './components/Logo';
 
 // Import mock data
@@ -18,6 +21,7 @@ import {
   newsArticles, 
   recognitionPosts, 
   initiativesData, 
+  missionsData,
   dashboardCards,
   getItemsByIds 
 } from './data/mockData';
@@ -33,8 +37,10 @@ function HomePage() {
   // Get featured items based on configuration
   const featuredRecognitionPosts = getItemsByIds(recognitionPosts, HOMEPAGE_CONFIG.featuredRecognitionPosts);
   const featuredNewsArticles = getItemsByIds(newsArticles, HOMEPAGE_CONFIG.featuredNewsArticles);
-  const featuredInitiatives = getItemsByIds(initiativesData, HOMEPAGE_CONFIG.featuredInitiatives);
   const featuredDashboardCards = getItemsByIds(dashboardCards, HOMEPAGE_CONFIG.featuredDashboardCards);
+  
+  // Get all active missions for homepage carousel
+  const activeMissions = missionsData.filter(mission => mission.status === 'Đang diễn ra');
 
   const handleReadMore = (articleId: number) => {
     alert(`Đang mở bài viết có ID: ${articleId}`);
@@ -54,6 +60,10 @@ function HomePage() {
 
   const handleViewInitiative = (initiativeId: number) => {
     navigate(`/initiatives/${initiativeId}`);
+  };
+
+  const handleViewMission = (missionId: number) => {
+    navigate(`/missions/${missionId}`);
   };
 
   return (
@@ -123,21 +133,72 @@ function HomePage() {
 
           <Separator className="my-8" />
 
+          {/* Featured Missions Section */}
+          <section className="mb-16">
+            <div className="flex justify-between items-center mb-8">
+              <h2 className="text-3xl font-semibold text-gray-900">Chương trình thi đua/Nhiệm vụ</h2>
+              <ViewAllButton label="Xem tất cả" onClick={() => navigate('/missions')} />
+            </div>
+            <div className="relative">
+              {activeMissions.length > 0 ? (
+                <div className={`flex gap-6 pb-4 ${
+                  activeMissions.length <= 3 
+                    ? 'justify-start' 
+                    : 'overflow-x-auto scrollbar-hide'
+                }`}>
+                  {activeMissions.map((mission) => (
+                    <div 
+                      key={mission.id} 
+                      className={`${
+                        activeMissions.length <= 3 
+                          ? 'flex-1 max-w-sm' 
+                          : 'flex-shrink-0 w-80'
+                      }`}
+                    >
+                      <MissionCard
+                        title={mission.title}
+                        summary={mission.summary}
+                        status={mission.status}
+                        deadline={mission.deadline}
+                        participants={mission.participants}
+                        onClick={() => handleViewMission(mission.id)}
+                      />
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <div className="text-center py-12">
+                  <svg className="mx-auto h-12 w-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.172 16.172a4 4 0 015.656 0M9 12h6m-6-4h6m2 5.291A7.962 7.962 0 0112 15c-2.34 0-4.47-.881-6.08-2.33" />
+                  </svg>
+                  <h3 className="mt-2 text-sm font-medium text-gray-900">Không có nhiệm vụ đang diễn ra</h3>
+                  <p className="mt-1 text-sm text-gray-500">
+                    Hiện tại không có chương trình thi đua hoặc nhiệm vụ nào đang được triển khai.
+                  </p>
+                </div>
+              )}
+            </div>
+          </section>
+
+          <Separator className="my-8" />
+
           {/* Featured Initiatives Section */}
           <section className="mb-16">
             <div className="flex justify-between items-center mb-8">
               <h2 className="text-3xl font-semibold text-gray-900">Sáng kiến nổi bật</h2>
               <ViewAllButton label="Xem tất cả" onClick={() => navigate('/initiatives')} />
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {featuredInitiatives.map((initiative) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
+              {getItemsByIds(initiativesData, HOMEPAGE_CONFIG.featuredInitiatives).map((initiative) => (
                 <InitiativeCard
                   key={initiative.id}
+                  id={initiative.id}
                   imageUrl={initiative.imageUrl}
                   title={initiative.title}
                   summary={initiative.summary}
                   members={initiative.members}
                   highlightResults={initiative.highlightResults}
+                  dashboardLink={initiative.dashboardLink}
                   onViewDetails={() => handleViewInitiative(initiative.id)}
                 />
               ))}
@@ -195,6 +256,9 @@ function Navigation() {
             <Link to="/initiatives" className="text-gray-700 hover:text-blue-600 transition-colors">
               Sáng kiến
             </Link>
+            <Link to="/missions" className="text-gray-700 hover:text-blue-600 transition-colors">
+              Chương trình thi đua/Nhiệm vụ
+            </Link>
             <Link to="/newsupdate" className="text-gray-700 hover:text-blue-600 transition-colors">
               Tin tức & Cập nhật
             </Link>
@@ -215,10 +279,12 @@ function App() {
         <Navigation />
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/recognition" element={<RecognitionPage />} />
           <Route path="/initiatives" element={<InitiativesPage />} />
-          <Route path="/initiatives/:initiativeId" element={<InitiativeDetailPage />} />
+          <Route path="/missions" element={<MissionPage />} />
+          <Route path="/missions/:missionId" element={<MissionDetailPage />} />
           <Route path="/newsupdate" element={<NewsUpdatePage />} />
+          <Route path="/recognition" element={<RecognitionPage />} />
+          <Route path="/initiatives/:initiativeId" element={<InitiativeDetailPage />} />
         </Routes>
       </div>
     </Router>

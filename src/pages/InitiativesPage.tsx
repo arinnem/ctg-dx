@@ -137,12 +137,14 @@ const InitiativesPage = () => {
               filteredInitiatives.map((initiative) => (
                 <InitiativeCard
                   key={initiative.id}
+                  id={initiative.id}
                   imageUrl={initiative.imageUrl}
                   title={initiative.title}
                   summary={initiative.summary}
                   members={initiative.members}
                   highlightResults={initiative.highlightResults}
-                  onViewDetails={() => handleViewDetails(initiative.id)}
+                  dashboardLink={initiative.dashboardLink}
+                  onViewDetails={handleViewDetails}
                 />
               ))
             ) : (

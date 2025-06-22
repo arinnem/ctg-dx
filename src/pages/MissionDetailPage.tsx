@@ -1,8 +1,6 @@
-// src/pages/InitiativeDetailPage.tsx
-
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { initiativesData } from '../data/mockData';
+import { missionsData } from '../data/mockData';
 import QnAAccordion from '../components/QnAAccordion';
 
 // --- Child Components ---
@@ -11,29 +9,28 @@ const DocumentIcon = () => (
     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
 );
 
-/*const CheckCircleIcon = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-green-500 mr-3 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
-        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+const TargetIcon = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" className="h-24 w-24 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
     </svg>
 );
-*/
 
 // --- Main Page Component ---
 
-const InitiativeDetailPage = () => {
+const MissionDetailPage = () => {
   const [activeTab, setActiveTab] = useState('description');
-  const { initiativeId } = useParams<{ initiativeId: string }>();
+  const { missionId } = useParams<{ missionId: string }>();
   
-  const initiative = initiativeId 
-    ? initiativesData.find(i => i.id === parseInt(initiativeId, 10))
+  const mission = missionId 
+    ? missionsData.find(m => m.id === parseInt(missionId, 10))
     : undefined;
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  if (!initiative) {
-    return <div className="text-center py-20">Không tìm thấy thông tin sáng kiến.</div>;
+  if (!mission) {
+    return <div className="text-center py-20">Không tìm thấy thông tin nhiệm vụ.</div>;
   }
 
   return (
@@ -42,21 +39,19 @@ const InitiativeDetailPage = () => {
         
         {/* Page Header */}
         <header className="flex items-center space-x-6 mb-8 pb-8 border-b-2 border-gray-200">
-            <img 
-                src={initiative.avatarUrl} 
-                alt={`Avatar của ${initiative.title}`} 
-                className="w-24 h-24 rounded-full object-cover border-4 border-white shadow-md"
-            />
+            <div className="flex items-center justify-center w-24 h-24 rounded-full bg-blue-100 border-4 border-white shadow-md">
+                <TargetIcon />
+            </div>
             <div>
-                <h1 className="text-4xl font-bold text-gray-900">{initiative.title}</h1>
-                <p className="mt-2 text-lg text-gray-600">{initiative.shortDescription}</p>
+                <h1 className="text-4xl font-bold text-gray-900">{mission.title}</h1>
+                <p className="mt-2 text-lg text-gray-600">{mission.summary}</p>
             </div>
         </header>
 
         {/* Main Layout Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           
-          {/* Main Content Column: 'flex flex-col' is the key fix */}
+          {/* Main Content Column */}
           <main className="lg:col-span-2">
             <div className="w-full">
               <div className="border-b border-gray-200">
@@ -71,24 +66,13 @@ const InitiativeDetailPage = () => {
               <div className="py-6">
                 {activeTab === 'description' && (
                     <div className="prose max-w-none text-justify">
-                        <p>{initiative.fullDescription}</p>
-                        {initiative.videoUrl && (
-                            <div className="mt-6 aspect-w-16 aspect-h-9 not-prose">
-                                <iframe className="w-full h-full rounded-lg" 
-                                    src={initiative.videoUrl} 
-                                    title={`Video giới thiệu ${initiative.title}`} 
-                                    frameBorder="0" 
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                                    allowFullScreen>
-                                </iframe>
-                            </div>
-                        )}
+                        <p>{mission.fullDescription}</p>
                     </div>
                 )}
                 {activeTab === 'results' && (
                   <div className="mt-6">
                     <QnAAccordion
-                      items={initiative.highlightResults.map((result) => ({
+                      items={mission.highlightResults.map((result) => ({
                         question: result.title,
                         answer: result.description,
                       }))}
@@ -97,11 +81,11 @@ const InitiativeDetailPage = () => {
                 )}
                 {activeTab === 'qa' && (
                   <div>
-                    {initiative.qa && initiative.qa.length > 0 ? (
-                        <QnAAccordion items={initiative.qa} />
+                    {mission.qa && mission.qa.length > 0 ? (
+                        <QnAAccordion items={mission.qa} />
                     ) : (
                         <div className="prose max-w-none">
-                            <p>Chưa có câu hỏi và trả lời cho sáng kiến này.</p>
+                            <p>Chưa có câu hỏi và trả lời cho nhiệm vụ này.</p>
                         </div>
                     )}
                   </div>
@@ -116,21 +100,29 @@ const InitiativeDetailPage = () => {
                 <div>
                     <h4 className="font-semibold text-gray-800">Thông tin chung</h4>
                     <div className="mt-4 space-y-2 text-sm">
-                        <p><strong>Trạng thái:</strong> <span className="text-green-600 font-semibold">{initiative.status}</span></p>
-                        <p><strong>IO:</strong> {initiative.io}</p>
-                        <p><strong>Backup IO:</strong> {initiative.backupIo}</p>
-                        <p><strong>Email:</strong> <a href={`mailto:${initiative.email}`} className="text-blue-600 hover:underline">{initiative.email}</a></p>
-                        <p><strong>Group link:</strong> <a href={initiative.grouplink} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Link</a></p>
-                        {initiative.dashboardLink && (
-                            <p><strong>Dashboard:</strong> <a href={initiative.dashboardLink} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Xem Dashboard</a></p>
-                        )}
+                        <p><strong>Trạng thái:</strong> 
+                          <span className={`ml-2 px-2 py-1 text-xs font-semibold rounded-full ${
+                            mission.status === 'Đang diễn ra' 
+                              ? 'bg-green-100 text-green-800 animate-pulse' 
+                              : 'bg-gray-100 text-gray-800'
+                          }`}>
+                            {mission.status}
+                          </span>
+                        </p>
+                        <p><strong>Thời hạn:</strong> {mission.deadline}</p>
+                        <p><strong>Số đơn vị tham gia:</strong> {mission.participants}</p>
+                        <p><strong>IO:</strong> {mission.io}</p>
+                        <p><strong>Backup IO:</strong> {mission.backupIo}</p>
+                        <p><strong>Phòng ban:</strong> {mission.contact}</p>
+                        <p><strong>Email:</strong> <a href={`mailto:${mission.email}`} className="text-blue-600 hover:underline">{mission.email}</a></p>
+                        <p><strong>Group link:</strong> <a href={mission.grouplink} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Link</a></p>
                     </div>
                 </div>
                 <hr/>
                 <div>
                     <h4 className="font-semibold text-gray-800">Tài liệu liên quan</h4>
                     <ul className="mt-4 space-y-3">
-                        {initiative.documents.map((doc, i) => (
+                        {mission.documents.map((doc, i) => (
                             <li key={i}>
                                 <a href={doc.url} download className="flex items-center space-x-3 text-sm text-blue-600 hover:underline">
                                     <DocumentIcon/>
@@ -149,4 +141,4 @@ const InitiativeDetailPage = () => {
   );
 };
 
-export default InitiativeDetailPage;
+export default MissionDetailPage; 
