@@ -1,0 +1,6348 @@
+{
+  "roles": [
+    {
+      "id": 1,
+      "name": "Người dùng thường"
+    },
+    {
+      "id": 2,
+      "name": "IO"
+    },
+    {
+      "id": 3,
+      "name": "TO"
+    }
+  ],
+  "statuses": [
+    {
+      "id": 1,
+      "name": "Nghiên cứu",
+      "description": "Giai đoạn nghiên cứu ý tưởng",
+      "color_code": "#3498db"
+    },
+    {
+      "id": 2,
+      "name": "Xây dựng",
+      "description": "Giai đoạn xây dựng giải pháp",
+      "color_code": "#e67e22"
+    },
+    {
+      "id": 3,
+      "name": "Thí điểm",
+      "description": "Giai đoạn thí điểm triển khai",
+      "color_code": "#f1c40f"
+    },
+    {
+      "id": 4,
+      "name": "Triển khai rộng",
+      "description": "Giai đoạn triển khai rộng rãi",
+      "color_code": "#2ecc71"
+    },
+    {
+      "id": 5,
+      "name": "Đang triển khai",
+      "description": "Nhiệm vụ/Chương trình thi đua đang được triển khai",
+      "color_code": "#2980b9"
+    },
+    {
+      "id": 6,
+      "name": "Kết thúc",
+      "description": "Nhiệm vụ/Chương trình thi đua đã kết thúc",
+      "color_code": "#7f8c8d"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Công nghệ"
+    },
+    {
+      "id": 2,
+      "name": "Chương trình thi đua"
+    },
+    {
+      "id": 3,
+      "name": "Giao nhiệm vụ"
+    },
+    {
+      "id": 4,
+      "name": "Vinh danh"
+    },
+    {
+      "id": 5,
+      "name": "Tin tức"
+    },
+    {
+      "id": 6,
+      "name": "Triển khai sáng kiến"
+    }
+  ],
+  "divisions": [
+    {
+      "id": 1,
+      "name": "Hội sở chính",
+      "avatar_url": "https://dummyimage.com/815x690",
+      "parent_division_id": null
+    },
+    {
+      "id": 2,
+      "name": "Chi nhánh TP.HCM",
+      "avatar_url": "https://dummyimage.com/883x883",
+      "parent_division_id": 1
+    },
+    {
+      "id": 3,
+      "name": "Chi nhánh Hà Nội",
+      "avatar_url": "https://picsum.photos/146/173",
+      "parent_division_id": 2
+    },
+    {
+      "id": 4,
+      "name": "Chi nhánh Đà Nẵng",
+      "avatar_url": "https://picsum.photos/744/552",
+      "parent_division_id": 3
+    },
+    {
+      "id": 5,
+      "name": "Chi nhánh Hải Dương",
+      "avatar_url": "https://dummyimage.com/944x166",
+      "parent_division_id": 2
+    },
+    {
+      "id": 6,
+      "name": "Chi nhánh Cần Thơ",
+      "avatar_url": "https://placekitten.com/573/842",
+      "parent_division_id": 5
+    },
+    {
+      "id": 7,
+      "name": "Chi nhánh Ngô Quyền",
+      "avatar_url": "https://picsum.photos/620/239",
+      "parent_division_id": 5
+    },
+    {
+      "id": 8,
+      "name": "Chi nhánh Hải Phòng",
+      "avatar_url": "https://picsum.photos/587/612",
+      "parent_division_id": 7
+    },
+    {
+      "id": 9,
+      "name": "Chi nhánh Cần Thơ",
+      "avatar_url": "https://dummyimage.com/128x389",
+      "parent_division_id": 5
+    },
+    {
+      "id": 10,
+      "name": "Khối Công nghệ Thông tin",
+      "avatar_url": "https://placekitten.com/98/51",
+      "parent_division_id": 1
+    },
+    {
+      "id": 11,
+      "name": "Khối Khách hàng Doanh nghiệp",
+      "avatar_url": "https://dummyimage.com/41x941",
+      "parent_division_id": 5
+    },
+    {
+      "id": 12,
+      "name": "Khối Bán lẻ",
+      "avatar_url": "https://dummyimage.com/669x265",
+      "parent_division_id": 9
+    },
+    {
+      "id": 13,
+      "name": "Khối Quản lý Rủi ro",
+      "avatar_url": "https://placekitten.com/291/439",
+      "parent_division_id": 7
+    },
+    {
+      "id": 14,
+      "name": "Khối QLRR",
+      "avatar_url": "https://placekitten.com/304/514",
+      "parent_division_id": 9
+    },
+    {
+      "id": 15,
+      "name": "Khối CNTT",
+      "avatar_url": "https://picsum.photos/158/391",
+      "parent_division_id": 13
+    },
+    {
+      "id": 16,
+      "name": "Khối Nhân sự",
+      "avatar_url": "https://picsum.photos/294/127",
+      "parent_division_id": 14
+    },
+    {
+      "id": 17,
+      "name": "Chi nhánh Bình Dương",
+      "avatar_url": "https://picsum.photos/923/846",
+      "parent_division_id": 12
+    },
+    {
+      "id": 18,
+      "name": "Chi nhánh Đồng Nai",
+      "avatar_url": "https://placekitten.com/183/315",
+      "parent_division_id": 8
+    },
+    {
+      "id": 19,
+      "name": "Chi nhánh Quảng Ninh",
+      "avatar_url": "https://placekitten.com/33/445",
+      "parent_division_id": 16
+    },
+    {
+      "id": 20,
+      "name": "Chi nhánh Thanh Hóa",
+      "avatar_url": "https://dummyimage.com/813x903",
+      "parent_division_id": 11
+    }
+  ],
+  "users": [
+    {
+      "id": "e50bc5bc-2276-472f-82bc-0383c82f56e1",
+      "employee_id": "EMP1000",
+      "full_name": "Duyên Mai",
+      "email": "jane77@vietinbank.vn",
+      "avatar_url": "https://dummyimage.com/152x979",
+      "role_id": 2
+    },
+    {
+      "id": "b473e86b-2392-4367-919f-1eb1367f619c",
+      "employee_id": "EMP1001",
+      "full_name": "Anh Hưng Lê",
+      "email": "johnnguyen@vietinbank.vn",
+      "avatar_url": "https://dummyimage.com/836x325",
+      "role_id": 1
+    },
+    {
+      "id": "f0fecc17-a6a7-4a90-abc1-348f153412ca",
+      "employee_id": "EMP1002",
+      "full_name": "An Phú Dương",
+      "email": "hoangjohn@vietinbank.vn",
+      "avatar_url": "https://picsum.photos/429/885",
+      "role_id": 1
+    },
+    {
+      "id": "55e08f42-e7e5-4f9d-8893-843ca22c11d5",
+      "employee_id": "EMP1003",
+      "full_name": "Vân Nguyễn",
+      "email": "lpham@vietinbank.vn",
+      "avatar_url": "https://picsum.photos/490/752",
+      "role_id": 3
+    },
+    {
+      "id": "bef7c7ca-bb8d-4538-b916-6cbb8ced5a18",
+      "employee_id": "EMP1004",
+      "full_name": "Khoa Hữu Lê",
+      "email": "tranjohn@vietinbank.vn",
+      "avatar_url": "https://placekitten.com/582/265",
+      "role_id": 3
+    },
+    {
+      "id": "2654d8af-cc44-4d73-84a7-e59718d978fe",
+      "employee_id": "EMP1005",
+      "full_name": "Bảo Xuân Vũ",
+      "email": "jane11@vietinbank.vn",
+      "avatar_url": "https://placekitten.com/307/59",
+      "role_id": 1
+    },
+    {
+      "id": "c884d75b-d390-40ba-9259-1f87d2e2c408",
+      "employee_id": "EMP1006",
+      "full_name": "Chị Thành Mai",
+      "email": "jane73@vietinbank.vn",
+      "avatar_url": "https://dummyimage.com/252x343",
+      "role_id": 3
+    },
+    {
+      "id": "728fcac0-7677-4851-b230-841f6e1a0b92",
+      "employee_id": "EMP1007",
+      "full_name": "Khoa Dương",
+      "email": "nbui@vietinbank.vn",
+      "avatar_url": "https://placekitten.com/606/729",
+      "role_id": 3
+    },
+    {
+      "id": "42612742-1085-48ae-b86d-cdb5df6f575b",
+      "employee_id": "EMP1008",
+      "full_name": "Cô Dương Đặng",
+      "email": "dangjohn@vietinbank.vn",
+      "avatar_url": "https://dummyimage.com/379x818",
+      "role_id": 2
+    },
+    {
+      "id": "654c5049-a425-46e2-9690-6a0c9d52bf46",
+      "employee_id": "EMP1009",
+      "full_name": "Cô Chi Mai",
+      "email": "buijane@vietinbank.vn",
+      "avatar_url": "https://picsum.photos/341/266",
+      "role_id": 3
+    },
+    {
+      "id": "936cf63f-5000-4e7f-b78d-1daf89a9cc8a",
+      "employee_id": "EMP1010",
+      "full_name": "Hà Lê",
+      "email": "john64@vietinbank.vn",
+      "avatar_url": "https://dummyimage.com/391x946",
+      "role_id": 3
+    },
+    {
+      "id": "dda0b651-6f10-429e-a65f-4d80a1bd8e9c",
+      "employee_id": "EMP1011",
+      "full_name": "Hạnh Quang Trần",
+      "email": "janepham@vietinbank.vn",
+      "avatar_url": "https://picsum.photos/269/592",
+      "role_id": 1
+    },
+    {
+      "id": "1d2b70e9-e80d-499a-92fc-745c584ef8ed",
+      "employee_id": "EMP1012",
+      "full_name": "Tùng Phạm",
+      "email": "johnvu@vietinbank.vn",
+      "avatar_url": "https://picsum.photos/692/77",
+      "role_id": 3
+    },
+    {
+      "id": "aaf11df4-02e9-40e0-b67e-e3f31cb0cfd1",
+      "employee_id": "EMP1013",
+      "full_name": "Anh Phúc Đặng",
+      "email": "janevu@vietinbank.vn",
+      "avatar_url": "https://placekitten.com/646/400",
+      "role_id": 2
+    },
+    {
+      "id": "83bca49c-200b-4455-8da4-ac0f87e510b7",
+      "employee_id": "EMP1014",
+      "full_name": "Hải Phạm",
+      "email": "john62@vietinbank.vn",
+      "avatar_url": "https://placekitten.com/505/763",
+      "role_id": 2
+    },
+    {
+      "id": "3f00c9ec-08e5-45a2-86c1-e54b77d2a0ae",
+      "employee_id": "EMP1015",
+      "full_name": "Nhật Thế Mai",
+      "email": "wbui@vietinbank.vn",
+      "avatar_url": "https://placekitten.com/854/208",
+      "role_id": 1
+    },
+    {
+      "id": "03b11c18-0be4-4d13-ac05-eb34276df24c",
+      "employee_id": "EMP1016",
+      "full_name": "Bà Duyên Phạm",
+      "email": "jane89@vietinbank.vn",
+      "avatar_url": "https://dummyimage.com/557x966",
+      "role_id": 2
+    },
+    {
+      "id": "6978083f-56c4-4726-99e7-821cc775e69a",
+      "employee_id": "EMP1017",
+      "full_name": "Cô Kim Trần",
+      "email": "john89@vietinbank.vn",
+      "avatar_url": "https://dummyimage.com/810x845",
+      "role_id": 2
+    },
+    {
+      "id": "895ee238-9b5b-4cfd-a86d-c87a06eb3736",
+      "employee_id": "EMP1018",
+      "full_name": "Bà Chi Dương",
+      "email": "janenguyen@vietinbank.vn",
+      "avatar_url": "https://placekitten.com/58/884",
+      "role_id": 1
+    },
+    {
+      "id": "e26e3cb6-37fe-4b41-8df6-96e3b0a07528",
+      "employee_id": "EMP1019",
+      "full_name": "Ông Trọng Trần",
+      "email": "janemai@vietinbank.vn",
+      "avatar_url": "https://picsum.photos/741/14",
+      "role_id": 3
+    }
+  ],
+  "missions": [
+    {
+      "id": 1,
+      "title": "Chuyển đổi số toàn diện ngân hàng",
+      "summary": "Chuyển đổi số toàn diện ngân hàng - Nào mà nhưng.",
+      "full_description": "Theo như từ sẽ để đúng tại. Nơi giống nào tôi từ cái tự.\nNếu để cho để. Là lớn vì đi giữa.\nDưới là đến nào của đã bên. Người chỉ theo đang.\nCách các vẫn. Hơn trong một trong đến khiến.",
+      "image_url": "https://dummyimage.com/584x236",
+      "status_id": 5,
+      "deadline": "2025-05-24",
+      "created_at": "2025-03-12T17:05:45",
+      "updated_at": "2025-01-14T18:08:07"
+    },
+    {
+      "id": 2,
+      "title": "Triển khai hệ thống AI thẩm định tín dụng",
+      "summary": "Triển khai hệ thống AI thẩm định tín dụng - Giống của không cho sau từ dưới như.",
+      "full_description": "Là một rất về tôi cái.\nĐiều với đi và. Của cho đúng bên điều không vì. Mà đến hoặc mỗi có. Trong nhưng như vài để.\nTại số bên để số. Sẽ vài sẽ cũng. Chưa với làm có.",
+      "image_url": "https://picsum.photos/56/142",
+      "status_id": 5,
+      "deadline": "2025-05-31",
+      "created_at": "2025-02-07T00:28:29",
+      "updated_at": "2025-02-20T14:45:02"
+    },
+    {
+      "id": 3,
+      "title": "Tự động hóa quy trình nội bộ với RPA",
+      "summary": "Tự động hóa quy trình nội bộ với RPA - Vài từ về đi cho sẽ giữa để.",
+      "full_description": "Hơn tại giống tự khiến các mỗi thì. Đúng để từng của để các.\nTừ mà như thế lớn. Để mà tôi giống đến. Như nơi nếu đang cũng sau.\nVài hơn tự khi làm. Đó đi lớn cho. Nào đi của đó.",
+      "image_url": "https://picsum.photos/807/963",
+      "status_id": 6,
+      "deadline": "2025-01-14",
+      "created_at": "2025-05-18T00:29:07",
+      "updated_at": "2025-02-11T10:48:02"
+    },
+    {
+      "id": 4,
+      "title": "Nâng cấp bảo mật thông tin",
+      "summary": "Nâng cấp bảo mật thông tin - Vẫn điều rất từng giống về vẫn.",
+      "full_description": "Của vài nào bên được. Của cách và chỉ rất với.\nĐó cũng gần và lớn hoặc để của. Nhiều cái lớn của hơn các điều.\nĐi và cho vì của hơn. Mà hoặc cũng này để của. Hoặc đó thì cho mà.",
+      "image_url": "https://picsum.photos/414/6",
+      "status_id": 6,
+      "deadline": "2025-01-16",
+      "created_at": "2025-04-08T09:54:08",
+      "updated_at": "2025-01-07T17:07:58"
+    },
+    {
+      "id": 5,
+      "title": "Đào tạo nhân viên về công nghệ mới",
+      "summary": "Đào tạo nhân viên về công nghệ mới - Các nào người.",
+      "full_description": "Khi để dưới thế này để. Trong nếu đúng từ cũng khi hoặc nơi. Vẫn điều làm cách của thế thay.\nLàm tự đúng đang để để bạn. Để tại về trong.\nGiữa các đó từng nhiều. Với tại để tại có như với.",
+      "image_url": "https://dummyimage.com/37x994",
+      "status_id": 5,
+      "deadline": "2025-04-15",
+      "created_at": "2025-04-03T01:36:22",
+      "updated_at": "2025-06-20T12:36:25"
+    },
+    {
+      "id": 6,
+      "title": "Phát triển ứng dụng ngân hàng số",
+      "summary": "Phát triển ứng dụng ngân hàng số - Cũng nào dưới hơn từng cho.",
+      "full_description": "Số rất thì không như. Vài lớn đang trong hơn các hoặc.\nGiống được các để. Đi được các để với làm.\nHơn vài đã từ nhiều bên. Sau chỉ gần nhưng. Có lớn cũng trong.",
+      "image_url": "https://picsum.photos/909/584",
+      "status_id": 6,
+      "deadline": "2025-03-31",
+      "created_at": "2025-01-07T01:16:48",
+      "updated_at": "2025-02-25T05:49:55"
+    },
+    {
+      "id": 7,
+      "title": "Tối ưu hóa trải nghiệm khách hàng",
+      "summary": "Tối ưu hóa trải nghiệm khách hàng - Cũng cho cũng không điều cách cái thay.",
+      "full_description": "Theo theo tự mỗi nào đến từ. Đi chỉ như người. Hơn để đến với bên với tại.\nNhư vài rất lớn từ. Thay làm cho thế đến thế. Cho rất nhưng vài cũng về.",
+      "image_url": "https://dummyimage.com/480x600",
+      "status_id": 6,
+      "deadline": "2025-05-24",
+      "created_at": "2025-02-17T14:05:39",
+      "updated_at": "2025-03-05T17:46:35"
+    },
+    {
+      "id": 8,
+      "title": "Triển khai chương trình thi đua sáng kiến",
+      "summary": "Triển khai chương trình thi đua sáng kiến - Hơn đến để khi từ.",
+      "full_description": "Mà giống là vài. Hơn từ sau giống để của như. Được các khiến cũng.\nNếu đang các bên sau của. Lớn cách của chỉ trong không hơn. Rất như khi chỉ sẽ khi.",
+      "image_url": "https://picsum.photos/214/41",
+      "status_id": 6,
+      "deadline": "2025-03-05",
+      "created_at": "2025-05-13T02:45:20",
+      "updated_at": "2025-03-26T19:30:08"
+    },
+    {
+      "id": 9,
+      "title": "Mở rộng mạng lưới chi nhánh",
+      "summary": "Mở rộng mạng lưới chi nhánh - Giống và hơn đã và sau.",
+      "full_description": "Với thì nhiều vậy như vài cũng. Được chưa này của cách. Đến có khi đó chỉ khi với.\nThế từ với tại dưới từ. Giữa vậy đến về chỉ. Như đó nếu với.",
+      "image_url": "https://placekitten.com/391/106",
+      "status_id": 6,
+      "deadline": "2025-05-03",
+      "created_at": "2025-02-24T17:53:35",
+      "updated_at": "2025-03-31T01:38:23"
+    },
+    {
+      "id": 10,
+      "title": "Ứng dụng Blockchain trong giao dịch",
+      "summary": "Ứng dụng Blockchain trong giao dịch - Của từ mà tại tại điều.",
+      "full_description": "Đã sau từng vài.\nThay đã để đúng. Đã tại bên thay mà có cách với.\nCó như trong để có thì. Theo mà mỗi đã giống chỉ.\nĐang lớn trong vài và từng. Nhiều lớn lớn như để bạn. Và hơn cái hơn người nhưng.",
+      "image_url": "https://placekitten.com/126/366",
+      "status_id": 6,
+      "deadline": "2025-03-31",
+      "created_at": "2025-04-15T21:28:14",
+      "updated_at": "2025-06-18T09:03:44"
+    },
+    {
+      "id": 11,
+      "title": "Phát triển hệ thống Chatbot",
+      "summary": "Phát triển hệ thống Chatbot - Tự cũng mà.",
+      "full_description": "Để như gần không từng có như. Từ cái như. Với hơn mà theo mỗi nào là.\nMột đang tự chỉ bên nhiều để. Tự làm của đang với để.\nHơn thì nhiều thế cái. Để vẫn có vẫn. Của với cho của như thì không.",
+      "image_url": "https://placekitten.com/711/902",
+      "status_id": 6,
+      "deadline": "2025-03-11",
+      "created_at": "2025-06-01T14:27:52",
+      "updated_at": "2025-03-02T15:47:37"
+    },
+    {
+      "id": 12,
+      "title": "Tăng cường quản lý rủi ro",
+      "summary": "Tăng cường quản lý rủi ro - Khi và thay của cho như.",
+      "full_description": "Từng bạn vài có cách. Hoặc cho khiến nhiều như. Chỉ vì có giống vẫn số về. Điều từ một.\nLàm để cũng tại sau vì với. Tự tôi đó từng.\nLớn bên tại nhưng trong thì tại.",
+      "image_url": "https://dummyimage.com/260x714",
+      "status_id": 6,
+      "deadline": "2025-02-03",
+      "created_at": "2025-06-21T22:51:40",
+      "updated_at": "2025-06-11T21:19:12"
+    },
+    {
+      "id": 13,
+      "title": "Cải tiến quy trình giao dịch",
+      "summary": "Cải tiến quy trình giao dịch - Đi nơi cái như và tại.",
+      "full_description": "Thế mà số thì khiến khi cũng là. Vài nào chưa tự. Từng nhiều của là trong.\nVậy từ không từ đã. Và giữa mỗi của chưa giống trong.\nChỉ nào để một bạn dưới.",
+      "image_url": "https://picsum.photos/651/209",
+      "status_id": 6,
+      "deadline": "2025-03-18",
+      "created_at": "2025-03-21T23:56:38",
+      "updated_at": "2025-01-24T04:52:34"
+    },
+    {
+      "id": 14,
+      "title": "Đổi mới sản phẩm dịch vụ",
+      "summary": "Đổi mới sản phẩm dịch vụ - Thế đi người tôi giữa rất vậy.",
+      "full_description": "Của đúng lớn hơn. Vậy và thay là như và vài.\nDưới vài tôi nếu có hơn có. Chưa này dưới tôi người.\nNhư vẫn chưa trong đang tại. Cách tại như cũng.\nMà như được tôi.",
+      "image_url": "https://placekitten.com/644/980",
+      "status_id": 6,
+      "deadline": "2025-05-13",
+      "created_at": "2025-02-18T04:04:55",
+      "updated_at": "2025-03-12T08:48:50"
+    },
+    {
+      "id": 15,
+      "title": "Nâng cao chất lượng đào tạo",
+      "summary": "Nâng cao chất lượng đào tạo - Dưới đúng như số được vậy.",
+      "full_description": "Không từng cách cái có đi.\nCó thì từng khiến. Thế đang được đang các đi.\nChưa giống để tôi. Như thì là bên.\nMà khi để từng giữa cũng như. Hơn cách người tại và của. Tự như giống sẽ cũng nhiều mỗi.",
+      "image_url": "https://picsum.photos/365/172",
+      "status_id": 5,
+      "deadline": "2025-04-01",
+      "created_at": "2025-01-10T00:38:48",
+      "updated_at": "2025-01-18T09:47:46"
+    },
+    {
+      "id": 16,
+      "title": "Tăng trưởng tín dụng bền vững",
+      "summary": "Tăng trưởng tín dụng bền vững - Cho hoặc thay nào hơn các từ.",
+      "full_description": "Sau và hoặc nhiều hơn nhiều. Người khi hơn cách và cũng vài. Của cũng với là tôi.\nĐúng mỗi vậy nơi. Là một người. Tại nơi không bạn.\nChỉ vài như. Của đến đến để điều chưa có một. Để sẽ thay cũng.",
+      "image_url": "https://placekitten.com/480/397",
+      "status_id": 5,
+      "deadline": "2025-03-14",
+      "created_at": "2025-06-16T02:51:27",
+      "updated_at": "2025-04-26T02:21:52"
+    },
+    {
+      "id": 17,
+      "title": "Phát triển dịch vụ khách hàng ưu tiên",
+      "summary": "Phát triển dịch vụ khách hàng ưu tiên - Một nào giống vẫn cũng không.",
+      "full_description": "Vẫn dưới như. Bạn lớn đi mà tự từ. Đúng tôi mà như nếu. Rất vì gần thì hơn của.\nNhư từng số chỉ đi chưa. Hơn nhiều để với cũng tự.\nCủa sau dưới tự mỗi nếu để. Là này và với có. Thì để rất cho đã như.",
+      "image_url": "https://picsum.photos/854/285",
+      "status_id": 5,
+      "deadline": "2025-04-01",
+      "created_at": "2025-06-22T13:34:36",
+      "updated_at": "2025-01-05T02:25:42"
+    },
+    {
+      "id": 18,
+      "title": "Ứng dụng dữ liệu lớn (Big Data)",
+      "summary": "Ứng dụng dữ liệu lớn (Big Data) - Nhiều bên hoặc nhiều nhưng.",
+      "full_description": "Khiến dưới cũng như giữa. Thì điều để với như các nào bạn.\nCái lớn rất để mỗi. Cũng để bạn thế sẽ với. Chưa để chưa hoặc như.\nKhiến cũng không vẫn. Thì làm hơn với.\nGần thế để. Từ như vài đã vài một.",
+      "image_url": "https://picsum.photos/458/728",
+      "status_id": 5,
+      "deadline": "2025-06-17",
+      "created_at": "2025-02-24T18:09:59",
+      "updated_at": "2025-03-09T06:33:35"
+    },
+    {
+      "id": 19,
+      "title": "Tối ưu hóa vận hành chi nhánh",
+      "summary": "Tối ưu hóa vận hành chi nhánh - Này rất giống là.",
+      "full_description": "Gần nào của lớn đi. Có một khiến về. Thì bên chỉ để.\nTừ đúng không gần. Từ vẫn để tại thế về hoặc. Điều hơn như làm sẽ.\nHơn đi rất chỉ với.\nĐã của cũng tại rất gần để. Dưới thay từ dưới.",
+      "image_url": "https://dummyimage.com/291x270",
+      "status_id": 5,
+      "deadline": "2025-03-02",
+      "created_at": "2025-05-21T15:59:15",
+      "updated_at": "2025-02-28T06:11:16"
+    },
+    {
+      "id": 20,
+      "title": "Phát triển hệ sinh thái số",
+      "summary": "Phát triển hệ sinh thái số - Về nơi nhưng như để nhiều với.",
+      "full_description": "Tại của rất vài và chưa người. Gần này đang.\nVề trong cách đang. Vậy như này chỉ rất hơn. Tôi nhưng khi trong. Mà đi cho giống.\nTrong có số sẽ của. Hơn cũng để của.",
+      "image_url": "https://picsum.photos/858/138",
+      "status_id": 5,
+      "deadline": "2025-06-13",
+      "created_at": "2025-04-02T10:52:32",
+      "updated_at": "2025-02-18T12:13:22"
+    }
+  ],
+  "initiatives": [
+    {
+      "id": 1,
+      "title": "Triển khai eKYC toàn hệ thống",
+      "summary": "Triển khai eKYC toàn hệ thống - Không trong để.",
+      "full_description": "Mà nào có để giống. Như rất gần với là dưới.\nGiống thế hoặc với. Là vài vẫn với.\nCủa cũng giữa thay thế như có. Từ tự chưa nhiều của. Đến đi người hoặc theo.",
+      "avatar_url": "https://picsum.photos/184/319",
+      "team_avatar_url": "https://dummyimage.com/489x281",
+      "video_url": "http://www.le.com/",
+      "mission_id": 6,
+      "current_status_id": 1,
+      "dashboard_iframe_url": "https://vu.com/",
+      "group_link": "http://www.mai.org/",
+      "created_at": "2025-03-05T20:37:41",
+      "updated_at": "2025-06-23T08:10:49"
+    },
+    {
+      "id": 2,
+      "title": "Phát triển ứng dụng Mobile Banking mới",
+      "summary": "Phát triển ứng dụng Mobile Banking mới - Từ đúng của đã theo bên của.",
+      "full_description": "Sẽ cũng thay nhưng đó. Khiến theo vài là thay như.\nTừng giống số nơi không nhưng. Giống đang để sau theo. Bạn chỉ số như nào từ cũng.\nSau rất làm cũng. Với đang như là.",
+      "avatar_url": "https://placekitten.com/537/100",
+      "team_avatar_url": "https://picsum.photos/402/51",
+      "video_url": "https://le.com/",
+      "mission_id": 11,
+      "current_status_id": 4,
+      "dashboard_iframe_url": "http://www.nguyen.info/",
+      "group_link": "http://tran.com/",
+      "created_at": "2025-04-01T20:02:46",
+      "updated_at": "2025-04-01T12:05:13"
+    },
+    {
+      "id": 3,
+      "title": "Tích hợp AI vào chăm sóc khách hàng",
+      "summary": "Tích hợp AI vào chăm sóc khách hàng - Thế bạn hơn đúng các tôi từ đến.",
+      "full_description": "Bạn để từ nào một mà. Bên này giữa như. Là làm từ theo.\nTại đi được người nhưng. Vài đang từng nhưng sẽ. Khi giống như các tự gần giống.\nNếu là như làm không không. Và đang giống bạn.",
+      "avatar_url": "https://picsum.photos/310/773",
+      "team_avatar_url": "https://placekitten.com/121/65",
+      "video_url": "https://le.org/",
+      "mission_id": 18,
+      "current_status_id": 4,
+      "dashboard_iframe_url": "http://www.bui.com/",
+      "group_link": "http://www.mai.biz/",
+      "created_at": "2025-06-01T09:03:18",
+      "updated_at": "2025-04-04T01:11:22"
+    },
+    {
+      "id": 4,
+      "title": "Tự động hóa phê duyệt khoản vay",
+      "summary": "Tự động hóa phê duyệt khoản vay - Theo nào nếu giống như vẫn.",
+      "full_description": "Không được khiến khi được thay hơn. Của các từ. Như vì này được khiến vì.\nCó lớn đi. Nơi trong lớn mỗi lớn hoặc thế. Vậy nơi trong tại đã.",
+      "avatar_url": "https://placekitten.com/19/514",
+      "team_avatar_url": "https://picsum.photos/877/207",
+      "video_url": "https://www.bui.com/",
+      "mission_id": 18,
+      "current_status_id": 2,
+      "dashboard_iframe_url": "http://vu.info/",
+      "group_link": "http://www.mai.info/",
+      "created_at": "2025-05-24T23:15:05",
+      "updated_at": "2025-03-26T22:47:48"
+    },
+    {
+      "id": 5,
+      "title": "Ứng dụng RPA vào xử lý giao dịch",
+      "summary": "Ứng dụng RPA vào xử lý giao dịch - Người như làm khiến dưới đã từ.",
+      "full_description": "Tại có sẽ từ. Đang tại được.\nVẫn như làm hoặc không. Đang là số lớn có hơn có.\nVề vì thì về gần. Khiến vì trong người để như để. Điều bên để giữa đi.",
+      "avatar_url": "https://dummyimage.com/5x525",
+      "team_avatar_url": "https://placekitten.com/644/113",
+      "video_url": "http://le.net/",
+      "mission_id": 7,
+      "current_status_id": 4,
+      "dashboard_iframe_url": "http://www.tran.biz/",
+      "group_link": "http://www.pham.com/",
+      "created_at": "2025-06-12T11:47:37",
+      "updated_at": "2025-05-05T13:06:28"
+    },
+    {
+      "id": 6,
+      "title": "Nâng cấp hệ thống bảo mật OTP",
+      "summary": "Nâng cấp hệ thống bảo mật OTP - Sau bên có các.",
+      "full_description": "Đó lớn mà tại về vì trong thì. Chưa chưa mỗi các mỗi của. Vậy của không vậy chỉ trong. Nơi nếu đang làm là lớn.",
+      "avatar_url": "https://placekitten.com/819/881",
+      "team_avatar_url": "https://picsum.photos/910/677",
+      "video_url": "https://tran.com/",
+      "mission_id": 5,
+      "current_status_id": 2,
+      "dashboard_iframe_url": "http://vu.com/",
+      "group_link": "http://vu.com/",
+      "created_at": "2025-02-26T22:59:01",
+      "updated_at": "2025-03-15T12:45:10"
+    },
+    {
+      "id": 7,
+      "title": "Phát triển hệ thống báo cáo thông minh",
+      "summary": "Phát triển hệ thống báo cáo thông minh - Thay số từ của nhưng.",
+      "full_description": "Cách là sẽ. Thì với thay chỉ cũng.\nCũng thế giống được đi của hơn đã. Cách các vài làm cái gần. Đã bạn theo. Cái một nhiều khi thì với đi.\nGần từ để vậy vài hơn có. Như tự cách như nào.",
+      "avatar_url": "https://dummyimage.com/87x699",
+      "team_avatar_url": "https://placekitten.com/841/640",
+      "video_url": "http://www.vu.info/",
+      "mission_id": 5,
+      "current_status_id": 2,
+      "dashboard_iframe_url": "https://www.tran.com/",
+      "group_link": "http://dang.com/",
+      "created_at": "2025-03-07T17:49:42",
+      "updated_at": "2025-02-14T00:33:14"
+    },
+    {
+      "id": 8,
+      "title": "Tối ưu hóa quy trình mở tài khoản",
+      "summary": "Tối ưu hóa quy trình mở tài khoản - Lớn trong sau thì của.",
+      "full_description": "Có trong có người tại.\nNếu vì mà đang cũng như. Của sẽ này dưới. Với tôi tôi đó của có theo.\nLớn người nơi và để vì. Có như các tại trong dưới. Và từ cái tại.",
+      "avatar_url": "https://dummyimage.com/85x287",
+      "team_avatar_url": "https://dummyimage.com/1024x580",
+      "video_url": "http://le.org/",
+      "mission_id": 10,
+      "current_status_id": 1,
+      "dashboard_iframe_url": "http://www.duong.biz/",
+      "group_link": "https://www.hoang.com/",
+      "created_at": "2025-05-06T00:15:05",
+      "updated_at": "2025-03-05T22:52:26"
+    },
+    {
+      "id": 9,
+      "title": "Xây dựng nền tảng đào tạo trực tuyến",
+      "summary": "Xây dựng nền tảng đào tạo trực tuyến - Cái khiến này được.",
+      "full_description": "Vậy đang của là số. Dưới và cách của nếu cũng một tại. Tại khiến của chưa hoặc. Nhưng hơn có như nào gần với.\nChỉ đang từ để vẫn. Cái dưới chưa tại gần sau gần. Là có của và nhiều với bên vài.",
+      "avatar_url": "https://picsum.photos/980/569",
+      "team_avatar_url": "https://dummyimage.com/787x216",
+      "video_url": "https://hoang.net/",
+      "mission_id": 12,
+      "current_status_id": 2,
+      "dashboard_iframe_url": "http://bui.com/",
+      "group_link": "http://pham.com/",
+      "created_at": "2025-01-19T06:08:02",
+      "updated_at": "2025-04-28T06:12:56"
+    },
+    {
+      "id": 10,
+      "title": "Ứng dụng Blockchain vào chuyển tiền",
+      "summary": "Ứng dụng Blockchain vào chuyển tiền - Cách gần nào.",
+      "full_description": "Điều đi không về có cái có cũng. Đang của thì từ đúng vẫn làm để. Với có không giống để cho.\nCủa thì khiến của khi. Nơi có sẽ đã. Đó từ số người.\nĐó người từ làm. Này và cho.",
+      "avatar_url": "https://placekitten.com/133/671",
+      "team_avatar_url": "https://picsum.photos/379/228",
+      "video_url": "https://www.duong.com/",
+      "mission_id": 3,
+      "current_status_id": 1,
+      "dashboard_iframe_url": "http://www.pham.com/",
+      "group_link": "http://pham.org/",
+      "created_at": "2025-05-04T09:26:46",
+      "updated_at": "2025-04-28T10:25:29"
+    },
+    {
+      "id": 11,
+      "title": "Phát triển hệ thống quản lý rủi ro",
+      "summary": "Phát triển hệ thống quản lý rủi ro - Thì nhiều giữa mỗi nhiều.",
+      "full_description": "Để cũng nào tại một nhiều. Dưới trong khi từ rất nào nơi như.\nGần thì như có nơi gần trong. Trong trong để làm. Vài nếu cũng từ.\nGiữa nhiều có nhưng dưới nào. Theo vài như đã làm. Người hoặc nếu một.",
+      "avatar_url": "https://picsum.photos/926/169",
+      "team_avatar_url": "https://picsum.photos/200/1005",
+      "video_url": "https://nguyen.info/",
+      "mission_id": 4,
+      "current_status_id": 1,
+      "dashboard_iframe_url": "https://www.vu.com/",
+      "group_link": "https://mai.com/",
+      "created_at": "2025-05-07T01:08:35",
+      "updated_at": "2025-04-11T01:41:14"
+    },
+    {
+      "id": 12,
+      "title": "Tối ưu hóa vận hành chi nhánh",
+      "summary": "Tối ưu hóa vận hành chi nhánh - Không nào của và như để.",
+      "full_description": "Cũng hơn vậy. Là đi nhiều đã.\nSau vẫn thế tôi. Thế mỗi vài tại. Trong chưa từ như khiến có là sau.\nCũng theo đúng khiến cái thì số.\nĐi cái khiến lớn. Là của đó. Về nhiều với.",
+      "avatar_url": "https://placekitten.com/698/70",
+      "team_avatar_url": "https://dummyimage.com/12x129",
+      "video_url": "https://hoang.net/",
+      "mission_id": 15,
+      "current_status_id": 2,
+      "dashboard_iframe_url": "https://nguyen.net/",
+      "group_link": "http://pham.org/",
+      "created_at": "2025-03-22T05:50:16",
+      "updated_at": "2025-03-23T08:43:12"
+    },
+    {
+      "id": 13,
+      "title": "Nâng cao trải nghiệm khách hàng số",
+      "summary": "Nâng cao trải nghiệm khách hàng số - Lớn đó giống vậy mỗi.",
+      "full_description": "Đang các nếu một đến tôi nhưng. Gần về nơi nhưng này bên vì. Thay giữa của về.\nNgười nào để này của đi. Dưới nếu với mà gần với.\nĐiều được là số đang vậy.",
+      "avatar_url": "https://dummyimage.com/829x732",
+      "team_avatar_url": "https://dummyimage.com/386x649",
+      "video_url": "https://www.duong.info/",
+      "mission_id": 14,
+      "current_status_id": 3,
+      "dashboard_iframe_url": "https://bui.com/",
+      "group_link": "http://www.pham.com/",
+      "created_at": "2025-03-04T07:25:48",
+      "updated_at": "2025-02-15T11:58:22"
+    },
+    {
+      "id": 14,
+      "title": "Phát triển sản phẩm tiết kiệm số",
+      "summary": "Phát triển sản phẩm tiết kiệm số - Đã với chưa của có và.",
+      "full_description": "Cái sẽ đang là. Khiến bên là hơn và đến. Theo như thay để trong một mà. Là các lớn.\nBạn theo nơi là mỗi từ. Tôi chỉ cái các giống.\nThay hơn khi mà theo của. Các trong để là theo. Được đi như tại.",
+      "avatar_url": "https://placekitten.com/199/432",
+      "team_avatar_url": "https://dummyimage.com/693x348",
+      "video_url": "http://duong.org/",
+      "mission_id": 5,
+      "current_status_id": 4,
+      "dashboard_iframe_url": "http://bui.info/",
+      "group_link": "https://nguyen.info/",
+      "created_at": "2025-05-15T21:26:46",
+      "updated_at": "2025-06-25T07:17:32"
+    },
+    {
+      "id": 15,
+      "title": "Tăng cường bảo mật dữ liệu khách hàng",
+      "summary": "Tăng cường bảo mật dữ liệu khách hàng - Như khi nơi hơn được trong cũng.",
+      "full_description": "Tự nhiều khiến chỉ các.\nThế điều cũng hơn. Thì cái thay vài tôi có. Cái được người của này nếu.\nĐể người nhưng điều mỗi từng. Vì các tự.",
+      "avatar_url": "https://dummyimage.com/77x586",
+      "team_avatar_url": "https://placekitten.com/471/428",
+      "video_url": "http://www.tran.com/",
+      "mission_id": 18,
+      "current_status_id": 1,
+      "dashboard_iframe_url": "http://nguyen.com/",
+      "group_link": "http://www.mai.org/",
+      "created_at": "2025-04-19T09:37:14",
+      "updated_at": "2025-03-29T00:01:43"
+    },
+    {
+      "id": 16,
+      "title": "Ứng dụng Big Data trong phân tích tín dụng",
+      "summary": "Ứng dụng Big Data trong phân tích tín dụng - Nếu nhưng đang các tự tự.",
+      "full_description": "Như khi làm có.\nĐiều bạn một thì cách nếu. Thay theo trong cho giữa.\nGần thay giữa. Đi vài hơn này với. Các giữa nhưng đó không của. Tự hơn sẽ với.\nSố để thế với không. Như vẫn vậy vài từng hơn có.",
+      "avatar_url": "https://placekitten.com/707/576",
+      "team_avatar_url": "https://dummyimage.com/240x57",
+      "video_url": "http://www.vu.com/",
+      "mission_id": 10,
+      "current_status_id": 1,
+      "dashboard_iframe_url": "https://www.hoang.com/",
+      "group_link": "http://www.duong.com/",
+      "created_at": "2025-02-07T02:36:00",
+      "updated_at": "2025-06-21T08:49:18"
+    },
+    {
+      "id": 17,
+      "title": "Tối ưu hóa quy trình giao dịch ATM",
+      "summary": "Tối ưu hóa quy trình giao dịch ATM - Từ với nhưng giống đúng hoặc và.",
+      "full_description": "Giống nếu vẫn như từ tại mà. Có tại nhiều khi. Trong mà một gần các thay nếu. Tại thay dưới khiến.\nGần đến thế giống dưới hơn. Để và này đó. Theo cũng hơn hơn như vậy.",
+      "avatar_url": "https://dummyimage.com/280x318",
+      "team_avatar_url": "https://dummyimage.com/891x278",
+      "video_url": "http://dang.com/",
+      "mission_id": 5,
+      "current_status_id": 3,
+      "dashboard_iframe_url": "https://www.nguyen.com/",
+      "group_link": "https://le.com/",
+      "created_at": "2025-04-19T17:08:08",
+      "updated_at": "2025-03-22T03:28:08"
+    },
+    {
+      "id": 18,
+      "title": "Phát triển hệ sinh thái dịch vụ số",
+      "summary": "Phát triển hệ sinh thái dịch vụ số - Từ người khi mà từ thay đi.",
+      "full_description": "Trong từng thì từng khiến nếu trong. Bên như cho cách chỉ.\nNào đi đã về tại. Vậy tại chưa trong. Cũng có với vài này.\nĐể vài cái lớn đến như vì có. Gần mà đến giống cái tại để. Số các như.",
+      "avatar_url": "https://picsum.photos/614/357",
+      "team_avatar_url": "https://dummyimage.com/767x315",
+      "video_url": "https://www.bui.biz/",
+      "mission_id": 7,
+      "current_status_id": 4,
+      "dashboard_iframe_url": "https://www.hoang.com/",
+      "group_link": "https://pham.com/",
+      "created_at": "2025-03-19T14:22:48",
+      "updated_at": "2025-04-02T08:04:02"
+    },
+    {
+      "id": 19,
+      "title": "Triển khai chương trình thi đua sáng kiến",
+      "summary": "Triển khai chương trình thi đua sáng kiến - Có có đến hoặc nếu.",
+      "full_description": "Có nào số. Giữa từ điều tại.\nThay vẫn đang làm vì hơn là. Đó không thế từ đi đã đó. Điều của nhiều là để nhiều của.\nSẽ thế từ tôi các đi. Đúng hoặc từ. Với của rất đi.",
+      "avatar_url": "https://dummyimage.com/141x403",
+      "team_avatar_url": "https://dummyimage.com/349x523",
+      "video_url": "http://duong.org/",
+      "mission_id": 11,
+      "current_status_id": 4,
+      "dashboard_iframe_url": "http://www.le.net/",
+      "group_link": "https://www.mai.com/",
+      "created_at": "2025-04-14T01:23:36",
+      "updated_at": "2025-01-18T06:13:42"
+    },
+    {
+      "id": 20,
+      "title": "Đổi mới quy trình quản trị nội bộ",
+      "summary": "Đổi mới quy trình quản trị nội bộ - Thế như tự và đến không hơn.",
+      "full_description": "Dưới rất nếu trong.\nHoặc đang đang để cũng đi. Nào với khi giữa.\nTheo cũng như đang và rất các. Cái giữa nếu thay. Các thế khi với để nhưng thế.",
+      "avatar_url": "https://picsum.photos/79/498",
+      "team_avatar_url": "https://placekitten.com/103/487",
+      "video_url": "http://duong.biz/",
+      "mission_id": 20,
+      "current_status_id": 3,
+      "dashboard_iframe_url": "https://www.hoang.biz/",
+      "group_link": "http://www.mai.com/",
+      "created_at": "2025-06-16T00:20:15",
+      "updated_at": "2025-02-13T18:50:21"
+    }
+  ],
+  "news_articles": [
+    {
+      "id": 1,
+      "title": "VietinBank ra mắt nền tảng ngân hàng số thế hệ mới",
+      "summary": "VietinBank ra mắt nền tảng ngân hàng số thế hệ mới - Sau như nơi như với này.",
+      "content": "Sẽ nhiều để. Để với để từ đó đến.\nNhư một trong của nào. Có thì cái cũng trong.\nCho từ trong thế hơn này. Đó không đó cách của mà.\nNếu để thì người làm đi.",
+      "image_url": "https://picsum.photos/485/198",
+      "author_id": "1d2b70e9-e80d-499a-92fc-745c584ef8ed",
+      "category_id": 6,
+      "is_featured": false,
+      "published_at": "2025-04-29T10:15:34"
+    },
+    {
+      "id": 2,
+      "title": "Ứng dụng AI trong quy trình thẩm định tín dụng",
+      "summary": "Ứng dụng AI trong quy trình thẩm định tín dụng - Về giữa từ rất giống điều.",
+      "content": "Nhưng nhưng từng tôi. Lớn nhưng sẽ như đang nhưng khi.\nNhưng cái mà đã vài không. Để vài đi điều được trong.",
+      "image_url": "https://picsum.photos/404/695",
+      "author_id": "895ee238-9b5b-4cfd-a86d-c87a06eb3736",
+      "category_id": 4,
+      "is_featured": false,
+      "published_at": "2025-05-18T18:48:10"
+    },
+    {
+      "id": 3,
+      "title": "Tự động hóa quy trình nội bộ với RPA",
+      "summary": "Tự động hóa quy trình nội bộ với RPA - Bên gần đúng để với.",
+      "content": "Từ mà nếu của đi cái đó khi. Người sau hoặc như điều.\nVới các thế cũng với. Các vì tôi như vì.\nĐã như đến được như. Đã vài đang. Từng nếu hơn có. Vài cũng về từ sau không từ.",
+      "image_url": "https://dummyimage.com/140x902",
+      "author_id": "dda0b651-6f10-429e-a65f-4d80a1bd8e9c",
+      "category_id": 1,
+      "is_featured": false,
+      "published_at": "2025-01-21T23:30:51"
+    },
+    {
+      "id": 4,
+      "title": "Chatbot thông minh hỗ trợ khách hàng 24/7",
+      "summary": "Chatbot thông minh hỗ trợ khách hàng 24/7 - Trong có cái tại nhưng.",
+      "content": "Để mỗi bạn nào đến lớn về. Của nếu lớn đi.\nThế tại người nào. Cũng một mà hơn cho trong một của. Có tôi các rất với để để.\nĐã làm hơn không đang cách. Từ vẫn đó vì.",
+      "image_url": "https://placekitten.com/384/945",
+      "author_id": "3f00c9ec-08e5-45a2-86c1-e54b77d2a0ae",
+      "category_id": 1,
+      "is_featured": true,
+      "published_at": "2025-05-22T18:49:11"
+    },
+    {
+      "id": 5,
+      "title": "Nâng cấp hệ thống bảo mật thông tin",
+      "summary": "Nâng cấp hệ thống bảo mật thông tin - Theo bên sau không nếu.",
+      "content": "Nhiều không tại khi hơn. Đến như nhưng nơi để này khiến.\nTừ hơn từ không. Dưới và thế của tôi từ nhiều.\nVà của cho vẫn tại. Rất chỉ dưới để để thế. Chưa dưới đúng nhiều.",
+      "image_url": "https://picsum.photos/185/622",
+      "author_id": "728fcac0-7677-4851-b230-841f6e1a0b92",
+      "category_id": 2,
+      "is_featured": false,
+      "published_at": "2025-05-09T22:37:31"
+    },
+    {
+      "id": 6,
+      "title": "Chương trình đào tạo nhân viên về công nghệ mới",
+      "summary": "Chương trình đào tạo nhân viên về công nghệ mới - Cách tự cho bạn.",
+      "content": "Đúng hơn vài cho cái vẫn. Của nào nếu số nếu. Đã thế có bạn nào cái.\nHơn nào về vậy. Hơn với nào như nhiều. Cũng với với.\nMà chỉ với nếu không có. Mỗi để vì nhưng vậy đang. Một chỉ của này tại.",
+      "image_url": "https://placekitten.com/847/930",
+      "author_id": "42612742-1085-48ae-b86d-cdb5df6f575b",
+      "category_id": 2,
+      "is_featured": true,
+      "published_at": "2025-02-15T02:41:57"
+    },
+    {
+      "id": 7,
+      "title": "Phát triển ứng dụng ngân hàng số",
+      "summary": "Phát triển ứng dụng ngân hàng số - Để tại chỉ như cái của.",
+      "content": "Vậy chưa nhưng trong rất. Được tự có rất lớn mỗi về. Về sau vẫn nhưng của đúng rất trong.\nNhư theo như như với. Đã và từng của.",
+      "image_url": "https://placekitten.com/296/967",
+      "author_id": "e50bc5bc-2276-472f-82bc-0383c82f56e1",
+      "category_id": 4,
+      "is_featured": false,
+      "published_at": "2025-04-07T19:43:35"
+    },
+    {
+      "id": 8,
+      "title": "Tối ưu hóa trải nghiệm khách hàng",
+      "summary": "Tối ưu hóa trải nghiệm khách hàng - Lớn hơn một về như để như.",
+      "content": "Giữa cũng mỗi. Có hoặc của mỗi.\nBạn dưới khiến cái mỗi. Như khiến giữa thế từ. Giống bên và theo đúng hơn. Giữa người cũng tại nhiều nhiều từ.",
+      "image_url": "https://placekitten.com/76/451",
+      "author_id": "936cf63f-5000-4e7f-b78d-1daf89a9cc8a",
+      "category_id": 6,
+      "is_featured": false,
+      "published_at": "2025-02-23T17:36:10"
+    },
+    {
+      "id": 9,
+      "title": "Triển khai chương trình thi đua sáng kiến",
+      "summary": "Triển khai chương trình thi đua sáng kiến - Hơn vậy như thì hơn đến cái.",
+      "content": "Nếu vài sẽ chưa từ. Không nào giữa điều. Trong giống từ giống đang.\nNếu nào nào như. Một hoặc cũng tự các vẫn nhiều và.\nVà khi một với. Để số điều tại khi.",
+      "image_url": "https://picsum.photos/719/529",
+      "author_id": "42612742-1085-48ae-b86d-cdb5df6f575b",
+      "category_id": 4,
+      "is_featured": true,
+      "published_at": "2025-05-22T10:59:07"
+    },
+    {
+      "id": 10,
+      "title": "Ứng dụng Blockchain trong giao dịch",
+      "summary": "Ứng dụng Blockchain trong giao dịch - Mà đang mà cho thì.",
+      "content": "Một của là cho đi mỗi các.\nKhiến này cái tôi như làm gần. Vậy thế cách nhưng bạn trong. Chưa cách từ vậy tôi dưới có.",
+      "image_url": "https://dummyimage.com/1012x637",
+      "author_id": "42612742-1085-48ae-b86d-cdb5df6f575b",
+      "category_id": 3,
+      "is_featured": true,
+      "published_at": "2025-05-30T00:53:20"
+    },
+    {
+      "id": 11,
+      "title": "Phát triển hệ thống Chatbot",
+      "summary": "Phát triển hệ thống Chatbot - Như vì dưới sau hơn.",
+      "content": "Đi thế hơn của một khiến vài. Hơn đã về nơi để. Về để khi gần cách gần.\nTôi hơn là là đúng gần. Điều nhiều giống không. Cho hơn thì như nơi.\nVậy của tôi tại có được được. Người gần của khi.",
+      "image_url": "https://dummyimage.com/35x749",
+      "author_id": "55e08f42-e7e5-4f9d-8893-843ca22c11d5",
+      "category_id": 1,
+      "is_featured": false,
+      "published_at": "2025-04-07T02:04:22"
+    },
+    {
+      "id": 12,
+      "title": "Tăng cường quản lý rủi ro",
+      "summary": "Tăng cường quản lý rủi ro - Đã đến cho đi nhiều sẽ khi.",
+      "content": "Của thì đúng để vài nhiều để. Tự có bên của từ nào của. Gần hoặc và như một một.\nCách như đang người như. Điều từng cách vẫn giữa các từ được. Thì đã đi cũng chỉ là vì.",
+      "image_url": "https://placekitten.com/2/158",
+      "author_id": "3f00c9ec-08e5-45a2-86c1-e54b77d2a0ae",
+      "category_id": 4,
+      "is_featured": true,
+      "published_at": "2025-04-03T10:06:18"
+    },
+    {
+      "id": 13,
+      "title": "Cải tiến quy trình giao dịch",
+      "summary": "Cải tiến quy trình giao dịch - Nhưng mà dưới chỉ để khi.",
+      "content": "Tại bên từ. Đi cũng bên được. Của dưới bên bên.\nTrong khiến mà đã nào. Các nếu vậy vì sau đã. Sau hơn cho cũng chưa trong.\nNếu vậy đúng cách rất. Có để hơn nhiều nhiều có.",
+      "image_url": "https://placekitten.com/456/620",
+      "author_id": "bef7c7ca-bb8d-4538-b916-6cbb8ced5a18",
+      "category_id": 4,
+      "is_featured": false,
+      "published_at": "2025-02-09T21:00:58"
+    },
+    {
+      "id": 14,
+      "title": "Đổi mới sản phẩm dịch vụ",
+      "summary": "Đổi mới sản phẩm dịch vụ - Như để làm từ giữa có.",
+      "content": "Để mà khiến vài.\nĐể trong chưa như. Để như bên rất trong các để hoặc.\nChỉ rất điều tôi như giống mỗi. Từ giống chưa nhưng có của. Với điều để nhiều các hoặc.",
+      "image_url": "https://picsum.photos/272/117",
+      "author_id": "dda0b651-6f10-429e-a65f-4d80a1bd8e9c",
+      "category_id": 3,
+      "is_featured": false,
+      "published_at": "2025-05-23T12:05:32"
+    },
+    {
+      "id": 15,
+      "title": "Nâng cao chất lượng đào tạo",
+      "summary": "Nâng cao chất lượng đào tạo - Hoặc là có như để của để.",
+      "content": "Là đúng làm đã. Điều hơn khi vẫn.\nNày thay cũng sau. Từng từ theo như. Nhiều để và từ đến cũng cái.\nLà với trong để như hoặc. Và tại tôi hơn của được. Lớn khiến vì của từ các cho.",
+      "image_url": "https://picsum.photos/634/159",
+      "author_id": "728fcac0-7677-4851-b230-841f6e1a0b92",
+      "category_id": 5,
+      "is_featured": true,
+      "published_at": "2025-02-06T00:13:09"
+    },
+    {
+      "id": 16,
+      "title": "Tăng trưởng tín dụng bền vững",
+      "summary": "Tăng trưởng tín dụng bền vững - Các để của.",
+      "content": "Để chưa đã theo của vì. Hoặc thay bên. Đi các cho.\nSẽ người tại đến trong. Có của đúng để khi đó về bên. Vẫn và một đó lớn thay.",
+      "image_url": "https://picsum.photos/909/668",
+      "author_id": "55e08f42-e7e5-4f9d-8893-843ca22c11d5",
+      "category_id": 4,
+      "is_featured": true,
+      "published_at": "2025-04-01T18:08:36"
+    },
+    {
+      "id": 17,
+      "title": "Phát triển dịch vụ khách hàng ưu tiên",
+      "summary": "Phát triển dịch vụ khách hàng ưu tiên - Giống và tại nhưng đến.",
+      "content": "Sẽ sẽ để từ. Để bên tại khiến đang điều đi. Để mỗi đúng.\nBạn có hơn mỗi để có. Khiến có mỗi về cũng.\nCủa là khiến nào trong và. Trong với vì tự. Từng từng cái từng cũng sau.",
+      "image_url": "https://placekitten.com/84/26",
+      "author_id": "c884d75b-d390-40ba-9259-1f87d2e2c408",
+      "category_id": 6,
+      "is_featured": true,
+      "published_at": "2025-02-12T17:32:46"
+    },
+    {
+      "id": 18,
+      "title": "Ứng dụng dữ liệu lớn (Big Data)",
+      "summary": "Ứng dụng dữ liệu lớn (Big Data) - Bạn cũng về chỉ rất vẫn.",
+      "content": "Đó có vẫn mỗi một.\nSố và bên của vì cái nào. Được bạn cái khiến.\nTrong là nhưng như. Nếu từng lớn đã cách.\nCó của đó đến của tại làm bạn. Từ không nhiều khiến là nơi lớn.",
+      "image_url": "https://dummyimage.com/556x199",
+      "author_id": "b473e86b-2392-4367-919f-1eb1367f619c",
+      "category_id": 3,
+      "is_featured": false,
+      "published_at": "2025-01-07T15:36:20"
+    },
+    {
+      "id": 19,
+      "title": "Tối ưu hóa vận hành chi nhánh",
+      "summary": "Tối ưu hóa vận hành chi nhánh - Cái trong từ thế.",
+      "content": "Đến trong nhiều của của như số. Không này khiến của đến trong để.\nVì đó hơn chưa vài thì cho của. Nào thay các cũng mà một cách nơi. Như có theo của tại.",
+      "image_url": "https://dummyimage.com/40x724",
+      "author_id": "b473e86b-2392-4367-919f-1eb1367f619c",
+      "category_id": 1,
+      "is_featured": true,
+      "published_at": "2025-04-26T10:24:29"
+    },
+    {
+      "id": 20,
+      "title": "Phát triển hệ sinh thái số",
+      "summary": "Phát triển hệ sinh thái số - Với thế rất.",
+      "content": "Như đi mà cũng. Bên chỉ số cũng hơn như. Để từng có nếu đi đó của này. Rất cách trong để thì đến với.\nVới đó không giống. Như có cái giống như. Là người để nơi cho khi rất.",
+      "image_url": "https://dummyimage.com/90x826",
+      "author_id": "936cf63f-5000-4e7f-b78d-1daf89a9cc8a",
+      "category_id": 5,
+      "is_featured": true,
+      "published_at": "2025-03-04T07:22:23"
+    }
+  ],
+  "recognition_posts": [
+    {
+      "id": 1,
+      "poster_id": "dda0b651-6f10-429e-a65f-4d80a1bd8e9c",
+      "content": "🎉 Vinh danh các Chi nhánh xuất sắc trong chương trình thi đua năm 2024!",
+      "created_at": "2025-06-07T00:10:01"
+    },
+    {
+      "id": 2,
+      "poster_id": "bef7c7ca-bb8d-4538-b916-6cbb8ced5a18",
+      "content": "🌟 Ghi nhận các đội nhóm sáng kiến tích cực năm 2024!",
+      "created_at": "2025-02-13T18:38:28"
+    },
+    {
+      "id": 3,
+      "poster_id": "42612742-1085-48ae-b86d-cdb5df6f575b",
+      "content": "🏆 Ban Chuyển đổi số khen thưởng các phòng ban triển khai thành công nền tảng đào tạo trực tuyến.",
+      "created_at": "2025-06-05T11:05:37"
+    },
+    {
+      "id": 4,
+      "poster_id": "aaf11df4-02e9-40e0-b67e-e3f31cb0cfd1",
+      "content": "👏 Vinh danh cá nhân xuất sắc trong phát triển sản phẩm mới.",
+      "created_at": "2025-05-30T05:23:01"
+    },
+    {
+      "id": 5,
+      "poster_id": "bef7c7ca-bb8d-4538-b916-6cbb8ced5a18",
+      "content": "🎊 Ghi nhận các sáng kiến đổi mới quy trình nội bộ.",
+      "created_at": "2025-01-13T01:10:20"
+    },
+    {
+      "id": 6,
+      "poster_id": "936cf63f-5000-4e7f-b78d-1daf89a9cc8a",
+      "content": "💡 Tôn vinh các nhóm phát triển ứng dụng ngân hàng số.",
+      "created_at": "2025-03-23T08:10:58"
+    },
+    {
+      "id": 7,
+      "poster_id": "2654d8af-cc44-4d73-84a7-e59718d978fe",
+      "content": "🏅 Khen thưởng các phòng giao dịch đạt thành tích vượt trội.",
+      "created_at": "2025-03-10T00:52:12"
+    },
+    {
+      "id": 8,
+      "poster_id": "bef7c7ca-bb8d-4538-b916-6cbb8ced5a18",
+      "content": "🎖️ Vinh danh các chi nhánh triển khai thành công RPA.",
+      "created_at": "2025-06-24T15:45:26"
+    },
+    {
+      "id": 9,
+      "poster_id": "55e08f42-e7e5-4f9d-8893-843ca22c11d5",
+      "content": "🏅 Ghi nhận các cá nhân xuất sắc trong đào tạo công nghệ.",
+      "created_at": "2025-01-05T19:29:48"
+    },
+    {
+      "id": 10,
+      "poster_id": "aaf11df4-02e9-40e0-b67e-e3f31cb0cfd1",
+      "content": "🌟 Tôn vinh các nhóm phát triển hệ sinh thái số.",
+      "created_at": "2025-04-14T16:21:56"
+    },
+    {
+      "id": 11,
+      "poster_id": "895ee238-9b5b-4cfd-a86d-c87a06eb3736",
+      "content": "🎉 Vinh danh các phòng ban đổi mới sản phẩm dịch vụ.",
+      "created_at": "2025-03-14T07:30:59"
+    },
+    {
+      "id": 12,
+      "poster_id": "c884d75b-d390-40ba-9259-1f87d2e2c408",
+      "content": "🏆 Khen thưởng các nhóm triển khai AI vào chăm sóc khách hàng.",
+      "created_at": "2025-03-30T06:03:40"
+    },
+    {
+      "id": 13,
+      "poster_id": "936cf63f-5000-4e7f-b78d-1daf89a9cc8a",
+      "content": "👏 Ghi nhận các sáng kiến tối ưu hóa vận hành.",
+      "created_at": "2025-06-03T14:31:29"
+    },
+    {
+      "id": 14,
+      "poster_id": "42612742-1085-48ae-b86d-cdb5df6f575b",
+      "content": "🎊 Vinh danh các chi nhánh phát triển dịch vụ khách hàng ưu tiên.",
+      "created_at": "2025-03-10T17:18:13"
+    },
+    {
+      "id": 15,
+      "poster_id": "f0fecc17-a6a7-4a90-abc1-348f153412ca",
+      "content": "💡 Tôn vinh các nhóm phát triển hệ thống bảo mật.",
+      "created_at": "2025-01-29T12:16:43"
+    },
+    {
+      "id": 16,
+      "poster_id": "bef7c7ca-bb8d-4538-b916-6cbb8ced5a18",
+      "content": "🏅 Khen thưởng các phòng giao dịch đạt thành tích xuất sắc.",
+      "created_at": "2025-03-09T18:05:29"
+    },
+    {
+      "id": 17,
+      "poster_id": "654c5049-a425-46e2-9690-6a0c9d52bf46",
+      "content": "🎖️ Vinh danh các chi nhánh triển khai thành công Blockchain.",
+      "created_at": "2025-03-24T11:34:52"
+    },
+    {
+      "id": 18,
+      "poster_id": "e26e3cb6-37fe-4b41-8df6-96e3b0a07528",
+      "content": "🏅 Ghi nhận các cá nhân xuất sắc trong phân tích dữ liệu lớn.",
+      "created_at": "2025-05-26T05:25:23"
+    },
+    {
+      "id": 19,
+      "poster_id": "728fcac0-7677-4851-b230-841f6e1a0b92",
+      "content": "🌟 Tôn vinh các nhóm phát triển sản phẩm tiết kiệm số.",
+      "created_at": "2025-05-28T15:43:54"
+    },
+    {
+      "id": 20,
+      "poster_id": "654c5049-a425-46e2-9690-6a0c9d52bf46",
+      "content": "🎉 Vinh danh các phòng ban đổi mới quy trình quản trị.",
+      "created_at": "2025-02-22T01:25:45"
+    }
+  ],
+  "initiative_divisions": [
+    {
+      "initiative_id": 1,
+      "division_id": 14
+    },
+    {
+      "initiative_id": 1,
+      "division_id": 5
+    },
+    {
+      "initiative_id": 1,
+      "division_id": 19
+    },
+    {
+      "initiative_id": 2,
+      "division_id": 6
+    },
+    {
+      "initiative_id": 2,
+      "division_id": 12
+    },
+    {
+      "initiative_id": 2,
+      "division_id": 13
+    },
+    {
+      "initiative_id": 2,
+      "division_id": 20
+    },
+    {
+      "initiative_id": 3,
+      "division_id": 8
+    },
+    {
+      "initiative_id": 3,
+      "division_id": 10
+    },
+    {
+      "initiative_id": 4,
+      "division_id": 11
+    },
+    {
+      "initiative_id": 4,
+      "division_id": 20
+    },
+    {
+      "initiative_id": 4,
+      "division_id": 5
+    },
+    {
+      "initiative_id": 5,
+      "division_id": 1
+    },
+    {
+      "initiative_id": 5,
+      "division_id": 20
+    },
+    {
+      "initiative_id": 6,
+      "division_id": 3
+    },
+    {
+      "initiative_id": 6,
+      "division_id": 16
+    },
+    {
+      "initiative_id": 6,
+      "division_id": 1
+    },
+    {
+      "initiative_id": 7,
+      "division_id": 9
+    },
+    {
+      "initiative_id": 7,
+      "division_id": 18
+    },
+    {
+      "initiative_id": 7,
+      "division_id": 7
+    },
+    {
+      "initiative_id": 7,
+      "division_id": 4
+    },
+    {
+      "initiative_id": 8,
+      "division_id": 9
+    },
+    {
+      "initiative_id": 8,
+      "division_id": 12
+    },
+    {
+      "initiative_id": 8,
+      "division_id": 13
+    },
+    {
+      "initiative_id": 9,
+      "division_id": 15
+    },
+    {
+      "initiative_id": 9,
+      "division_id": 10
+    },
+    {
+      "initiative_id": 9,
+      "division_id": 9
+    },
+    {
+      "initiative_id": 9,
+      "division_id": 12
+    },
+    {
+      "initiative_id": 10,
+      "division_id": 6
+    },
+    {
+      "initiative_id": 10,
+      "division_id": 12
+    },
+    {
+      "initiative_id": 11,
+      "division_id": 1
+    },
+    {
+      "initiative_id": 11,
+      "division_id": 9
+    },
+    {
+      "initiative_id": 12,
+      "division_id": 14
+    },
+    {
+      "initiative_id": 12,
+      "division_id": 12
+    },
+    {
+      "initiative_id": 12,
+      "division_id": 7
+    },
+    {
+      "initiative_id": 13,
+      "division_id": 15
+    },
+    {
+      "initiative_id": 13,
+      "division_id": 20
+    },
+    {
+      "initiative_id": 14,
+      "division_id": 7
+    },
+    {
+      "initiative_id": 14,
+      "division_id": 19
+    },
+    {
+      "initiative_id": 14,
+      "division_id": 5
+    },
+    {
+      "initiative_id": 14,
+      "division_id": 4
+    },
+    {
+      "initiative_id": 15,
+      "division_id": 5
+    },
+    {
+      "initiative_id": 15,
+      "division_id": 11
+    },
+    {
+      "initiative_id": 16,
+      "division_id": 16
+    },
+    {
+      "initiative_id": 16,
+      "division_id": 4
+    },
+    {
+      "initiative_id": 16,
+      "division_id": 12
+    },
+    {
+      "initiative_id": 17,
+      "division_id": 7
+    },
+    {
+      "initiative_id": 17,
+      "division_id": 10
+    },
+    {
+      "initiative_id": 17,
+      "division_id": 8
+    },
+    {
+      "initiative_id": 18,
+      "division_id": 11
+    },
+    {
+      "initiative_id": 18,
+      "division_id": 7
+    },
+    {
+      "initiative_id": 18,
+      "division_id": 6
+    },
+    {
+      "initiative_id": 18,
+      "division_id": 15
+    },
+    {
+      "initiative_id": 19,
+      "division_id": 12
+    },
+    {
+      "initiative_id": 19,
+      "division_id": 1
+    },
+    {
+      "initiative_id": 19,
+      "division_id": 3
+    },
+    {
+      "initiative_id": 20,
+      "division_id": 1
+    },
+    {
+      "initiative_id": 20,
+      "division_id": 3
+    },
+    {
+      "initiative_id": 20,
+      "division_id": 20
+    },
+    {
+      "initiative_id": 20,
+      "division_id": 6
+    }
+  ],
+  "initiative_members": [
+    {
+      "initiative_id": 1,
+      "user_id": "dda0b651-6f10-429e-a65f-4d80a1bd8e9c",
+      "role": "Cố vấn"
+    },
+    {
+      "initiative_id": 1,
+      "user_id": "728fcac0-7677-4851-b230-841f6e1a0b92",
+      "role": "Cố vấn"
+    },
+    {
+      "initiative_id": 1,
+      "user_id": "bef7c7ca-bb8d-4538-b916-6cbb8ced5a18",
+      "role": "Thành viên"
+    },
+    {
+      "initiative_id": 2,
+      "user_id": "b473e86b-2392-4367-919f-1eb1367f619c",
+      "role": "Cố vấn"
+    },
+    {
+      "initiative_id": 2,
+      "user_id": "83bca49c-200b-4455-8da4-ac0f87e510b7",
+      "role": "Thành viên"
+    },
+    {
+      "initiative_id": 2,
+      "user_id": "6978083f-56c4-4726-99e7-821cc775e69a",
+      "role": "Cố vấn"
+    },
+    {
+      "initiative_id": 2,
+      "user_id": "936cf63f-5000-4e7f-b78d-1daf89a9cc8a",
+      "role": "Cố vấn"
+    },
+    {
+      "initiative_id": 2,
+      "user_id": "3f00c9ec-08e5-45a2-86c1-e54b77d2a0ae",
+      "role": "Thành viên"
+    },
+    {
+      "initiative_id": 3,
+      "user_id": "1d2b70e9-e80d-499a-92fc-745c584ef8ed",
+      "role": "Cố vấn"
+    },
+    {
+      "initiative_id": 3,
+      "user_id": "936cf63f-5000-4e7f-b78d-1daf89a9cc8a",
+      "role": "Trưởng nhóm"
+    },
+    {
+      "initiative_id": 3,
+      "user_id": "b473e86b-2392-4367-919f-1eb1367f619c",
+      "role": "Thành viên"
+    },
+    {
+      "initiative_id": 3,
+      "user_id": "42612742-1085-48ae-b86d-cdb5df6f575b",
+      "role": "Thành viên"
+    },
+    {
+      "initiative_id": 3,
+      "user_id": "aaf11df4-02e9-40e0-b67e-e3f31cb0cfd1",
+      "role": "Cố vấn"
+    },
+    {
+      "initiative_id": 3,
+      "user_id": "2654d8af-cc44-4d73-84a7-e59718d978fe",
+      "role": "Thành viên"
+    },
+    {
+      "initiative_id": 4,
+      "user_id": "3f00c9ec-08e5-45a2-86c1-e54b77d2a0ae",
+      "role": "Trưởng nhóm"
+    },
+    {
+      "initiative_id": 4,
+      "user_id": "1d2b70e9-e80d-499a-92fc-745c584ef8ed",
+      "role": "Thành viên"
+    },
+    {
+      "initiative_id": 4,
+      "user_id": "728fcac0-7677-4851-b230-841f6e1a0b92",
+      "role": "Cố vấn"
+    },
+    {
+      "initiative_id": 4,
+      "user_id": "55e08f42-e7e5-4f9d-8893-843ca22c11d5",
+      "role": "Trưởng nhóm"
+    },
+    {
+      "initiative_id": 5,
+      "user_id": "2654d8af-cc44-4d73-84a7-e59718d978fe",
+      "role": "Thành viên"
+    },
+    {
+      "initiative_id": 5,
+      "user_id": "aaf11df4-02e9-40e0-b67e-e3f31cb0cfd1",
+      "role": "Cố vấn"
+    },
+    {
+      "initiative_id": 5,
+      "user_id": "c884d75b-d390-40ba-9259-1f87d2e2c408",
+      "role": "Cố vấn"
+    },
+    {
+      "initiative_id": 5,
+      "user_id": "936cf63f-5000-4e7f-b78d-1daf89a9cc8a",
+      "role": "Thành viên"
+    },
+    {
+      "initiative_id": 5,
+      "user_id": "e26e3cb6-37fe-4b41-8df6-96e3b0a07528",
+      "role": "Thành viên"
+    },
+    {
+      "initiative_id": 6,
+      "user_id": "42612742-1085-48ae-b86d-cdb5df6f575b",
+      "role": "Trưởng nhóm"
+    },
+    {
+      "initiative_id": 6,
+      "user_id": "6978083f-56c4-4726-99e7-821cc775e69a",
+      "role": "Trưởng nhóm"
+    },
+    {
+      "initiative_id": 6,
+      "user_id": "aaf11df4-02e9-40e0-b67e-e3f31cb0cfd1",
+      "role": "Cố vấn"
+    },
+    {
+      "initiative_id": 6,
+      "user_id": "bef7c7ca-bb8d-4538-b916-6cbb8ced5a18",
+      "role": "Cố vấn"
+    },
+    {
+      "initiative_id": 6,
+      "user_id": "f0fecc17-a6a7-4a90-abc1-348f153412ca",
+      "role": "Cố vấn"
+    },
+    {
+      "initiative_id": 7,
+      "user_id": "83bca49c-200b-4455-8da4-ac0f87e510b7",
+      "role": "Cố vấn"
+    },
+    {
+      "initiative_id": 7,
+      "user_id": "6978083f-56c4-4726-99e7-821cc775e69a",
+      "role": "Trưởng nhóm"
+    },
+    {
+      "initiative_id": 7,
+      "user_id": "dda0b651-6f10-429e-a65f-4d80a1bd8e9c",
+      "role": "Cố vấn"
+    },
+    {
+      "initiative_id": 7,
+      "user_id": "654c5049-a425-46e2-9690-6a0c9d52bf46",
+      "role": "Cố vấn"
+    },
+    {
+      "initiative_id": 7,
+      "user_id": "895ee238-9b5b-4cfd-a86d-c87a06eb3736",
+      "role": "Cố vấn"
+    },
+    {
+      "initiative_id": 7,
+      "user_id": "936cf63f-5000-4e7f-b78d-1daf89a9cc8a",
+      "role": "Cố vấn"
+    },
+    {
+      "initiative_id": 8,
+      "user_id": "654c5049-a425-46e2-9690-6a0c9d52bf46",
+      "role": "Trưởng nhóm"
+    },
+    {
+      "initiative_id": 8,
+      "user_id": "bef7c7ca-bb8d-4538-b916-6cbb8ced5a18",
+      "role": "Thành viên"
+    },
+    {
+      "initiative_id": 8,
+      "user_id": "3f00c9ec-08e5-45a2-86c1-e54b77d2a0ae",
+      "role": "Trưởng nhóm"
+    },
+    {
+      "initiative_id": 8,
+      "user_id": "728fcac0-7677-4851-b230-841f6e1a0b92",
+      "role": "Thành viên"
+    },
+    {
+      "initiative_id": 8,
+      "user_id": "55e08f42-e7e5-4f9d-8893-843ca22c11d5",
+      "role": "Trưởng nhóm"
+    },
+    {
+      "initiative_id": 9,
+      "user_id": "895ee238-9b5b-4cfd-a86d-c87a06eb3736",
+      "role": "Trưởng nhóm"
+    },
+    {
+      "initiative_id": 9,
+      "user_id": "936cf63f-5000-4e7f-b78d-1daf89a9cc8a",
+      "role": "Thành viên"
+    },
+    {
+      "initiative_id": 9,
+      "user_id": "bef7c7ca-bb8d-4538-b916-6cbb8ced5a18",
+      "role": "Cố vấn"
+    },
+    {
+      "initiative_id": 9,
+      "user_id": "aaf11df4-02e9-40e0-b67e-e3f31cb0cfd1",
+      "role": "Thành viên"
+    },
+    {
+      "initiative_id": 9,
+      "user_id": "c884d75b-d390-40ba-9259-1f87d2e2c408",
+      "role": "Cố vấn"
+    },
+    {
+      "initiative_id": 9,
+      "user_id": "dda0b651-6f10-429e-a65f-4d80a1bd8e9c",
+      "role": "Cố vấn"
+    },
+    {
+      "initiative_id": 10,
+      "user_id": "6978083f-56c4-4726-99e7-821cc775e69a",
+      "role": "Cố vấn"
+    },
+    {
+      "initiative_id": 10,
+      "user_id": "aaf11df4-02e9-40e0-b67e-e3f31cb0cfd1",
+      "role": "Thành viên"
+    },
+    {
+      "initiative_id": 10,
+      "user_id": "55e08f42-e7e5-4f9d-8893-843ca22c11d5",
+      "role": "Cố vấn"
+    },
+    {
+      "initiative_id": 11,
+      "user_id": "b473e86b-2392-4367-919f-1eb1367f619c",
+      "role": "Trưởng nhóm"
+    },
+    {
+      "initiative_id": 11,
+      "user_id": "55e08f42-e7e5-4f9d-8893-843ca22c11d5",
+      "role": "Trưởng nhóm"
+    },
+    {
+      "initiative_id": 11,
+      "user_id": "6978083f-56c4-4726-99e7-821cc775e69a",
+      "role": "Trưởng nhóm"
+    },
+    {
+      "initiative_id": 11,
+      "user_id": "dda0b651-6f10-429e-a65f-4d80a1bd8e9c",
+      "role": "Trưởng nhóm"
+    },
+    {
+      "initiative_id": 11,
+      "user_id": "c884d75b-d390-40ba-9259-1f87d2e2c408",
+      "role": "Trưởng nhóm"
+    },
+    {
+      "initiative_id": 11,
+      "user_id": "3f00c9ec-08e5-45a2-86c1-e54b77d2a0ae",
+      "role": "Thành viên"
+    },
+    {
+      "initiative_id": 12,
+      "user_id": "1d2b70e9-e80d-499a-92fc-745c584ef8ed",
+      "role": "Cố vấn"
+    },
+    {
+      "initiative_id": 12,
+      "user_id": "6978083f-56c4-4726-99e7-821cc775e69a",
+      "role": "Trưởng nhóm"
+    },
+    {
+      "initiative_id": 12,
+      "user_id": "f0fecc17-a6a7-4a90-abc1-348f153412ca",
+      "role": "Cố vấn"
+    },
+    {
+      "initiative_id": 13,
+      "user_id": "728fcac0-7677-4851-b230-841f6e1a0b92",
+      "role": "Thành viên"
+    },
+    {
+      "initiative_id": 13,
+      "user_id": "e50bc5bc-2276-472f-82bc-0383c82f56e1",
+      "role": "Thành viên"
+    },
+    {
+      "initiative_id": 13,
+      "user_id": "42612742-1085-48ae-b86d-cdb5df6f575b",
+      "role": "Trưởng nhóm"
+    },
+    {
+      "initiative_id": 14,
+      "user_id": "55e08f42-e7e5-4f9d-8893-843ca22c11d5",
+      "role": "Cố vấn"
+    },
+    {
+      "initiative_id": 14,
+      "user_id": "e50bc5bc-2276-472f-82bc-0383c82f56e1",
+      "role": "Cố vấn"
+    },
+    {
+      "initiative_id": 14,
+      "user_id": "895ee238-9b5b-4cfd-a86d-c87a06eb3736",
+      "role": "Thành viên"
+    },
+    {
+      "initiative_id": 14,
+      "user_id": "aaf11df4-02e9-40e0-b67e-e3f31cb0cfd1",
+      "role": "Trưởng nhóm"
+    },
+    {
+      "initiative_id": 15,
+      "user_id": "e26e3cb6-37fe-4b41-8df6-96e3b0a07528",
+      "role": "Cố vấn"
+    },
+    {
+      "initiative_id": 15,
+      "user_id": "728fcac0-7677-4851-b230-841f6e1a0b92",
+      "role": "Trưởng nhóm"
+    },
+    {
+      "initiative_id": 15,
+      "user_id": "2654d8af-cc44-4d73-84a7-e59718d978fe",
+      "role": "Thành viên"
+    },
+    {
+      "initiative_id": 15,
+      "user_id": "e50bc5bc-2276-472f-82bc-0383c82f56e1",
+      "role": "Thành viên"
+    },
+    {
+      "initiative_id": 15,
+      "user_id": "aaf11df4-02e9-40e0-b67e-e3f31cb0cfd1",
+      "role": "Cố vấn"
+    },
+    {
+      "initiative_id": 16,
+      "user_id": "f0fecc17-a6a7-4a90-abc1-348f153412ca",
+      "role": "Thành viên"
+    },
+    {
+      "initiative_id": 16,
+      "user_id": "895ee238-9b5b-4cfd-a86d-c87a06eb3736",
+      "role": "Thành viên"
+    },
+    {
+      "initiative_id": 16,
+      "user_id": "42612742-1085-48ae-b86d-cdb5df6f575b",
+      "role": "Trưởng nhóm"
+    },
+    {
+      "initiative_id": 16,
+      "user_id": "aaf11df4-02e9-40e0-b67e-e3f31cb0cfd1",
+      "role": "Thành viên"
+    },
+    {
+      "initiative_id": 16,
+      "user_id": "c884d75b-d390-40ba-9259-1f87d2e2c408",
+      "role": "Trưởng nhóm"
+    },
+    {
+      "initiative_id": 17,
+      "user_id": "03b11c18-0be4-4d13-ac05-eb34276df24c",
+      "role": "Thành viên"
+    },
+    {
+      "initiative_id": 17,
+      "user_id": "c884d75b-d390-40ba-9259-1f87d2e2c408",
+      "role": "Cố vấn"
+    },
+    {
+      "initiative_id": 17,
+      "user_id": "3f00c9ec-08e5-45a2-86c1-e54b77d2a0ae",
+      "role": "Thành viên"
+    },
+    {
+      "initiative_id": 17,
+      "user_id": "f0fecc17-a6a7-4a90-abc1-348f153412ca",
+      "role": "Cố vấn"
+    },
+    {
+      "initiative_id": 17,
+      "user_id": "e50bc5bc-2276-472f-82bc-0383c82f56e1",
+      "role": "Thành viên"
+    },
+    {
+      "initiative_id": 18,
+      "user_id": "1d2b70e9-e80d-499a-92fc-745c584ef8ed",
+      "role": "Trưởng nhóm"
+    },
+    {
+      "initiative_id": 18,
+      "user_id": "e26e3cb6-37fe-4b41-8df6-96e3b0a07528",
+      "role": "Cố vấn"
+    },
+    {
+      "initiative_id": 18,
+      "user_id": "895ee238-9b5b-4cfd-a86d-c87a06eb3736",
+      "role": "Thành viên"
+    },
+    {
+      "initiative_id": 18,
+      "user_id": "728fcac0-7677-4851-b230-841f6e1a0b92",
+      "role": "Thành viên"
+    },
+    {
+      "initiative_id": 19,
+      "user_id": "03b11c18-0be4-4d13-ac05-eb34276df24c",
+      "role": "Trưởng nhóm"
+    },
+    {
+      "initiative_id": 19,
+      "user_id": "654c5049-a425-46e2-9690-6a0c9d52bf46",
+      "role": "Trưởng nhóm"
+    },
+    {
+      "initiative_id": 19,
+      "user_id": "1d2b70e9-e80d-499a-92fc-745c584ef8ed",
+      "role": "Cố vấn"
+    },
+    {
+      "initiative_id": 19,
+      "user_id": "895ee238-9b5b-4cfd-a86d-c87a06eb3736",
+      "role": "Trưởng nhóm"
+    },
+    {
+      "initiative_id": 19,
+      "user_id": "dda0b651-6f10-429e-a65f-4d80a1bd8e9c",
+      "role": "Trưởng nhóm"
+    },
+    {
+      "initiative_id": 20,
+      "user_id": "3f00c9ec-08e5-45a2-86c1-e54b77d2a0ae",
+      "role": "Trưởng nhóm"
+    },
+    {
+      "initiative_id": 20,
+      "user_id": "55e08f42-e7e5-4f9d-8893-843ca22c11d5",
+      "role": "Thành viên"
+    },
+    {
+      "initiative_id": 20,
+      "user_id": "654c5049-a425-46e2-9690-6a0c9d52bf46",
+      "role": "Trưởng nhóm"
+    },
+    {
+      "initiative_id": 20,
+      "user_id": "e26e3cb6-37fe-4b41-8df6-96e3b0a07528",
+      "role": "Thành viên"
+    },
+    {
+      "initiative_id": 20,
+      "user_id": "936cf63f-5000-4e7f-b78d-1daf89a9cc8a",
+      "role": "Trưởng nhóm"
+    },
+    {
+      "initiative_id": 20,
+      "user_id": "1d2b70e9-e80d-499a-92fc-745c584ef8ed",
+      "role": "Cố vấn"
+    }
+  ],
+  "mission_honorees": [
+    {
+      "mission_id": 1,
+      "division_id": 16,
+      "description": "Cách tại có sau cũng trong."
+    },
+    {
+      "mission_id": 1,
+      "division_id": 4,
+      "description": "Rất giống mà sau được với để."
+    },
+    {
+      "mission_id": 2,
+      "division_id": 12,
+      "description": "Các có nhưng với."
+    },
+    {
+      "mission_id": 3,
+      "division_id": 18,
+      "description": "Dưới trong lớn làm với nhiều."
+    },
+    {
+      "mission_id": 3,
+      "division_id": 11,
+      "description": "Này về để các."
+    },
+    {
+      "mission_id": 3,
+      "division_id": 12,
+      "description": "Bên của từng vẫn."
+    },
+    {
+      "mission_id": 4,
+      "division_id": 19,
+      "description": "Thế vậy thay."
+    },
+    {
+      "mission_id": 4,
+      "division_id": 4,
+      "description": "Thay nếu sau mỗi sau người sẽ."
+    },
+    {
+      "mission_id": 4,
+      "division_id": 8,
+      "description": "Vậy và và sau rất sau."
+    },
+    {
+      "mission_id": 5,
+      "division_id": 18,
+      "description": "Tại người đó nhưng vậy đến của."
+    },
+    {
+      "mission_id": 5,
+      "division_id": 6,
+      "description": "Về trong nhưng tại."
+    },
+    {
+      "mission_id": 6,
+      "division_id": 13,
+      "description": "Nhưng và đó."
+    },
+    {
+      "mission_id": 6,
+      "division_id": 15,
+      "description": "Nhiều đi được sẽ của như vẫn."
+    },
+    {
+      "mission_id": 7,
+      "division_id": 16,
+      "description": "Cách nào của giữa tôi như tự."
+    },
+    {
+      "mission_id": 7,
+      "division_id": 18,
+      "description": "Chỉ người mỗi mà các thế."
+    },
+    {
+      "mission_id": 7,
+      "division_id": 14,
+      "description": "Này gần cũng đi này cũng."
+    },
+    {
+      "mission_id": 8,
+      "division_id": 15,
+      "description": "Có có bạn mỗi."
+    },
+    {
+      "mission_id": 9,
+      "division_id": 18,
+      "description": "Với nếu của hơn giống gần như."
+    },
+    {
+      "mission_id": 10,
+      "division_id": 18,
+      "description": "Rất như giữa sẽ."
+    },
+    {
+      "mission_id": 11,
+      "division_id": 8,
+      "description": "Trong khi cũng tôi."
+    },
+    {
+      "mission_id": 11,
+      "division_id": 10,
+      "description": "Đã sau hơn."
+    },
+    {
+      "mission_id": 11,
+      "division_id": 18,
+      "description": "Từ trong hoặc cho người dưới nhưng."
+    },
+    {
+      "mission_id": 12,
+      "division_id": 3,
+      "description": "Như vài tự vậy nào hoặc nhiều."
+    },
+    {
+      "mission_id": 13,
+      "division_id": 4,
+      "description": "Số để như nhưng."
+    },
+    {
+      "mission_id": 13,
+      "division_id": 13,
+      "description": "Như sau khiến là để."
+    },
+    {
+      "mission_id": 14,
+      "division_id": 16,
+      "description": "Theo này như với."
+    },
+    {
+      "mission_id": 15,
+      "division_id": 9,
+      "description": "Cho chỉ như người."
+    },
+    {
+      "mission_id": 15,
+      "division_id": 1,
+      "description": "Như điều giống đến với."
+    },
+    {
+      "mission_id": 16,
+      "division_id": 17,
+      "description": "Điều với lớn trong là."
+    },
+    {
+      "mission_id": 16,
+      "division_id": 3,
+      "description": "Giống lớn có hơn về đi số."
+    },
+    {
+      "mission_id": 16,
+      "division_id": 20,
+      "description": "Từ bên nào vài tôi cái."
+    },
+    {
+      "mission_id": 17,
+      "division_id": 15,
+      "description": "Nhưng từng với lớn để."
+    },
+    {
+      "mission_id": 18,
+      "division_id": 2,
+      "description": "Người vì đến cho."
+    },
+    {
+      "mission_id": 18,
+      "division_id": 17,
+      "description": "Trong đã vì mà vậy."
+    },
+    {
+      "mission_id": 18,
+      "division_id": 6,
+      "description": "Của dưới chưa này cái nơi và cũng."
+    },
+    {
+      "mission_id": 19,
+      "division_id": 6,
+      "description": "Bên từ thế tự tại người gần từ."
+    },
+    {
+      "mission_id": 20,
+      "division_id": 3,
+      "description": "Vậy được từng."
+    },
+    {
+      "mission_id": 20,
+      "division_id": 15,
+      "description": "Nhiều thay thì cách giống theo."
+    },
+    {
+      "mission_id": 20,
+      "division_id": 5,
+      "description": "Của như như khiến như đang tại."
+    }
+  ],
+  "mission_honored_initiatives": [
+    {
+      "mission_id": 1,
+      "initiative_id": 20,
+      "description": "Bạn một cũng rất.",
+      "honored_at": "2025-01-16T08:43:58"
+    },
+    {
+      "mission_id": 2,
+      "initiative_id": 3,
+      "description": "Về lớn hơn này khiến.",
+      "honored_at": "2025-04-07T09:26:23"
+    },
+    {
+      "mission_id": 3,
+      "initiative_id": 6,
+      "description": "Nhiều vài nào rất.",
+      "honored_at": "2025-02-06T19:02:42"
+    },
+    {
+      "mission_id": 4,
+      "initiative_id": 5,
+      "description": "Để có cách nhưng đang của.",
+      "honored_at": "2025-01-31T16:52:39"
+    },
+    {
+      "mission_id": 5,
+      "initiative_id": 8,
+      "description": "Nhiều sẽ khi gần của.",
+      "honored_at": "2025-03-14T21:56:59"
+    },
+    {
+      "mission_id": 5,
+      "initiative_id": 9,
+      "description": "Cách từ cách nào cái từ.",
+      "honored_at": "2025-01-02T17:11:33"
+    },
+    {
+      "mission_id": 6,
+      "initiative_id": 14,
+      "description": "Vài mà bạn nào khiến.",
+      "honored_at": "2025-04-07T22:58:23"
+    },
+    {
+      "mission_id": 6,
+      "initiative_id": 16,
+      "description": "Vì về cho hơn tôi số để.",
+      "honored_at": "2025-06-01T10:18:24"
+    },
+    {
+      "mission_id": 7,
+      "initiative_id": 8,
+      "description": "Nơi đi để làm và dưới để.",
+      "honored_at": "2025-05-28T14:52:22"
+    },
+    {
+      "mission_id": 7,
+      "initiative_id": 1,
+      "description": "Sau này chưa của với.",
+      "honored_at": "2025-05-21T00:54:28"
+    },
+    {
+      "mission_id": 8,
+      "initiative_id": 20,
+      "description": "Tôi đang làm nào như.",
+      "honored_at": "2025-03-29T22:28:24"
+    },
+    {
+      "mission_id": 9,
+      "initiative_id": 16,
+      "description": "Nơi nhưng này của của vài của.",
+      "honored_at": "2025-01-31T07:10:57"
+    },
+    {
+      "mission_id": 9,
+      "initiative_id": 15,
+      "description": "Đến chỉ từ vậy nếu và.",
+      "honored_at": "2025-04-12T18:30:54"
+    },
+    {
+      "mission_id": 10,
+      "initiative_id": 2,
+      "description": "Sẽ sẽ đã trong.",
+      "honored_at": "2025-04-18T10:20:26"
+    },
+    {
+      "mission_id": 10,
+      "initiative_id": 12,
+      "description": "Để cũng cách dưới dưới về hơn mỗi.",
+      "honored_at": "2025-01-28T08:12:18"
+    },
+    {
+      "mission_id": 11,
+      "initiative_id": 1,
+      "description": "Làm điều đang lớn có người vẫn.",
+      "honored_at": "2025-04-14T01:48:04"
+    },
+    {
+      "mission_id": 12,
+      "initiative_id": 14,
+      "description": "Mà làm người và hơn.",
+      "honored_at": "2025-05-29T22:00:28"
+    },
+    {
+      "mission_id": 12,
+      "initiative_id": 7,
+      "description": "Sẽ giữa tại.",
+      "honored_at": "2025-06-23T09:39:10"
+    },
+    {
+      "mission_id": 13,
+      "initiative_id": 5,
+      "description": "Thay đang theo hơn từng với nhiều cái.",
+      "honored_at": "2025-06-02T02:49:41"
+    },
+    {
+      "mission_id": 14,
+      "initiative_id": 14,
+      "description": "Cũng tự là trong trong rất.",
+      "honored_at": "2025-06-13T01:00:01"
+    },
+    {
+      "mission_id": 15,
+      "initiative_id": 20,
+      "description": "Thay trong đúng không sẽ nào.",
+      "honored_at": "2025-01-31T13:24:42"
+    },
+    {
+      "mission_id": 15,
+      "initiative_id": 8,
+      "description": "Để cách số bên.",
+      "honored_at": "2025-01-10T05:43:35"
+    },
+    {
+      "mission_id": 16,
+      "initiative_id": 8,
+      "description": "Cho khiến nhiều một.",
+      "honored_at": "2025-05-09T11:56:09"
+    },
+    {
+      "mission_id": 16,
+      "initiative_id": 16,
+      "description": "Có là bên.",
+      "honored_at": "2025-05-14T09:46:18"
+    },
+    {
+      "mission_id": 17,
+      "initiative_id": 15,
+      "description": "Nhiều vẫn như.",
+      "honored_at": "2025-04-21T01:44:29"
+    },
+    {
+      "mission_id": 17,
+      "initiative_id": 4,
+      "description": "Có tự có của tôi.",
+      "honored_at": "2025-05-01T01:15:44"
+    },
+    {
+      "mission_id": 18,
+      "initiative_id": 11,
+      "description": "Khiến chưa vậy tôi đến.",
+      "honored_at": "2025-06-15T16:43:10"
+    },
+    {
+      "mission_id": 18,
+      "initiative_id": 7,
+      "description": "Sau là thế cách đến có hơn.",
+      "honored_at": "2025-06-12T07:49:12"
+    },
+    {
+      "mission_id": 19,
+      "initiative_id": 11,
+      "description": "Cái đúng làm trong số hoặc khi.",
+      "honored_at": "2025-03-31T01:59:33"
+    },
+    {
+      "mission_id": 19,
+      "initiative_id": 14,
+      "description": "Nếu chỉ trong bạn thì.",
+      "honored_at": "2025-04-07T01:44:57"
+    },
+    {
+      "mission_id": 20,
+      "initiative_id": 16,
+      "description": "Đến vậy từ.",
+      "honored_at": "2025-06-21T09:11:38"
+    }
+  ],
+  "honorees": [
+    {
+      "post_id": 1,
+      "honoree_id": 7,
+      "honoree_type": "division"
+    },
+    {
+      "post_id": 1,
+      "honoree_id": 10,
+      "honoree_type": "division"
+    },
+    {
+      "post_id": 2,
+      "honoree_id": "55e08f42-e7e5-4f9d-8893-843ca22c11d5",
+      "honoree_type": "user"
+    },
+    {
+      "post_id": 3,
+      "honoree_id": 12,
+      "honoree_type": "division"
+    },
+    {
+      "post_id": 4,
+      "honoree_id": 6,
+      "honoree_type": "division"
+    },
+    {
+      "post_id": 5,
+      "honoree_id": "bef7c7ca-bb8d-4538-b916-6cbb8ced5a18",
+      "honoree_type": "user"
+    },
+    {
+      "post_id": 5,
+      "honoree_id": "f0fecc17-a6a7-4a90-abc1-348f153412ca",
+      "honoree_type": "user"
+    },
+    {
+      "post_id": 6,
+      "honoree_id": 14,
+      "honoree_type": "division"
+    },
+    {
+      "post_id": 6,
+      "honoree_id": 12,
+      "honoree_type": "division"
+    },
+    {
+      "post_id": 7,
+      "honoree_id": 12,
+      "honoree_type": "division"
+    },
+    {
+      "post_id": 7,
+      "honoree_id": 12,
+      "honoree_type": "division"
+    },
+    {
+      "post_id": 8,
+      "honoree_id": 20,
+      "honoree_type": "division"
+    },
+    {
+      "post_id": 8,
+      "honoree_id": "dda0b651-6f10-429e-a65f-4d80a1bd8e9c",
+      "honoree_type": "user"
+    },
+    {
+      "post_id": 9,
+      "honoree_id": "83bca49c-200b-4455-8da4-ac0f87e510b7",
+      "honoree_type": "user"
+    },
+    {
+      "post_id": 10,
+      "honoree_id": 11,
+      "honoree_type": "division"
+    },
+    {
+      "post_id": 10,
+      "honoree_id": 6,
+      "honoree_type": "division"
+    },
+    {
+      "post_id": 11,
+      "honoree_id": 10,
+      "honoree_type": "division"
+    },
+    {
+      "post_id": 12,
+      "honoree_id": 11,
+      "honoree_type": "division"
+    },
+    {
+      "post_id": 12,
+      "honoree_id": 1,
+      "honoree_type": "division"
+    },
+    {
+      "post_id": 13,
+      "honoree_id": "55e08f42-e7e5-4f9d-8893-843ca22c11d5",
+      "honoree_type": "user"
+    },
+    {
+      "post_id": 14,
+      "honoree_id": "2654d8af-cc44-4d73-84a7-e59718d978fe",
+      "honoree_type": "user"
+    },
+    {
+      "post_id": 14,
+      "honoree_id": 7,
+      "honoree_type": "division"
+    },
+    {
+      "post_id": 15,
+      "honoree_id": 2,
+      "honoree_type": "division"
+    },
+    {
+      "post_id": 15,
+      "honoree_id": "2654d8af-cc44-4d73-84a7-e59718d978fe",
+      "honoree_type": "user"
+    },
+    {
+      "post_id": 16,
+      "honoree_id": "3f00c9ec-08e5-45a2-86c1-e54b77d2a0ae",
+      "honoree_type": "user"
+    },
+    {
+      "post_id": 16,
+      "honoree_id": 5,
+      "honoree_type": "division"
+    },
+    {
+      "post_id": 17,
+      "honoree_id": 10,
+      "honoree_type": "division"
+    },
+    {
+      "post_id": 18,
+      "honoree_id": 19,
+      "honoree_type": "division"
+    },
+    {
+      "post_id": 18,
+      "honoree_id": 13,
+      "honoree_type": "division"
+    },
+    {
+      "post_id": 19,
+      "honoree_id": "654c5049-a425-46e2-9690-6a0c9d52bf46",
+      "honoree_type": "user"
+    },
+    {
+      "post_id": 20,
+      "honoree_id": "f0fecc17-a6a7-4a90-abc1-348f153412ca",
+      "honoree_type": "user"
+    }
+  ],
+  "likes": [
+    {
+      "post_id": 1,
+      "user_id": "654c5049-a425-46e2-9690-6a0c9d52bf46"
+    },
+    {
+      "post_id": 1,
+      "user_id": "e50bc5bc-2276-472f-82bc-0383c82f56e1"
+    },
+    {
+      "post_id": 2,
+      "user_id": "bef7c7ca-bb8d-4538-b916-6cbb8ced5a18"
+    },
+    {
+      "post_id": 2,
+      "user_id": "3f00c9ec-08e5-45a2-86c1-e54b77d2a0ae"
+    },
+    {
+      "post_id": 2,
+      "user_id": "03b11c18-0be4-4d13-ac05-eb34276df24c"
+    },
+    {
+      "post_id": 2,
+      "user_id": "936cf63f-5000-4e7f-b78d-1daf89a9cc8a"
+    },
+    {
+      "post_id": 2,
+      "user_id": "f0fecc17-a6a7-4a90-abc1-348f153412ca"
+    },
+    {
+      "post_id": 3,
+      "user_id": "654c5049-a425-46e2-9690-6a0c9d52bf46"
+    },
+    {
+      "post_id": 3,
+      "user_id": "2654d8af-cc44-4d73-84a7-e59718d978fe"
+    },
+    {
+      "post_id": 4,
+      "user_id": "55e08f42-e7e5-4f9d-8893-843ca22c11d5"
+    },
+    {
+      "post_id": 4,
+      "user_id": "bef7c7ca-bb8d-4538-b916-6cbb8ced5a18"
+    },
+    {
+      "post_id": 4,
+      "user_id": "6978083f-56c4-4726-99e7-821cc775e69a"
+    },
+    {
+      "post_id": 5,
+      "user_id": "2654d8af-cc44-4d73-84a7-e59718d978fe"
+    },
+    {
+      "post_id": 5,
+      "user_id": "654c5049-a425-46e2-9690-6a0c9d52bf46"
+    },
+    {
+      "post_id": 6,
+      "user_id": "6978083f-56c4-4726-99e7-821cc775e69a"
+    },
+    {
+      "post_id": 6,
+      "user_id": "2654d8af-cc44-4d73-84a7-e59718d978fe"
+    },
+    {
+      "post_id": 7,
+      "user_id": "2654d8af-cc44-4d73-84a7-e59718d978fe"
+    },
+    {
+      "post_id": 7,
+      "user_id": "936cf63f-5000-4e7f-b78d-1daf89a9cc8a"
+    },
+    {
+      "post_id": 7,
+      "user_id": "728fcac0-7677-4851-b230-841f6e1a0b92"
+    },
+    {
+      "post_id": 8,
+      "user_id": "3f00c9ec-08e5-45a2-86c1-e54b77d2a0ae"
+    },
+    {
+      "post_id": 8,
+      "user_id": "42612742-1085-48ae-b86d-cdb5df6f575b"
+    },
+    {
+      "post_id": 8,
+      "user_id": "936cf63f-5000-4e7f-b78d-1daf89a9cc8a"
+    },
+    {
+      "post_id": 8,
+      "user_id": "55e08f42-e7e5-4f9d-8893-843ca22c11d5"
+    },
+    {
+      "post_id": 9,
+      "user_id": "e26e3cb6-37fe-4b41-8df6-96e3b0a07528"
+    },
+    {
+      "post_id": 9,
+      "user_id": "728fcac0-7677-4851-b230-841f6e1a0b92"
+    },
+    {
+      "post_id": 9,
+      "user_id": "aaf11df4-02e9-40e0-b67e-e3f31cb0cfd1"
+    },
+    {
+      "post_id": 9,
+      "user_id": "654c5049-a425-46e2-9690-6a0c9d52bf46"
+    },
+    {
+      "post_id": 9,
+      "user_id": "bef7c7ca-bb8d-4538-b916-6cbb8ced5a18"
+    },
+    {
+      "post_id": 10,
+      "user_id": "e50bc5bc-2276-472f-82bc-0383c82f56e1"
+    },
+    {
+      "post_id": 10,
+      "user_id": "bef7c7ca-bb8d-4538-b916-6cbb8ced5a18"
+    },
+    {
+      "post_id": 10,
+      "user_id": "b473e86b-2392-4367-919f-1eb1367f619c"
+    },
+    {
+      "post_id": 10,
+      "user_id": "e26e3cb6-37fe-4b41-8df6-96e3b0a07528"
+    },
+    {
+      "post_id": 11,
+      "user_id": "6978083f-56c4-4726-99e7-821cc775e69a"
+    },
+    {
+      "post_id": 11,
+      "user_id": "895ee238-9b5b-4cfd-a86d-c87a06eb3736"
+    },
+    {
+      "post_id": 11,
+      "user_id": "83bca49c-200b-4455-8da4-ac0f87e510b7"
+    },
+    {
+      "post_id": 11,
+      "user_id": "728fcac0-7677-4851-b230-841f6e1a0b92"
+    },
+    {
+      "post_id": 12,
+      "user_id": "895ee238-9b5b-4cfd-a86d-c87a06eb3736"
+    },
+    {
+      "post_id": 12,
+      "user_id": "3f00c9ec-08e5-45a2-86c1-e54b77d2a0ae"
+    },
+    {
+      "post_id": 12,
+      "user_id": "f0fecc17-a6a7-4a90-abc1-348f153412ca"
+    },
+    {
+      "post_id": 12,
+      "user_id": "aaf11df4-02e9-40e0-b67e-e3f31cb0cfd1"
+    },
+    {
+      "post_id": 13,
+      "user_id": "83bca49c-200b-4455-8da4-ac0f87e510b7"
+    },
+    {
+      "post_id": 13,
+      "user_id": "42612742-1085-48ae-b86d-cdb5df6f575b"
+    },
+    {
+      "post_id": 13,
+      "user_id": "c884d75b-d390-40ba-9259-1f87d2e2c408"
+    },
+    {
+      "post_id": 13,
+      "user_id": "895ee238-9b5b-4cfd-a86d-c87a06eb3736"
+    },
+    {
+      "post_id": 14,
+      "user_id": "728fcac0-7677-4851-b230-841f6e1a0b92"
+    },
+    {
+      "post_id": 14,
+      "user_id": "aaf11df4-02e9-40e0-b67e-e3f31cb0cfd1"
+    },
+    {
+      "post_id": 14,
+      "user_id": "55e08f42-e7e5-4f9d-8893-843ca22c11d5"
+    },
+    {
+      "post_id": 14,
+      "user_id": "83bca49c-200b-4455-8da4-ac0f87e510b7"
+    },
+    {
+      "post_id": 14,
+      "user_id": "dda0b651-6f10-429e-a65f-4d80a1bd8e9c"
+    },
+    {
+      "post_id": 15,
+      "user_id": "1d2b70e9-e80d-499a-92fc-745c584ef8ed"
+    },
+    {
+      "post_id": 15,
+      "user_id": "c884d75b-d390-40ba-9259-1f87d2e2c408"
+    },
+    {
+      "post_id": 15,
+      "user_id": "55e08f42-e7e5-4f9d-8893-843ca22c11d5"
+    },
+    {
+      "post_id": 15,
+      "user_id": "03b11c18-0be4-4d13-ac05-eb34276df24c"
+    },
+    {
+      "post_id": 15,
+      "user_id": "42612742-1085-48ae-b86d-cdb5df6f575b"
+    },
+    {
+      "post_id": 16,
+      "user_id": "f0fecc17-a6a7-4a90-abc1-348f153412ca"
+    },
+    {
+      "post_id": 16,
+      "user_id": "2654d8af-cc44-4d73-84a7-e59718d978fe"
+    },
+    {
+      "post_id": 16,
+      "user_id": "dda0b651-6f10-429e-a65f-4d80a1bd8e9c"
+    },
+    {
+      "post_id": 16,
+      "user_id": "03b11c18-0be4-4d13-ac05-eb34276df24c"
+    },
+    {
+      "post_id": 16,
+      "user_id": "728fcac0-7677-4851-b230-841f6e1a0b92"
+    },
+    {
+      "post_id": 17,
+      "user_id": "aaf11df4-02e9-40e0-b67e-e3f31cb0cfd1"
+    },
+    {
+      "post_id": 17,
+      "user_id": "f0fecc17-a6a7-4a90-abc1-348f153412ca"
+    },
+    {
+      "post_id": 17,
+      "user_id": "654c5049-a425-46e2-9690-6a0c9d52bf46"
+    },
+    {
+      "post_id": 17,
+      "user_id": "936cf63f-5000-4e7f-b78d-1daf89a9cc8a"
+    },
+    {
+      "post_id": 18,
+      "user_id": "bef7c7ca-bb8d-4538-b916-6cbb8ced5a18"
+    },
+    {
+      "post_id": 18,
+      "user_id": "aaf11df4-02e9-40e0-b67e-e3f31cb0cfd1"
+    },
+    {
+      "post_id": 19,
+      "user_id": "895ee238-9b5b-4cfd-a86d-c87a06eb3736"
+    },
+    {
+      "post_id": 19,
+      "user_id": "6978083f-56c4-4726-99e7-821cc775e69a"
+    },
+    {
+      "post_id": 19,
+      "user_id": "55e08f42-e7e5-4f9d-8893-843ca22c11d5"
+    },
+    {
+      "post_id": 19,
+      "user_id": "bef7c7ca-bb8d-4538-b916-6cbb8ced5a18"
+    },
+    {
+      "post_id": 19,
+      "user_id": "3f00c9ec-08e5-45a2-86c1-e54b77d2a0ae"
+    },
+    {
+      "post_id": 20,
+      "user_id": "728fcac0-7677-4851-b230-841f6e1a0b92"
+    },
+    {
+      "post_id": 20,
+      "user_id": "c884d75b-d390-40ba-9259-1f87d2e2c408"
+    },
+    {
+      "post_id": 20,
+      "user_id": "55e08f42-e7e5-4f9d-8893-843ca22c11d5"
+    }
+  ],
+  "initiative_status_history": [
+    {
+      "id": 1,
+      "initiative_id": 1,
+      "status_id": 4,
+      "start_date": "2025-01-31T11:10:01",
+      "notes": "Rất cũng tại số tại."
+    },
+    {
+      "id": 2,
+      "initiative_id": 1,
+      "status_id": 2,
+      "start_date": "2025-03-13T14:52:14",
+      "notes": "Hoặc từ chỉ số một."
+    },
+    {
+      "id": 3,
+      "initiative_id": 1,
+      "status_id": 4,
+      "start_date": "2025-02-15T08:36:16",
+      "notes": "Có đúng thay để này làm làm."
+    },
+    {
+      "id": 4,
+      "initiative_id": 1,
+      "status_id": 3,
+      "start_date": "2025-03-22T02:56:21",
+      "notes": "Khiến về trong hơn khiến."
+    },
+    {
+      "id": 5,
+      "initiative_id": 2,
+      "status_id": 2,
+      "start_date": "2025-05-02T02:42:53",
+      "notes": "Lớn để có để cách tôi số."
+    },
+    {
+      "id": 6,
+      "initiative_id": 2,
+      "status_id": 3,
+      "start_date": "2025-01-17T06:09:00",
+      "notes": "Giống giữa khi gần là trong khi."
+    },
+    {
+      "id": 7,
+      "initiative_id": 2,
+      "status_id": 4,
+      "start_date": "2025-03-22T00:51:41",
+      "notes": "Như với vì đi nào."
+    },
+    {
+      "id": 8,
+      "initiative_id": 3,
+      "status_id": 3,
+      "start_date": "2025-01-13T21:52:54",
+      "notes": "Tại từ đi để đúng tại."
+    },
+    {
+      "id": 9,
+      "initiative_id": 3,
+      "status_id": 2,
+      "start_date": "2025-04-10T07:47:26",
+      "notes": "Vì với trong cũng cũng."
+    },
+    {
+      "id": 10,
+      "initiative_id": 4,
+      "status_id": 3,
+      "start_date": "2025-05-13T16:53:40",
+      "notes": "Từ điều vài dưới."
+    },
+    {
+      "id": 11,
+      "initiative_id": 4,
+      "status_id": 2,
+      "start_date": "2025-03-16T17:57:44",
+      "notes": "Trong với bên hoặc."
+    },
+    {
+      "id": 12,
+      "initiative_id": 4,
+      "status_id": 1,
+      "start_date": "2025-05-09T06:36:50",
+      "notes": "Trong của theo làm cách từ."
+    },
+    {
+      "id": 13,
+      "initiative_id": 4,
+      "status_id": 3,
+      "start_date": "2025-01-29T18:43:58",
+      "notes": "Chưa như một bạn khi giống tôi."
+    },
+    {
+      "id": 14,
+      "initiative_id": 5,
+      "status_id": 3,
+      "start_date": "2025-06-03T04:56:50",
+      "notes": "Tại để như bên và của như."
+    },
+    {
+      "id": 15,
+      "initiative_id": 5,
+      "status_id": 3,
+      "start_date": "2025-06-06T13:50:53",
+      "notes": "Từng cũng về và."
+    },
+    {
+      "id": 16,
+      "initiative_id": 5,
+      "status_id": 3,
+      "start_date": "2025-01-27T18:41:56",
+      "notes": "Đó nhiều lớn bên."
+    },
+    {
+      "id": 17,
+      "initiative_id": 5,
+      "status_id": 2,
+      "start_date": "2025-01-17T07:42:12",
+      "notes": "Tại chỉ từng cái có."
+    },
+    {
+      "id": 18,
+      "initiative_id": 6,
+      "status_id": 1,
+      "start_date": "2025-03-04T17:12:32",
+      "notes": "Với bên đã một trong đúng đã."
+    },
+    {
+      "id": 19,
+      "initiative_id": 6,
+      "status_id": 4,
+      "start_date": "2025-02-07T00:44:34",
+      "notes": "Như về đến để."
+    },
+    {
+      "id": 20,
+      "initiative_id": 6,
+      "status_id": 4,
+      "start_date": "2025-01-12T21:54:22",
+      "notes": "Từ trong và tại."
+    },
+    {
+      "id": 21,
+      "initiative_id": 6,
+      "status_id": 4,
+      "start_date": "2025-04-20T17:03:59",
+      "notes": "Thì của nếu về một giống."
+    },
+    {
+      "id": 22,
+      "initiative_id": 7,
+      "status_id": 3,
+      "start_date": "2025-04-08T22:44:29",
+      "notes": "Vài trong người một giống theo."
+    },
+    {
+      "id": 23,
+      "initiative_id": 7,
+      "status_id": 4,
+      "start_date": "2025-06-13T17:41:11",
+      "notes": "Đó dưới số."
+    },
+    {
+      "id": 24,
+      "initiative_id": 8,
+      "status_id": 3,
+      "start_date": "2025-05-07T15:32:59",
+      "notes": "Khi nếu nào từ."
+    },
+    {
+      "id": 25,
+      "initiative_id": 8,
+      "status_id": 2,
+      "start_date": "2025-02-04T11:31:19",
+      "notes": "Từ cách đúng một tôi."
+    },
+    {
+      "id": 26,
+      "initiative_id": 9,
+      "status_id": 4,
+      "start_date": "2025-04-24T14:26:57",
+      "notes": "Và đang mỗi đúng tôi."
+    },
+    {
+      "id": 27,
+      "initiative_id": 9,
+      "status_id": 2,
+      "start_date": "2025-01-18T23:55:26",
+      "notes": "Như từ đến số người như."
+    },
+    {
+      "id": 28,
+      "initiative_id": 9,
+      "status_id": 3,
+      "start_date": "2025-03-13T23:33:45",
+      "notes": "Như thì cho sau để."
+    },
+    {
+      "id": 29,
+      "initiative_id": 9,
+      "status_id": 3,
+      "start_date": "2025-03-31T18:45:02",
+      "notes": "Hơn lớn nhưng từ đã với."
+    },
+    {
+      "id": 30,
+      "initiative_id": 10,
+      "status_id": 4,
+      "start_date": "2025-04-21T20:36:28",
+      "notes": "Có vài sẽ sẽ đến."
+    },
+    {
+      "id": 31,
+      "initiative_id": 10,
+      "status_id": 4,
+      "start_date": "2025-01-05T10:16:32",
+      "notes": "Vẫn giống gần nhiều của thì tự."
+    },
+    {
+      "id": 32,
+      "initiative_id": 10,
+      "status_id": 4,
+      "start_date": "2025-03-02T04:04:57",
+      "notes": "Và chỉ bên nơi đến không."
+    },
+    {
+      "id": 33,
+      "initiative_id": 10,
+      "status_id": 4,
+      "start_date": "2025-05-18T01:55:33",
+      "notes": "Cho vẫn mà."
+    },
+    {
+      "id": 34,
+      "initiative_id": 11,
+      "status_id": 1,
+      "start_date": "2025-02-25T20:03:21",
+      "notes": "Có nhiều hoặc tự mỗi."
+    },
+    {
+      "id": 35,
+      "initiative_id": 11,
+      "status_id": 4,
+      "start_date": "2025-02-27T22:45:25",
+      "notes": "Từ tôi tại có của của."
+    },
+    {
+      "id": 36,
+      "initiative_id": 12,
+      "status_id": 4,
+      "start_date": "2025-05-09T21:02:17",
+      "notes": "Nếu nào không."
+    },
+    {
+      "id": 37,
+      "initiative_id": 12,
+      "status_id": 1,
+      "start_date": "2025-03-06T16:22:57",
+      "notes": "Cách vẫn thì tự về gần có có."
+    },
+    {
+      "id": 38,
+      "initiative_id": 13,
+      "status_id": 1,
+      "start_date": "2025-05-18T21:16:45",
+      "notes": "Đến thì của như của."
+    },
+    {
+      "id": 39,
+      "initiative_id": 13,
+      "status_id": 4,
+      "start_date": "2025-01-05T04:11:38",
+      "notes": "Thay tại từ là giữa với."
+    },
+    {
+      "id": 40,
+      "initiative_id": 13,
+      "status_id": 3,
+      "start_date": "2025-01-03T06:03:05",
+      "notes": "Có khi nhiều nào khiến để sẽ."
+    },
+    {
+      "id": 41,
+      "initiative_id": 13,
+      "status_id": 1,
+      "start_date": "2025-04-23T14:05:10",
+      "notes": "Của vẫn hơn."
+    },
+    {
+      "id": 42,
+      "initiative_id": 14,
+      "status_id": 3,
+      "start_date": "2025-03-12T03:25:11",
+      "notes": "Thay đó từ cái không để lớn vài."
+    },
+    {
+      "id": 43,
+      "initiative_id": 14,
+      "status_id": 3,
+      "start_date": "2025-06-22T12:34:12",
+      "notes": "Đó điều đang nơi nơi."
+    },
+    {
+      "id": 44,
+      "initiative_id": 15,
+      "status_id": 4,
+      "start_date": "2025-04-20T14:54:18",
+      "notes": "Chỉ làm tôi."
+    },
+    {
+      "id": 45,
+      "initiative_id": 15,
+      "status_id": 1,
+      "start_date": "2025-03-07T08:17:59",
+      "notes": "Đó gần như đúng."
+    },
+    {
+      "id": 46,
+      "initiative_id": 16,
+      "status_id": 4,
+      "start_date": "2025-03-12T05:27:55",
+      "notes": "Từng như về nào nào đó."
+    },
+    {
+      "id": 47,
+      "initiative_id": 16,
+      "status_id": 1,
+      "start_date": "2025-04-02T07:07:56",
+      "notes": "Có tôi mà cũng vậy tại tại."
+    },
+    {
+      "id": 48,
+      "initiative_id": 16,
+      "status_id": 2,
+      "start_date": "2025-01-12T05:55:22",
+      "notes": "Khiến một hơn của."
+    },
+    {
+      "id": 49,
+      "initiative_id": 16,
+      "status_id": 2,
+      "start_date": "2025-05-23T10:20:52",
+      "notes": "Để để của gần."
+    },
+    {
+      "id": 50,
+      "initiative_id": 17,
+      "status_id": 3,
+      "start_date": "2025-06-04T05:08:38",
+      "notes": "Tại với số tại."
+    },
+    {
+      "id": 51,
+      "initiative_id": 17,
+      "status_id": 4,
+      "start_date": "2025-06-18T02:05:17",
+      "notes": "Làm vẫn trong bạn trong."
+    },
+    {
+      "id": 52,
+      "initiative_id": 17,
+      "status_id": 1,
+      "start_date": "2025-02-28T11:36:37",
+      "notes": "Từ cũng cũng này cho vẫn có."
+    },
+    {
+      "id": 53,
+      "initiative_id": 18,
+      "status_id": 1,
+      "start_date": "2025-03-07T18:53:58",
+      "notes": "Để có rất."
+    },
+    {
+      "id": 54,
+      "initiative_id": 18,
+      "status_id": 3,
+      "start_date": "2025-02-17T17:57:28",
+      "notes": "Đi cách để điều bên vậy."
+    },
+    {
+      "id": 55,
+      "initiative_id": 19,
+      "status_id": 1,
+      "start_date": "2025-02-05T00:42:28",
+      "notes": "Như hơn trong theo."
+    },
+    {
+      "id": 56,
+      "initiative_id": 19,
+      "status_id": 1,
+      "start_date": "2025-06-16T05:39:54",
+      "notes": "Nơi từng cũng trong tôi không nếu."
+    },
+    {
+      "id": 57,
+      "initiative_id": 19,
+      "status_id": 4,
+      "start_date": "2025-02-27T05:33:50",
+      "notes": "Đã chưa các số vài trong."
+    },
+    {
+      "id": 58,
+      "initiative_id": 20,
+      "status_id": 4,
+      "start_date": "2025-04-12T12:13:29",
+      "notes": "Cũng giữa sau của không."
+    },
+    {
+      "id": 59,
+      "initiative_id": 20,
+      "status_id": 2,
+      "start_date": "2025-01-10T11:50:20",
+      "notes": "Cái cho như giống chỉ cách sau vậy."
+    },
+    {
+      "id": 60,
+      "initiative_id": 20,
+      "status_id": 1,
+      "start_date": "2025-04-21T13:31:06",
+      "notes": "Nhưng cũng có của và sẽ."
+    }
+  ],
+  "initiative_kpis": [
+    {
+      "id": 1,
+      "initiative_id": 1,
+      "kpi_name": "có"
+    },
+    {
+      "id": 2,
+      "initiative_id": 1,
+      "kpi_name": "khi"
+    },
+    {
+      "id": 3,
+      "initiative_id": 2,
+      "kpi_name": "chỉ"
+    },
+    {
+      "id": 4,
+      "initiative_id": 2,
+      "kpi_name": "hoặc"
+    },
+    {
+      "id": 5,
+      "initiative_id": 2,
+      "kpi_name": "như"
+    },
+    {
+      "id": 6,
+      "initiative_id": 3,
+      "kpi_name": "nào"
+    },
+    {
+      "id": 7,
+      "initiative_id": 3,
+      "kpi_name": "vì"
+    },
+    {
+      "id": 8,
+      "initiative_id": 3,
+      "kpi_name": "thay"
+    },
+    {
+      "id": 9,
+      "initiative_id": 4,
+      "kpi_name": "đang"
+    },
+    {
+      "id": 10,
+      "initiative_id": 4,
+      "kpi_name": "nếu"
+    },
+    {
+      "id": 11,
+      "initiative_id": 5,
+      "kpi_name": "vẫn"
+    },
+    {
+      "id": 12,
+      "initiative_id": 5,
+      "kpi_name": "tự"
+    },
+    {
+      "id": 13,
+      "initiative_id": 6,
+      "kpi_name": "này"
+    },
+    {
+      "id": 14,
+      "initiative_id": 6,
+      "kpi_name": "rất"
+    },
+    {
+      "id": 15,
+      "initiative_id": 6,
+      "kpi_name": "thì"
+    },
+    {
+      "id": 16,
+      "initiative_id": 7,
+      "kpi_name": "không"
+    },
+    {
+      "id": 17,
+      "initiative_id": 7,
+      "kpi_name": "tại"
+    },
+    {
+      "id": 18,
+      "initiative_id": 8,
+      "kpi_name": "với"
+    },
+    {
+      "id": 19,
+      "initiative_id": 8,
+      "kpi_name": "giữa"
+    },
+    {
+      "id": 20,
+      "initiative_id": 8,
+      "kpi_name": "hơn"
+    },
+    {
+      "id": 21,
+      "initiative_id": 9,
+      "kpi_name": "mà"
+    },
+    {
+      "id": 22,
+      "initiative_id": 9,
+      "kpi_name": "tôi"
+    },
+    {
+      "id": 23,
+      "initiative_id": 10,
+      "kpi_name": "thay"
+    },
+    {
+      "id": 24,
+      "initiative_id": 10,
+      "kpi_name": "người"
+    },
+    {
+      "id": 25,
+      "initiative_id": 10,
+      "kpi_name": "tại"
+    },
+    {
+      "id": 26,
+      "initiative_id": 11,
+      "kpi_name": "mà"
+    },
+    {
+      "id": 27,
+      "initiative_id": 11,
+      "kpi_name": "hơn"
+    },
+    {
+      "id": 28,
+      "initiative_id": 12,
+      "kpi_name": "từ"
+    },
+    {
+      "id": 29,
+      "initiative_id": 12,
+      "kpi_name": "như"
+    },
+    {
+      "id": 30,
+      "initiative_id": 12,
+      "kpi_name": "của"
+    },
+    {
+      "id": 31,
+      "initiative_id": 13,
+      "kpi_name": "hơn"
+    },
+    {
+      "id": 32,
+      "initiative_id": 13,
+      "kpi_name": "từ"
+    },
+    {
+      "id": 33,
+      "initiative_id": 13,
+      "kpi_name": "là"
+    },
+    {
+      "id": 34,
+      "initiative_id": 14,
+      "kpi_name": "vẫn"
+    },
+    {
+      "id": 35,
+      "initiative_id": 14,
+      "kpi_name": "lớn"
+    },
+    {
+      "id": 36,
+      "initiative_id": 14,
+      "kpi_name": "chưa"
+    },
+    {
+      "id": 37,
+      "initiative_id": 15,
+      "kpi_name": "chưa"
+    },
+    {
+      "id": 38,
+      "initiative_id": 15,
+      "kpi_name": "chưa"
+    },
+    {
+      "id": 39,
+      "initiative_id": 15,
+      "kpi_name": "tại"
+    },
+    {
+      "id": 40,
+      "initiative_id": 16,
+      "kpi_name": "vẫn"
+    },
+    {
+      "id": 41,
+      "initiative_id": 16,
+      "kpi_name": "cũng"
+    },
+    {
+      "id": 42,
+      "initiative_id": 17,
+      "kpi_name": "khiến"
+    },
+    {
+      "id": 43,
+      "initiative_id": 17,
+      "kpi_name": "vẫn"
+    },
+    {
+      "id": 44,
+      "initiative_id": 18,
+      "kpi_name": "có"
+    },
+    {
+      "id": 45,
+      "initiative_id": 18,
+      "kpi_name": "sau"
+    },
+    {
+      "id": 46,
+      "initiative_id": 18,
+      "kpi_name": "mà"
+    },
+    {
+      "id": 47,
+      "initiative_id": 19,
+      "kpi_name": "điều"
+    },
+    {
+      "id": 48,
+      "initiative_id": 19,
+      "kpi_name": "của"
+    },
+    {
+      "id": 49,
+      "initiative_id": 19,
+      "kpi_name": "với"
+    },
+    {
+      "id": 50,
+      "initiative_id": 20,
+      "kpi_name": "như"
+    },
+    {
+      "id": 51,
+      "initiative_id": 20,
+      "kpi_name": "như"
+    },
+    {
+      "id": 52,
+      "initiative_id": 20,
+      "kpi_name": "này"
+    }
+  ],
+  "initiative_kpi_data": [
+    {
+      "id": 1,
+      "kpi_id": 1,
+      "date": "2025-01-19",
+      "value": 882.24
+    },
+    {
+      "id": 2,
+      "kpi_id": 1,
+      "date": "2025-03-21",
+      "value": 166.67
+    },
+    {
+      "id": 3,
+      "kpi_id": 1,
+      "date": "2025-02-12",
+      "value": 124.02
+    },
+    {
+      "id": 4,
+      "kpi_id": 2,
+      "date": "2025-03-18",
+      "value": 919.34
+    },
+    {
+      "id": 5,
+      "kpi_id": 2,
+      "date": "2025-03-03",
+      "value": 569.68
+    },
+    {
+      "id": 6,
+      "kpi_id": 2,
+      "date": "2025-03-30",
+      "value": 822.1
+    },
+    {
+      "id": 7,
+      "kpi_id": 2,
+      "date": "2025-03-19",
+      "value": 395.55
+    },
+    {
+      "id": 8,
+      "kpi_id": 3,
+      "date": "2025-06-23",
+      "value": 409.71
+    },
+    {
+      "id": 9,
+      "kpi_id": 3,
+      "date": "2025-04-24",
+      "value": 693.92
+    },
+    {
+      "id": 10,
+      "kpi_id": 3,
+      "date": "2025-03-01",
+      "value": 996.79
+    },
+    {
+      "id": 11,
+      "kpi_id": 4,
+      "date": "2025-05-01",
+      "value": 503.88
+    },
+    {
+      "id": 12,
+      "kpi_id": 4,
+      "date": "2025-02-06",
+      "value": 238.51
+    },
+    {
+      "id": 13,
+      "kpi_id": 4,
+      "date": "2025-05-31",
+      "value": 238.32
+    },
+    {
+      "id": 14,
+      "kpi_id": 5,
+      "date": "2025-02-27",
+      "value": 422.4
+    },
+    {
+      "id": 15,
+      "kpi_id": 5,
+      "date": "2025-05-23",
+      "value": 439.56
+    },
+    {
+      "id": 16,
+      "kpi_id": 5,
+      "date": "2025-05-24",
+      "value": 359.57
+    },
+    {
+      "id": 17,
+      "kpi_id": 6,
+      "date": "2025-02-05",
+      "value": 545.12
+    },
+    {
+      "id": 18,
+      "kpi_id": 6,
+      "date": "2025-02-19",
+      "value": 977.51
+    },
+    {
+      "id": 19,
+      "kpi_id": 6,
+      "date": "2025-06-02",
+      "value": 497.53
+    },
+    {
+      "id": 20,
+      "kpi_id": 6,
+      "date": "2025-05-06",
+      "value": 180.75
+    },
+    {
+      "id": 21,
+      "kpi_id": 6,
+      "date": "2025-04-06",
+      "value": 490.89
+    },
+    {
+      "id": 22,
+      "kpi_id": 7,
+      "date": "2025-02-04",
+      "value": 298.38
+    },
+    {
+      "id": 23,
+      "kpi_id": 7,
+      "date": "2025-01-05",
+      "value": 175.19
+    },
+    {
+      "id": 24,
+      "kpi_id": 7,
+      "date": "2025-01-11",
+      "value": 661.2
+    },
+    {
+      "id": 25,
+      "kpi_id": 7,
+      "date": "2025-04-25",
+      "value": 243.13
+    },
+    {
+      "id": 26,
+      "kpi_id": 7,
+      "date": "2025-01-21",
+      "value": 429.38
+    },
+    {
+      "id": 27,
+      "kpi_id": 8,
+      "date": "2025-03-17",
+      "value": 268.5
+    },
+    {
+      "id": 28,
+      "kpi_id": 8,
+      "date": "2025-01-18",
+      "value": 68.79
+    },
+    {
+      "id": 29,
+      "kpi_id": 8,
+      "date": "2025-03-11",
+      "value": 58.82
+    },
+    {
+      "id": 30,
+      "kpi_id": 8,
+      "date": "2025-01-29",
+      "value": 517.12
+    },
+    {
+      "id": 31,
+      "kpi_id": 8,
+      "date": "2025-05-08",
+      "value": 706.67
+    },
+    {
+      "id": 32,
+      "kpi_id": 9,
+      "date": "2025-02-27",
+      "value": 498.35
+    },
+    {
+      "id": 33,
+      "kpi_id": 9,
+      "date": "2025-01-20",
+      "value": 910.27
+    },
+    {
+      "id": 34,
+      "kpi_id": 9,
+      "date": "2025-01-22",
+      "value": 120.57
+    },
+    {
+      "id": 35,
+      "kpi_id": 9,
+      "date": "2025-05-17",
+      "value": 144.84
+    },
+    {
+      "id": 36,
+      "kpi_id": 9,
+      "date": "2025-02-10",
+      "value": 153.27
+    },
+    {
+      "id": 37,
+      "kpi_id": 10,
+      "date": "2025-03-28",
+      "value": 752.67
+    },
+    {
+      "id": 38,
+      "kpi_id": 10,
+      "date": "2025-01-16",
+      "value": 438.37
+    },
+    {
+      "id": 39,
+      "kpi_id": 10,
+      "date": "2025-03-26",
+      "value": 615.37
+    },
+    {
+      "id": 40,
+      "kpi_id": 10,
+      "date": "2025-01-30",
+      "value": 249.73
+    },
+    {
+      "id": 41,
+      "kpi_id": 11,
+      "date": "2025-06-24",
+      "value": 820.84
+    },
+    {
+      "id": 42,
+      "kpi_id": 11,
+      "date": "2025-06-20",
+      "value": 753.09
+    },
+    {
+      "id": 43,
+      "kpi_id": 11,
+      "date": "2025-04-22",
+      "value": 455.5
+    },
+    {
+      "id": 44,
+      "kpi_id": 12,
+      "date": "2025-03-18",
+      "value": 29.73
+    },
+    {
+      "id": 45,
+      "kpi_id": 12,
+      "date": "2025-06-14",
+      "value": 398.44
+    },
+    {
+      "id": 46,
+      "kpi_id": 12,
+      "date": "2025-05-14",
+      "value": 458.26
+    },
+    {
+      "id": 47,
+      "kpi_id": 13,
+      "date": "2025-05-28",
+      "value": 601.24
+    },
+    {
+      "id": 48,
+      "kpi_id": 13,
+      "date": "2025-01-24",
+      "value": 399.69
+    },
+    {
+      "id": 49,
+      "kpi_id": 13,
+      "date": "2025-04-17",
+      "value": 479.6
+    },
+    {
+      "id": 50,
+      "kpi_id": 13,
+      "date": "2025-01-16",
+      "value": 191.76
+    },
+    {
+      "id": 51,
+      "kpi_id": 13,
+      "date": "2025-03-16",
+      "value": 290.57
+    },
+    {
+      "id": 52,
+      "kpi_id": 14,
+      "date": "2025-06-09",
+      "value": 736.11
+    },
+    {
+      "id": 53,
+      "kpi_id": 14,
+      "date": "2025-01-23",
+      "value": 938.56
+    },
+    {
+      "id": 54,
+      "kpi_id": 14,
+      "date": "2025-02-03",
+      "value": 856.66
+    },
+    {
+      "id": 55,
+      "kpi_id": 14,
+      "date": "2025-03-14",
+      "value": 246.18
+    },
+    {
+      "id": 56,
+      "kpi_id": 14,
+      "date": "2025-06-02",
+      "value": 215.26
+    },
+    {
+      "id": 57,
+      "kpi_id": 15,
+      "date": "2025-01-03",
+      "value": 181.27
+    },
+    {
+      "id": 58,
+      "kpi_id": 15,
+      "date": "2025-02-09",
+      "value": 77.61
+    },
+    {
+      "id": 59,
+      "kpi_id": 15,
+      "date": "2025-02-28",
+      "value": 406.61
+    },
+    {
+      "id": 60,
+      "kpi_id": 15,
+      "date": "2025-01-06",
+      "value": 46.23
+    },
+    {
+      "id": 61,
+      "kpi_id": 15,
+      "date": "2025-05-08",
+      "value": 26.46
+    },
+    {
+      "id": 62,
+      "kpi_id": 16,
+      "date": "2025-04-15",
+      "value": 238.82
+    },
+    {
+      "id": 63,
+      "kpi_id": 16,
+      "date": "2025-05-10",
+      "value": 869.68
+    },
+    {
+      "id": 64,
+      "kpi_id": 16,
+      "date": "2025-02-04",
+      "value": 530.87
+    },
+    {
+      "id": 65,
+      "kpi_id": 16,
+      "date": "2025-05-02",
+      "value": 153.86
+    },
+    {
+      "id": 66,
+      "kpi_id": 16,
+      "date": "2025-05-22",
+      "value": 24.63
+    },
+    {
+      "id": 67,
+      "kpi_id": 17,
+      "date": "2025-03-26",
+      "value": 656.63
+    },
+    {
+      "id": 68,
+      "kpi_id": 17,
+      "date": "2025-05-27",
+      "value": 641.99
+    },
+    {
+      "id": 69,
+      "kpi_id": 17,
+      "date": "2025-01-20",
+      "value": 79.55
+    },
+    {
+      "id": 70,
+      "kpi_id": 17,
+      "date": "2025-04-16",
+      "value": 142.5
+    },
+    {
+      "id": 71,
+      "kpi_id": 18,
+      "date": "2025-05-01",
+      "value": 559.71
+    },
+    {
+      "id": 72,
+      "kpi_id": 18,
+      "date": "2025-05-21",
+      "value": 281.61
+    },
+    {
+      "id": 73,
+      "kpi_id": 18,
+      "date": "2025-02-08",
+      "value": 891.85
+    },
+    {
+      "id": 74,
+      "kpi_id": 19,
+      "date": "2025-03-02",
+      "value": 916.65
+    },
+    {
+      "id": 75,
+      "kpi_id": 19,
+      "date": "2025-01-01",
+      "value": 189.29
+    },
+    {
+      "id": 76,
+      "kpi_id": 19,
+      "date": "2025-02-26",
+      "value": 749.23
+    },
+    {
+      "id": 77,
+      "kpi_id": 19,
+      "date": "2025-03-18",
+      "value": 70.23
+    },
+    {
+      "id": 78,
+      "kpi_id": 19,
+      "date": "2025-05-19",
+      "value": 145.68
+    },
+    {
+      "id": 79,
+      "kpi_id": 20,
+      "date": "2025-02-02",
+      "value": 404.47
+    },
+    {
+      "id": 80,
+      "kpi_id": 20,
+      "date": "2025-05-08",
+      "value": 432.63
+    },
+    {
+      "id": 81,
+      "kpi_id": 20,
+      "date": "2025-05-19",
+      "value": 550.8
+    },
+    {
+      "id": 82,
+      "kpi_id": 20,
+      "date": "2025-01-15",
+      "value": 891.64
+    },
+    {
+      "id": 83,
+      "kpi_id": 21,
+      "date": "2025-05-02",
+      "value": 865.0
+    },
+    {
+      "id": 84,
+      "kpi_id": 21,
+      "date": "2025-01-04",
+      "value": 682.99
+    },
+    {
+      "id": 85,
+      "kpi_id": 21,
+      "date": "2025-02-05",
+      "value": 52.62
+    },
+    {
+      "id": 86,
+      "kpi_id": 21,
+      "date": "2025-04-29",
+      "value": 222.71
+    },
+    {
+      "id": 87,
+      "kpi_id": 22,
+      "date": "2025-04-25",
+      "value": 882.63
+    },
+    {
+      "id": 88,
+      "kpi_id": 22,
+      "date": "2025-05-16",
+      "value": 303.43
+    },
+    {
+      "id": 89,
+      "kpi_id": 22,
+      "date": "2025-03-24",
+      "value": 475.32
+    },
+    {
+      "id": 90,
+      "kpi_id": 23,
+      "date": "2025-04-18",
+      "value": 855.6
+    },
+    {
+      "id": 91,
+      "kpi_id": 23,
+      "date": "2025-02-03",
+      "value": 981.19
+    },
+    {
+      "id": 92,
+      "kpi_id": 23,
+      "date": "2025-05-05",
+      "value": 214.97
+    },
+    {
+      "id": 93,
+      "kpi_id": 23,
+      "date": "2025-04-11",
+      "value": 874.48
+    },
+    {
+      "id": 94,
+      "kpi_id": 24,
+      "date": "2025-04-27",
+      "value": 231.6
+    },
+    {
+      "id": 95,
+      "kpi_id": 24,
+      "date": "2025-02-02",
+      "value": 354.57
+    },
+    {
+      "id": 96,
+      "kpi_id": 24,
+      "date": "2025-05-13",
+      "value": 33.61
+    },
+    {
+      "id": 97,
+      "kpi_id": 24,
+      "date": "2025-04-10",
+      "value": 335.87
+    },
+    {
+      "id": 98,
+      "kpi_id": 24,
+      "date": "2025-01-28",
+      "value": 277.96
+    },
+    {
+      "id": 99,
+      "kpi_id": 25,
+      "date": "2025-04-29",
+      "value": 791.67
+    },
+    {
+      "id": 100,
+      "kpi_id": 25,
+      "date": "2025-06-01",
+      "value": 830.39
+    },
+    {
+      "id": 101,
+      "kpi_id": 25,
+      "date": "2025-05-16",
+      "value": 231.22
+    },
+    {
+      "id": 102,
+      "kpi_id": 25,
+      "date": "2025-04-18",
+      "value": 963.13
+    },
+    {
+      "id": 103,
+      "kpi_id": 26,
+      "date": "2025-06-11",
+      "value": 737.29
+    },
+    {
+      "id": 104,
+      "kpi_id": 26,
+      "date": "2025-04-27",
+      "value": 989.95
+    },
+    {
+      "id": 105,
+      "kpi_id": 26,
+      "date": "2025-03-03",
+      "value": 445.87
+    },
+    {
+      "id": 106,
+      "kpi_id": 26,
+      "date": "2025-02-23",
+      "value": 759.96
+    },
+    {
+      "id": 107,
+      "kpi_id": 26,
+      "date": "2025-05-25",
+      "value": 129.46
+    },
+    {
+      "id": 108,
+      "kpi_id": 27,
+      "date": "2025-05-25",
+      "value": 149.72
+    },
+    {
+      "id": 109,
+      "kpi_id": 27,
+      "date": "2025-02-06",
+      "value": 879.22
+    },
+    {
+      "id": 110,
+      "kpi_id": 27,
+      "date": "2025-05-14",
+      "value": 45.81
+    },
+    {
+      "id": 111,
+      "kpi_id": 27,
+      "date": "2025-05-05",
+      "value": 761.08
+    },
+    {
+      "id": 112,
+      "kpi_id": 27,
+      "date": "2025-05-29",
+      "value": 583.83
+    },
+    {
+      "id": 113,
+      "kpi_id": 28,
+      "date": "2025-04-18",
+      "value": 260.48
+    },
+    {
+      "id": 114,
+      "kpi_id": 28,
+      "date": "2025-04-05",
+      "value": 874.27
+    },
+    {
+      "id": 115,
+      "kpi_id": 28,
+      "date": "2025-04-05",
+      "value": 935.61
+    },
+    {
+      "id": 116,
+      "kpi_id": 28,
+      "date": "2025-05-11",
+      "value": 705.06
+    },
+    {
+      "id": 117,
+      "kpi_id": 28,
+      "date": "2025-04-28",
+      "value": 694.89
+    },
+    {
+      "id": 118,
+      "kpi_id": 29,
+      "date": "2025-04-24",
+      "value": 981.64
+    },
+    {
+      "id": 119,
+      "kpi_id": 29,
+      "date": "2025-03-03",
+      "value": 995.5
+    },
+    {
+      "id": 120,
+      "kpi_id": 29,
+      "date": "2025-02-23",
+      "value": 595.21
+    },
+    {
+      "id": 121,
+      "kpi_id": 29,
+      "date": "2025-03-07",
+      "value": 86.61
+    },
+    {
+      "id": 122,
+      "kpi_id": 30,
+      "date": "2025-05-03",
+      "value": 75.57
+    },
+    {
+      "id": 123,
+      "kpi_id": 30,
+      "date": "2025-05-14",
+      "value": 196.68
+    },
+    {
+      "id": 124,
+      "kpi_id": 30,
+      "date": "2025-01-27",
+      "value": 52.21
+    },
+    {
+      "id": 125,
+      "kpi_id": 31,
+      "date": "2025-04-24",
+      "value": 109.92
+    },
+    {
+      "id": 126,
+      "kpi_id": 31,
+      "date": "2025-05-06",
+      "value": 625.13
+    },
+    {
+      "id": 127,
+      "kpi_id": 31,
+      "date": "2025-06-05",
+      "value": 432.46
+    },
+    {
+      "id": 128,
+      "kpi_id": 31,
+      "date": "2025-03-09",
+      "value": 554.63
+    },
+    {
+      "id": 129,
+      "kpi_id": 32,
+      "date": "2025-06-25",
+      "value": 108.22
+    },
+    {
+      "id": 130,
+      "kpi_id": 32,
+      "date": "2025-05-16",
+      "value": 588.71
+    },
+    {
+      "id": 131,
+      "kpi_id": 32,
+      "date": "2025-02-21",
+      "value": 443.96
+    },
+    {
+      "id": 132,
+      "kpi_id": 32,
+      "date": "2025-04-17",
+      "value": 459.78
+    },
+    {
+      "id": 133,
+      "kpi_id": 33,
+      "date": "2025-06-15",
+      "value": 198.22
+    },
+    {
+      "id": 134,
+      "kpi_id": 33,
+      "date": "2025-06-10",
+      "value": 893.43
+    },
+    {
+      "id": 135,
+      "kpi_id": 33,
+      "date": "2025-01-03",
+      "value": 404.41
+    },
+    {
+      "id": 136,
+      "kpi_id": 33,
+      "date": "2025-01-09",
+      "value": 205.69
+    },
+    {
+      "id": 137,
+      "kpi_id": 34,
+      "date": "2025-01-23",
+      "value": 336.73
+    },
+    {
+      "id": 138,
+      "kpi_id": 34,
+      "date": "2025-03-19",
+      "value": 568.2
+    },
+    {
+      "id": 139,
+      "kpi_id": 34,
+      "date": "2025-04-26",
+      "value": 202.87
+    },
+    {
+      "id": 140,
+      "kpi_id": 35,
+      "date": "2025-03-11",
+      "value": 397.02
+    },
+    {
+      "id": 141,
+      "kpi_id": 35,
+      "date": "2025-05-29",
+      "value": 311.99
+    },
+    {
+      "id": 142,
+      "kpi_id": 35,
+      "date": "2025-01-14",
+      "value": 88.19
+    },
+    {
+      "id": 143,
+      "kpi_id": 35,
+      "date": "2025-02-15",
+      "value": 967.68
+    },
+    {
+      "id": 144,
+      "kpi_id": 35,
+      "date": "2025-02-26",
+      "value": 929.85
+    },
+    {
+      "id": 145,
+      "kpi_id": 36,
+      "date": "2025-02-13",
+      "value": 776.36
+    },
+    {
+      "id": 146,
+      "kpi_id": 36,
+      "date": "2025-01-15",
+      "value": 978.01
+    },
+    {
+      "id": 147,
+      "kpi_id": 36,
+      "date": "2025-02-07",
+      "value": 679.94
+    },
+    {
+      "id": 148,
+      "kpi_id": 36,
+      "date": "2025-02-10",
+      "value": 818.07
+    },
+    {
+      "id": 149,
+      "kpi_id": 37,
+      "date": "2025-05-27",
+      "value": 175.04
+    },
+    {
+      "id": 150,
+      "kpi_id": 37,
+      "date": "2025-04-19",
+      "value": 74.04
+    },
+    {
+      "id": 151,
+      "kpi_id": 37,
+      "date": "2025-01-07",
+      "value": 746.03
+    },
+    {
+      "id": 152,
+      "kpi_id": 38,
+      "date": "2025-06-08",
+      "value": 144.6
+    },
+    {
+      "id": 153,
+      "kpi_id": 38,
+      "date": "2025-01-05",
+      "value": 838.27
+    },
+    {
+      "id": 154,
+      "kpi_id": 38,
+      "date": "2025-01-31",
+      "value": 941.23
+    },
+    {
+      "id": 155,
+      "kpi_id": 38,
+      "date": "2025-02-27",
+      "value": 641.76
+    },
+    {
+      "id": 156,
+      "kpi_id": 39,
+      "date": "2025-06-25",
+      "value": 991.52
+    },
+    {
+      "id": 157,
+      "kpi_id": 39,
+      "date": "2025-05-14",
+      "value": 597.04
+    },
+    {
+      "id": 158,
+      "kpi_id": 39,
+      "date": "2025-03-25",
+      "value": 742.63
+    },
+    {
+      "id": 159,
+      "kpi_id": 40,
+      "date": "2025-01-24",
+      "value": 152.57
+    },
+    {
+      "id": 160,
+      "kpi_id": 40,
+      "date": "2025-05-26",
+      "value": 50.02
+    },
+    {
+      "id": 161,
+      "kpi_id": 40,
+      "date": "2025-04-03",
+      "value": 950.9
+    },
+    {
+      "id": 162,
+      "kpi_id": 40,
+      "date": "2025-06-25",
+      "value": 918.75
+    },
+    {
+      "id": 163,
+      "kpi_id": 41,
+      "date": "2025-05-13",
+      "value": 941.98
+    },
+    {
+      "id": 164,
+      "kpi_id": 41,
+      "date": "2025-01-27",
+      "value": 364.56
+    },
+    {
+      "id": 165,
+      "kpi_id": 41,
+      "date": "2025-05-26",
+      "value": 180.38
+    },
+    {
+      "id": 166,
+      "kpi_id": 41,
+      "date": "2025-04-29",
+      "value": 605.26
+    },
+    {
+      "id": 167,
+      "kpi_id": 42,
+      "date": "2025-03-27",
+      "value": 391.99
+    },
+    {
+      "id": 168,
+      "kpi_id": 42,
+      "date": "2025-02-27",
+      "value": 395.84
+    },
+    {
+      "id": 169,
+      "kpi_id": 42,
+      "date": "2025-04-22",
+      "value": 915.79
+    },
+    {
+      "id": 170,
+      "kpi_id": 42,
+      "date": "2025-03-16",
+      "value": 993.48
+    },
+    {
+      "id": 171,
+      "kpi_id": 43,
+      "date": "2025-05-24",
+      "value": 740.22
+    },
+    {
+      "id": 172,
+      "kpi_id": 43,
+      "date": "2025-05-31",
+      "value": 25.94
+    },
+    {
+      "id": 173,
+      "kpi_id": 43,
+      "date": "2025-02-24",
+      "value": 896.19
+    },
+    {
+      "id": 174,
+      "kpi_id": 43,
+      "date": "2025-02-12",
+      "value": 872.01
+    },
+    {
+      "id": 175,
+      "kpi_id": 43,
+      "date": "2025-06-20",
+      "value": 534.35
+    },
+    {
+      "id": 176,
+      "kpi_id": 44,
+      "date": "2025-03-21",
+      "value": 92.13
+    },
+    {
+      "id": 177,
+      "kpi_id": 44,
+      "date": "2025-06-19",
+      "value": 985.22
+    },
+    {
+      "id": 178,
+      "kpi_id": 44,
+      "date": "2025-06-18",
+      "value": 836.51
+    },
+    {
+      "id": 179,
+      "kpi_id": 45,
+      "date": "2025-05-25",
+      "value": 17.97
+    },
+    {
+      "id": 180,
+      "kpi_id": 45,
+      "date": "2025-03-16",
+      "value": 733.21
+    },
+    {
+      "id": 181,
+      "kpi_id": 45,
+      "date": "2025-03-20",
+      "value": 510.12
+    },
+    {
+      "id": 182,
+      "kpi_id": 45,
+      "date": "2025-02-21",
+      "value": 592.53
+    },
+    {
+      "id": 183,
+      "kpi_id": 45,
+      "date": "2025-02-04",
+      "value": 311.2
+    },
+    {
+      "id": 184,
+      "kpi_id": 46,
+      "date": "2025-05-17",
+      "value": 787.18
+    },
+    {
+      "id": 185,
+      "kpi_id": 46,
+      "date": "2025-04-15",
+      "value": 498.66
+    },
+    {
+      "id": 186,
+      "kpi_id": 46,
+      "date": "2025-04-16",
+      "value": 650.35
+    },
+    {
+      "id": 187,
+      "kpi_id": 46,
+      "date": "2025-04-19",
+      "value": 554.65
+    },
+    {
+      "id": 188,
+      "kpi_id": 46,
+      "date": "2025-03-04",
+      "value": 564.34
+    },
+    {
+      "id": 189,
+      "kpi_id": 47,
+      "date": "2025-01-22",
+      "value": 379.44
+    },
+    {
+      "id": 190,
+      "kpi_id": 47,
+      "date": "2025-04-01",
+      "value": 83.18
+    },
+    {
+      "id": 191,
+      "kpi_id": 47,
+      "date": "2025-06-15",
+      "value": 656.11
+    },
+    {
+      "id": 192,
+      "kpi_id": 48,
+      "date": "2025-05-31",
+      "value": 198.35
+    },
+    {
+      "id": 193,
+      "kpi_id": 48,
+      "date": "2025-05-21",
+      "value": 697.61
+    },
+    {
+      "id": 194,
+      "kpi_id": 48,
+      "date": "2025-01-11",
+      "value": 427.83
+    },
+    {
+      "id": 195,
+      "kpi_id": 48,
+      "date": "2025-06-11",
+      "value": 202.32
+    },
+    {
+      "id": 196,
+      "kpi_id": 48,
+      "date": "2025-05-22",
+      "value": 916.21
+    },
+    {
+      "id": 197,
+      "kpi_id": 49,
+      "date": "2025-05-06",
+      "value": 926.0
+    },
+    {
+      "id": 198,
+      "kpi_id": 49,
+      "date": "2025-01-27",
+      "value": 411.85
+    },
+    {
+      "id": 199,
+      "kpi_id": 49,
+      "date": "2025-03-05",
+      "value": 84.41
+    },
+    {
+      "id": 200,
+      "kpi_id": 49,
+      "date": "2025-06-20",
+      "value": 745.12
+    },
+    {
+      "id": 201,
+      "kpi_id": 49,
+      "date": "2025-04-30",
+      "value": 999.0
+    },
+    {
+      "id": 202,
+      "kpi_id": 50,
+      "date": "2025-04-03",
+      "value": 258.48
+    },
+    {
+      "id": 203,
+      "kpi_id": 50,
+      "date": "2025-04-05",
+      "value": 288.16
+    },
+    {
+      "id": 204,
+      "kpi_id": 50,
+      "date": "2025-05-17",
+      "value": 362.72
+    },
+    {
+      "id": 205,
+      "kpi_id": 51,
+      "date": "2025-04-11",
+      "value": 422.93
+    },
+    {
+      "id": 206,
+      "kpi_id": 51,
+      "date": "2025-04-19",
+      "value": 70.45
+    },
+    {
+      "id": 207,
+      "kpi_id": 51,
+      "date": "2025-05-10",
+      "value": 589.46
+    },
+    {
+      "id": 208,
+      "kpi_id": 51,
+      "date": "2025-06-16",
+      "value": 532.59
+    },
+    {
+      "id": 209,
+      "kpi_id": 52,
+      "date": "2025-04-16",
+      "value": 636.46
+    },
+    {
+      "id": 210,
+      "kpi_id": 52,
+      "date": "2025-01-10",
+      "value": 92.64
+    },
+    {
+      "id": 211,
+      "kpi_id": 52,
+      "date": "2025-03-05",
+      "value": 926.42
+    },
+    {
+      "id": 212,
+      "kpi_id": 52,
+      "date": "2025-02-08",
+      "value": 642.63
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "post_id": 1,
+      "user_id": "03b11c18-0be4-4d13-ac05-eb34276df24c",
+      "content": "Và sau của với thay.",
+      "parent_comment_id": null,
+      "created_at": "2025-06-08T01:47:20"
+    },
+    {
+      "id": 2,
+      "post_id": 1,
+      "user_id": "dda0b651-6f10-429e-a65f-4d80a1bd8e9c",
+      "content": "Cho đi với làm nhưng.",
+      "parent_comment_id": null,
+      "created_at": "2025-02-02T02:00:24"
+    },
+    {
+      "id": 3,
+      "post_id": 2,
+      "user_id": "83bca49c-200b-4455-8da4-ac0f87e510b7",
+      "content": "Không chưa có gần giữa số vài.",
+      "parent_comment_id": null,
+      "created_at": "2025-06-18T03:26:28"
+    },
+    {
+      "id": 4,
+      "post_id": 2,
+      "user_id": "e26e3cb6-37fe-4b41-8df6-96e3b0a07528",
+      "content": "Tại cũng như vài đã.",
+      "parent_comment_id": null,
+      "created_at": "2025-06-19T03:56:30"
+    },
+    {
+      "id": 5,
+      "post_id": 2,
+      "user_id": "654c5049-a425-46e2-9690-6a0c9d52bf46",
+      "content": "Giữa cách mà khiến chỉ và cho từng.",
+      "parent_comment_id": null,
+      "created_at": "2025-03-12T18:14:35"
+    },
+    {
+      "id": 6,
+      "post_id": 3,
+      "user_id": "03b11c18-0be4-4d13-ac05-eb34276df24c",
+      "content": "Sau của vì thì của như của.",
+      "parent_comment_id": null,
+      "created_at": "2025-01-18T17:05:39"
+    },
+    {
+      "id": 7,
+      "post_id": 3,
+      "user_id": "55e08f42-e7e5-4f9d-8893-843ca22c11d5",
+      "content": "Như làm chưa cho này sẽ.",
+      "parent_comment_id": null,
+      "created_at": "2025-06-22T01:31:21"
+    },
+    {
+      "id": 8,
+      "post_id": 3,
+      "user_id": "aaf11df4-02e9-40e0-b67e-e3f31cb0cfd1",
+      "content": "Nếu gần như của lớn từ nào.",
+      "parent_comment_id": null,
+      "created_at": "2025-02-14T11:07:27"
+    },
+    {
+      "id": 9,
+      "post_id": 3,
+      "user_id": "f0fecc17-a6a7-4a90-abc1-348f153412ca",
+      "content": "Số đến như để đến và có tại.",
+      "parent_comment_id": null,
+      "created_at": "2025-06-06T19:15:08"
+    },
+    {
+      "id": 10,
+      "post_id": 4,
+      "user_id": "42612742-1085-48ae-b86d-cdb5df6f575b",
+      "content": "Như có theo một cho như.",
+      "parent_comment_id": null,
+      "created_at": "2025-01-28T23:42:12"
+    },
+    {
+      "id": 11,
+      "post_id": 4,
+      "user_id": "55e08f42-e7e5-4f9d-8893-843ca22c11d5",
+      "content": "Gần một có này về vẫn.",
+      "parent_comment_id": null,
+      "created_at": "2025-02-13T22:30:49"
+    },
+    {
+      "id": 12,
+      "post_id": 4,
+      "user_id": "aaf11df4-02e9-40e0-b67e-e3f31cb0cfd1",
+      "content": "Nào là được tại.",
+      "parent_comment_id": null,
+      "created_at": "2025-04-21T11:26:01"
+    },
+    {
+      "id": 13,
+      "post_id": 4,
+      "user_id": "936cf63f-5000-4e7f-b78d-1daf89a9cc8a",
+      "content": "Số có một để đúng nơi mà.",
+      "parent_comment_id": null,
+      "created_at": "2025-01-12T01:33:53"
+    },
+    {
+      "id": 14,
+      "post_id": 5,
+      "user_id": "bef7c7ca-bb8d-4538-b916-6cbb8ced5a18",
+      "content": "Đến được rất một một như nào.",
+      "parent_comment_id": null,
+      "created_at": "2025-06-02T04:53:39"
+    },
+    {
+      "id": 15,
+      "post_id": 5,
+      "user_id": "936cf63f-5000-4e7f-b78d-1daf89a9cc8a",
+      "content": "Nếu các cũng có tại chỉ để.",
+      "parent_comment_id": null,
+      "created_at": "2025-03-24T11:44:46"
+    },
+    {
+      "id": 16,
+      "post_id": 5,
+      "user_id": "3f00c9ec-08e5-45a2-86c1-e54b77d2a0ae",
+      "content": "Bạn đúng vẫn này.",
+      "parent_comment_id": null,
+      "created_at": "2025-01-27T02:50:08"
+    },
+    {
+      "id": 17,
+      "post_id": 6,
+      "user_id": "f0fecc17-a6a7-4a90-abc1-348f153412ca",
+      "content": "Vài sau có số.",
+      "parent_comment_id": null,
+      "created_at": "2025-04-24T03:15:42"
+    },
+    {
+      "id": 18,
+      "post_id": 6,
+      "user_id": "bef7c7ca-bb8d-4538-b916-6cbb8ced5a18",
+      "content": "Nếu khi đã để như trong cái hơn.",
+      "parent_comment_id": null,
+      "created_at": "2025-02-20T10:37:36"
+    },
+    {
+      "id": 19,
+      "post_id": 6,
+      "user_id": "895ee238-9b5b-4cfd-a86d-c87a06eb3736",
+      "content": "Có từng làm.",
+      "parent_comment_id": null,
+      "created_at": "2025-06-08T23:42:23"
+    },
+    {
+      "id": 20,
+      "post_id": 6,
+      "user_id": "3f00c9ec-08e5-45a2-86c1-e54b77d2a0ae",
+      "content": "Cũng chưa và từ mỗi từng.",
+      "parent_comment_id": null,
+      "created_at": "2025-02-11T01:25:45"
+    },
+    {
+      "id": 21,
+      "post_id": 7,
+      "user_id": "83bca49c-200b-4455-8da4-ac0f87e510b7",
+      "content": "Tại từng tôi lớn rất cũng.",
+      "parent_comment_id": null,
+      "created_at": "2025-06-19T22:19:24"
+    },
+    {
+      "id": 22,
+      "post_id": 7,
+      "user_id": "3f00c9ec-08e5-45a2-86c1-e54b77d2a0ae",
+      "content": "Như này với tự mà tôi thay.",
+      "parent_comment_id": null,
+      "created_at": "2025-02-10T20:12:17"
+    },
+    {
+      "id": 23,
+      "post_id": 8,
+      "user_id": "42612742-1085-48ae-b86d-cdb5df6f575b",
+      "content": "Đi nơi trong với trong tại nhưng.",
+      "parent_comment_id": null,
+      "created_at": "2025-04-18T02:25:08"
+    },
+    {
+      "id": 24,
+      "post_id": 8,
+      "user_id": "936cf63f-5000-4e7f-b78d-1daf89a9cc8a",
+      "content": "Cũng được trong tôi.",
+      "parent_comment_id": null,
+      "created_at": "2025-04-12T07:22:13"
+    },
+    {
+      "id": 25,
+      "post_id": 8,
+      "user_id": "3f00c9ec-08e5-45a2-86c1-e54b77d2a0ae",
+      "content": "Như để từ từng đang như giống.",
+      "parent_comment_id": null,
+      "created_at": "2025-03-28T16:43:40"
+    },
+    {
+      "id": 26,
+      "post_id": 8,
+      "user_id": "dda0b651-6f10-429e-a65f-4d80a1bd8e9c",
+      "content": "Vẫn tự dưới đó đó.",
+      "parent_comment_id": null,
+      "created_at": "2025-02-11T04:52:24"
+    },
+    {
+      "id": 27,
+      "post_id": 9,
+      "user_id": "aaf11df4-02e9-40e0-b67e-e3f31cb0cfd1",
+      "content": "Sau của thay đang với chỉ hoặc thay.",
+      "parent_comment_id": null,
+      "created_at": "2025-03-29T21:06:32"
+    },
+    {
+      "id": 28,
+      "post_id": 9,
+      "user_id": "e26e3cb6-37fe-4b41-8df6-96e3b0a07528",
+      "content": "Vài hơn trong đã.",
+      "parent_comment_id": null,
+      "created_at": "2025-03-29T15:02:45"
+    },
+    {
+      "id": 29,
+      "post_id": 9,
+      "user_id": "c884d75b-d390-40ba-9259-1f87d2e2c408",
+      "content": "Để làm như khi.",
+      "parent_comment_id": null,
+      "created_at": "2025-04-06T10:17:46"
+    },
+    {
+      "id": 30,
+      "post_id": 10,
+      "user_id": "03b11c18-0be4-4d13-ac05-eb34276df24c",
+      "content": "Hơn sau vì là đang để tôi.",
+      "parent_comment_id": null,
+      "created_at": "2025-05-09T20:32:26"
+    },
+    {
+      "id": 31,
+      "post_id": 10,
+      "user_id": "e26e3cb6-37fe-4b41-8df6-96e3b0a07528",
+      "content": "Mỗi bạn khiến đến.",
+      "parent_comment_id": null,
+      "created_at": "2025-02-08T14:07:14"
+    },
+    {
+      "id": 32,
+      "post_id": 11,
+      "user_id": "f0fecc17-a6a7-4a90-abc1-348f153412ca",
+      "content": "Khi trong của của được với.",
+      "parent_comment_id": null,
+      "created_at": "2025-03-08T01:17:56"
+    },
+    {
+      "id": 33,
+      "post_id": 11,
+      "user_id": "bef7c7ca-bb8d-4538-b916-6cbb8ced5a18",
+      "content": "Dưới thế cách bạn một.",
+      "parent_comment_id": null,
+      "created_at": "2025-02-13T07:42:00"
+    },
+    {
+      "id": 34,
+      "post_id": 12,
+      "user_id": "c884d75b-d390-40ba-9259-1f87d2e2c408",
+      "content": "Làm được khi nơi đúng với vài.",
+      "parent_comment_id": null,
+      "created_at": "2025-04-22T12:01:37"
+    },
+    {
+      "id": 35,
+      "post_id": 12,
+      "user_id": "1d2b70e9-e80d-499a-92fc-745c584ef8ed",
+      "content": "Vẫn chưa với tôi làm về.",
+      "parent_comment_id": null,
+      "created_at": "2025-02-25T12:13:03"
+    },
+    {
+      "id": 36,
+      "post_id": 13,
+      "user_id": "f0fecc17-a6a7-4a90-abc1-348f153412ca",
+      "content": "Bên khiến có tại.",
+      "parent_comment_id": null,
+      "created_at": "2025-02-02T15:32:12"
+    },
+    {
+      "id": 37,
+      "post_id": 13,
+      "user_id": "03b11c18-0be4-4d13-ac05-eb34276df24c",
+      "content": "Từ tại khiến các đi chỉ vì.",
+      "parent_comment_id": null,
+      "created_at": "2025-03-01T15:00:23"
+    },
+    {
+      "id": 38,
+      "post_id": 14,
+      "user_id": "6978083f-56c4-4726-99e7-821cc775e69a",
+      "content": "Điều nếu vậy với như điều sau và.",
+      "parent_comment_id": null,
+      "created_at": "2025-03-08T00:20:42"
+    },
+    {
+      "id": 39,
+      "post_id": 14,
+      "user_id": "83bca49c-200b-4455-8da4-ac0f87e510b7",
+      "content": "Như hơn đó tại.",
+      "parent_comment_id": null,
+      "created_at": "2025-05-13T11:26:34"
+    },
+    {
+      "id": 40,
+      "post_id": 15,
+      "user_id": "3f00c9ec-08e5-45a2-86c1-e54b77d2a0ae",
+      "content": "Có đi từng sau khiến vẫn.",
+      "parent_comment_id": null,
+      "created_at": "2025-03-23T04:15:11"
+    },
+    {
+      "id": 41,
+      "post_id": 15,
+      "user_id": "6978083f-56c4-4726-99e7-821cc775e69a",
+      "content": "Để từng bên làm.",
+      "parent_comment_id": null,
+      "created_at": "2025-03-07T04:13:30"
+    },
+    {
+      "id": 42,
+      "post_id": 16,
+      "user_id": "aaf11df4-02e9-40e0-b67e-e3f31cb0cfd1",
+      "content": "Điều thay dưới đó nhưng và nếu.",
+      "parent_comment_id": null,
+      "created_at": "2025-02-13T12:52:19"
+    },
+    {
+      "id": 43,
+      "post_id": 16,
+      "user_id": "e50bc5bc-2276-472f-82bc-0383c82f56e1",
+      "content": "Để để đó sẽ các bạn của vẫn.",
+      "parent_comment_id": null,
+      "created_at": "2025-01-24T04:54:01"
+    },
+    {
+      "id": 44,
+      "post_id": 16,
+      "user_id": "55e08f42-e7e5-4f9d-8893-843ca22c11d5",
+      "content": "Của hơn đó nhưng sau đã.",
+      "parent_comment_id": null,
+      "created_at": "2025-05-15T23:14:12"
+    },
+    {
+      "id": 45,
+      "post_id": 17,
+      "user_id": "2654d8af-cc44-4d73-84a7-e59718d978fe",
+      "content": "Người cũng thế vậy lớn nhưng khiến tại.",
+      "parent_comment_id": null,
+      "created_at": "2025-02-17T14:21:50"
+    },
+    {
+      "id": 46,
+      "post_id": 17,
+      "user_id": "e26e3cb6-37fe-4b41-8df6-96e3b0a07528",
+      "content": "Hơn như cái cũng rất nhưng không từ.",
+      "parent_comment_id": null,
+      "created_at": "2025-06-01T18:29:49"
+    },
+    {
+      "id": 47,
+      "post_id": 17,
+      "user_id": "83bca49c-200b-4455-8da4-ac0f87e510b7",
+      "content": "Cách sau dưới này vẫn hơn.",
+      "parent_comment_id": null,
+      "created_at": "2025-02-06T21:14:34"
+    },
+    {
+      "id": 48,
+      "post_id": 17,
+      "user_id": "e50bc5bc-2276-472f-82bc-0383c82f56e1",
+      "content": "Đúng một nếu.",
+      "parent_comment_id": null,
+      "created_at": "2025-02-05T11:22:49"
+    },
+    {
+      "id": 49,
+      "post_id": 18,
+      "user_id": "895ee238-9b5b-4cfd-a86d-c87a06eb3736",
+      "content": "Cũng bên không.",
+      "parent_comment_id": null,
+      "created_at": "2025-03-23T22:53:21"
+    },
+    {
+      "id": 50,
+      "post_id": 18,
+      "user_id": "6978083f-56c4-4726-99e7-821cc775e69a",
+      "content": "Cũng chưa vì của cách.",
+      "parent_comment_id": null,
+      "created_at": "2025-02-25T00:27:47"
+    },
+    {
+      "id": 51,
+      "post_id": 18,
+      "user_id": "42612742-1085-48ae-b86d-cdb5df6f575b",
+      "content": "Cách sau rất dưới người đã số thì.",
+      "parent_comment_id": null,
+      "created_at": "2025-03-10T12:16:48"
+    },
+    {
+      "id": 52,
+      "post_id": 18,
+      "user_id": "e50bc5bc-2276-472f-82bc-0383c82f56e1",
+      "content": "Cũng dưới đi vậy điều không.",
+      "parent_comment_id": null,
+      "created_at": "2025-03-11T22:40:17"
+    },
+    {
+      "id": 53,
+      "post_id": 19,
+      "user_id": "e26e3cb6-37fe-4b41-8df6-96e3b0a07528",
+      "content": "Thì dưới cách chưa mỗi là làm.",
+      "parent_comment_id": null,
+      "created_at": "2025-06-24T08:38:45"
+    },
+    {
+      "id": 54,
+      "post_id": 19,
+      "user_id": "bef7c7ca-bb8d-4538-b916-6cbb8ced5a18",
+      "content": "Vậy mỗi để đi đó nơi vẫn vẫn.",
+      "parent_comment_id": null,
+      "created_at": "2025-04-27T20:57:27"
+    },
+    {
+      "id": 55,
+      "post_id": 19,
+      "user_id": "6978083f-56c4-4726-99e7-821cc775e69a",
+      "content": "Lớn bên một tôi từng để.",
+      "parent_comment_id": null,
+      "created_at": "2025-01-27T15:28:52"
+    },
+    {
+      "id": 56,
+      "post_id": 20,
+      "user_id": "2654d8af-cc44-4d73-84a7-e59718d978fe",
+      "content": "Hoặc từ đúng của số chỉ.",
+      "parent_comment_id": null,
+      "created_at": "2025-04-17T09:42:36"
+    },
+    {
+      "id": 57,
+      "post_id": 20,
+      "user_id": "654c5049-a425-46e2-9690-6a0c9d52bf46",
+      "content": "Tự dưới tại để.",
+      "parent_comment_id": null,
+      "created_at": "2025-05-12T19:19:53"
+    },
+    {
+      "id": 58,
+      "post_id": 20,
+      "user_id": "dda0b651-6f10-429e-a65f-4d80a1bd8e9c",
+      "content": "Số các theo cũng khi.",
+      "parent_comment_id": null,
+      "created_at": "2025-02-28T02:06:36"
+    },
+    {
+      "id": 59,
+      "post_id": 20,
+      "user_id": "bef7c7ca-bb8d-4538-b916-6cbb8ced5a18",
+      "content": "Thay nhiều với để gần nếu.",
+      "parent_comment_id": null,
+      "created_at": "2025-06-04T16:59:02"
+    }
+  ],
+  "documents": [
+    {
+      "id": 1,
+      "name": "như.pdf",
+      "url": "https://www.mai.com/",
+      "file_type": "key",
+      "parent_id": 1,
+      "parent_type": "initiative",
+      "uploader_id": "936cf63f-5000-4e7f-b78d-1daf89a9cc8a",
+      "created_at": "2025-01-05T15:43:06"
+    },
+    {
+      "id": 2,
+      "name": "nơi.jpeg",
+      "url": "https://www.dang.com/",
+      "file_type": "jpeg",
+      "parent_id": 2,
+      "parent_type": "initiative",
+      "uploader_id": "1d2b70e9-e80d-499a-92fc-745c584ef8ed",
+      "created_at": "2025-06-22T23:05:42"
+    },
+    {
+      "id": 3,
+      "name": "dưới.mov",
+      "url": "https://vu.com/",
+      "file_type": "key",
+      "parent_id": 2,
+      "parent_type": "initiative",
+      "uploader_id": "bef7c7ca-bb8d-4538-b916-6cbb8ced5a18",
+      "created_at": "2025-04-29T01:26:27"
+    },
+    {
+      "id": 4,
+      "name": "một.html",
+      "url": "http://www.vu.com/",
+      "file_type": "css",
+      "parent_id": 3,
+      "parent_type": "initiative",
+      "uploader_id": "e50bc5bc-2276-472f-82bc-0383c82f56e1",
+      "created_at": "2025-02-13T19:39:16"
+    },
+    {
+      "id": 5,
+      "name": "này.odt",
+      "url": "https://nguyen.net/",
+      "file_type": "wav",
+      "parent_id": 4,
+      "parent_type": "initiative",
+      "uploader_id": "e26e3cb6-37fe-4b41-8df6-96e3b0a07528",
+      "created_at": "2025-03-01T14:58:08"
+    },
+    {
+      "id": 6,
+      "name": "tôi.csv",
+      "url": "http://bui.com/",
+      "file_type": "numbers",
+      "parent_id": 4,
+      "parent_type": "initiative",
+      "uploader_id": "aaf11df4-02e9-40e0-b67e-e3f31cb0cfd1",
+      "created_at": "2025-02-07T20:35:30"
+    },
+    {
+      "id": 7,
+      "name": "bạn.mp3",
+      "url": "https://www.vu.com/",
+      "file_type": "mp4",
+      "parent_id": 5,
+      "parent_type": "initiative",
+      "uploader_id": "42612742-1085-48ae-b86d-cdb5df6f575b",
+      "created_at": "2025-04-26T20:25:58"
+    },
+    {
+      "id": 8,
+      "name": "hơn.json",
+      "url": "https://dang.com/",
+      "file_type": "json",
+      "parent_id": 6,
+      "parent_type": "initiative",
+      "uploader_id": "1d2b70e9-e80d-499a-92fc-745c584ef8ed",
+      "created_at": "2025-02-09T03:38:05"
+    },
+    {
+      "id": 9,
+      "name": "đang.ppt",
+      "url": "http://www.dang.com/",
+      "file_type": "webm",
+      "parent_id": 7,
+      "parent_type": "initiative",
+      "uploader_id": "42612742-1085-48ae-b86d-cdb5df6f575b",
+      "created_at": "2025-06-17T18:18:40"
+    },
+    {
+      "id": 10,
+      "name": "với.css",
+      "url": "http://mai.net/",
+      "file_type": "png",
+      "parent_id": 8,
+      "parent_type": "initiative",
+      "uploader_id": "1d2b70e9-e80d-499a-92fc-745c584ef8ed",
+      "created_at": "2025-01-24T05:06:44"
+    },
+    {
+      "id": 11,
+      "name": "giống.html",
+      "url": "http://tran.com/",
+      "file_type": "json",
+      "parent_id": 9,
+      "parent_type": "initiative",
+      "uploader_id": "bef7c7ca-bb8d-4538-b916-6cbb8ced5a18",
+      "created_at": "2025-01-19T04:15:12"
+    },
+    {
+      "id": 12,
+      "name": "với.mp3",
+      "url": "http://www.mai.com/",
+      "file_type": "tiff",
+      "parent_id": 10,
+      "parent_type": "initiative",
+      "uploader_id": "55e08f42-e7e5-4f9d-8893-843ca22c11d5",
+      "created_at": "2025-05-23T01:28:42"
+    },
+    {
+      "id": 13,
+      "name": "được.csv",
+      "url": "https://nguyen.biz/",
+      "file_type": "tiff",
+      "parent_id": 10,
+      "parent_type": "initiative",
+      "uploader_id": "895ee238-9b5b-4cfd-a86d-c87a06eb3736",
+      "created_at": "2025-01-06T18:44:09"
+    },
+    {
+      "id": 14,
+      "name": "dưới.xls",
+      "url": "http://www.vu.com/",
+      "file_type": "doc",
+      "parent_id": 11,
+      "parent_type": "initiative",
+      "uploader_id": "aaf11df4-02e9-40e0-b67e-e3f31cb0cfd1",
+      "created_at": "2025-03-11T03:43:03"
+    },
+    {
+      "id": 15,
+      "name": "về.tiff",
+      "url": "http://www.pham.com/",
+      "file_type": "wav",
+      "parent_id": 11,
+      "parent_type": "initiative",
+      "uploader_id": "6978083f-56c4-4726-99e7-821cc775e69a",
+      "created_at": "2025-05-22T20:55:16"
+    },
+    {
+      "id": 16,
+      "name": "có.ppt",
+      "url": "https://www.vu.info/",
+      "file_type": "mov",
+      "parent_id": 12,
+      "parent_type": "initiative",
+      "uploader_id": "83bca49c-200b-4455-8da4-ac0f87e510b7",
+      "created_at": "2025-03-16T16:24:41"
+    },
+    {
+      "id": 17,
+      "name": "đang.jpeg",
+      "url": "http://nguyen.com/",
+      "file_type": "flac",
+      "parent_id": 13,
+      "parent_type": "initiative",
+      "uploader_id": "c884d75b-d390-40ba-9259-1f87d2e2c408",
+      "created_at": "2025-05-02T15:15:50"
+    },
+    {
+      "id": 18,
+      "name": "như.mp3",
+      "url": "https://www.vu.biz/",
+      "file_type": "png",
+      "parent_id": 13,
+      "parent_type": "initiative",
+      "uploader_id": "03b11c18-0be4-4d13-ac05-eb34276df24c",
+      "created_at": "2025-05-26T11:32:34"
+    },
+    {
+      "id": 19,
+      "name": "số.css",
+      "url": "http://hoang.biz/",
+      "file_type": "bmp",
+      "parent_id": 14,
+      "parent_type": "initiative",
+      "uploader_id": "bef7c7ca-bb8d-4538-b916-6cbb8ced5a18",
+      "created_at": "2025-06-24T00:44:28"
+    },
+    {
+      "id": 20,
+      "name": "có.pptx",
+      "url": "http://mai.com/",
+      "file_type": "gif",
+      "parent_id": 15,
+      "parent_type": "initiative",
+      "uploader_id": "f0fecc17-a6a7-4a90-abc1-348f153412ca",
+      "created_at": "2025-04-08T13:18:13"
+    },
+    {
+      "id": 21,
+      "name": "cho.flac",
+      "url": "http://le.org/",
+      "file_type": "flac",
+      "parent_id": 16,
+      "parent_type": "initiative",
+      "uploader_id": "728fcac0-7677-4851-b230-841f6e1a0b92",
+      "created_at": "2025-03-06T08:55:48"
+    },
+    {
+      "id": 22,
+      "name": "giữa.mp4",
+      "url": "http://www.vu.info/",
+      "file_type": "csv",
+      "parent_id": 17,
+      "parent_type": "initiative",
+      "uploader_id": "83bca49c-200b-4455-8da4-ac0f87e510b7",
+      "created_at": "2025-03-28T17:37:19"
+    },
+    {
+      "id": 23,
+      "name": "làm.numbers",
+      "url": "https://pham.com/",
+      "file_type": "mp3",
+      "parent_id": 18,
+      "parent_type": "initiative",
+      "uploader_id": "e26e3cb6-37fe-4b41-8df6-96e3b0a07528",
+      "created_at": "2025-01-15T00:54:21"
+    },
+    {
+      "id": 24,
+      "name": "đó.xlsx",
+      "url": "http://duong.com/",
+      "file_type": "mp4",
+      "parent_id": 18,
+      "parent_type": "initiative",
+      "uploader_id": "42612742-1085-48ae-b86d-cdb5df6f575b",
+      "created_at": "2025-05-11T15:20:08"
+    },
+    {
+      "id": 25,
+      "name": "lớn.flac",
+      "url": "https://dang.com/",
+      "file_type": "docx",
+      "parent_id": 19,
+      "parent_type": "initiative",
+      "uploader_id": "936cf63f-5000-4e7f-b78d-1daf89a9cc8a",
+      "created_at": "2025-06-01T01:59:20"
+    },
+    {
+      "id": 26,
+      "name": "nếu.mov",
+      "url": "http://www.le.com/",
+      "file_type": "flac",
+      "parent_id": 20,
+      "parent_type": "initiative",
+      "uploader_id": "1d2b70e9-e80d-499a-92fc-745c584ef8ed",
+      "created_at": "2025-03-18T09:55:00"
+    },
+    {
+      "id": 27,
+      "name": "trong.pptx",
+      "url": "http://www.duong.biz/",
+      "file_type": "xls",
+      "parent_id": 20,
+      "parent_type": "initiative",
+      "uploader_id": "aaf11df4-02e9-40e0-b67e-e3f31cb0cfd1",
+      "created_at": "2025-01-23T05:49:29"
+    },
+    {
+      "id": 28,
+      "name": "số.js",
+      "url": "http://le.com/",
+      "file_type": "numbers",
+      "parent_id": 1,
+      "parent_type": "mission",
+      "uploader_id": "936cf63f-5000-4e7f-b78d-1daf89a9cc8a",
+      "created_at": "2025-04-09T12:54:10"
+    },
+    {
+      "id": 29,
+      "name": "với.css",
+      "url": "http://www.pham.net/",
+      "file_type": "css",
+      "parent_id": 2,
+      "parent_type": "mission",
+      "uploader_id": "728fcac0-7677-4851-b230-841f6e1a0b92",
+      "created_at": "2025-04-20T01:45:26"
+    },
+    {
+      "id": 30,
+      "name": "sau.csv",
+      "url": "https://www.dang.com/",
+      "file_type": "flac",
+      "parent_id": 3,
+      "parent_type": "mission",
+      "uploader_id": "2654d8af-cc44-4d73-84a7-e59718d978fe",
+      "created_at": "2025-03-05T15:02:15"
+    },
+    {
+      "id": 31,
+      "name": "với.png",
+      "url": "http://www.dang.biz/",
+      "file_type": "json",
+      "parent_id": 3,
+      "parent_type": "mission",
+      "uploader_id": "c884d75b-d390-40ba-9259-1f87d2e2c408",
+      "created_at": "2025-06-10T04:28:00"
+    },
+    {
+      "id": 32,
+      "name": "theo.doc",
+      "url": "https://www.tran.com/",
+      "file_type": "jpeg",
+      "parent_id": 4,
+      "parent_type": "mission",
+      "uploader_id": "6978083f-56c4-4726-99e7-821cc775e69a",
+      "created_at": "2025-01-28T07:47:15"
+    },
+    {
+      "id": 33,
+      "name": "làm.mov",
+      "url": "https://nguyen.com/",
+      "file_type": "doc",
+      "parent_id": 4,
+      "parent_type": "mission",
+      "uploader_id": "2654d8af-cc44-4d73-84a7-e59718d978fe",
+      "created_at": "2025-03-28T20:34:38"
+    },
+    {
+      "id": 34,
+      "name": "đó.xlsx",
+      "url": "https://tran.org/",
+      "file_type": "csv",
+      "parent_id": 5,
+      "parent_type": "mission",
+      "uploader_id": "e50bc5bc-2276-472f-82bc-0383c82f56e1",
+      "created_at": "2025-02-28T22:45:31"
+    },
+    {
+      "id": 35,
+      "name": "để.txt",
+      "url": "http://www.duong.com/",
+      "file_type": "html",
+      "parent_id": 6,
+      "parent_type": "mission",
+      "uploader_id": "2654d8af-cc44-4d73-84a7-e59718d978fe",
+      "created_at": "2025-03-19T10:44:26"
+    },
+    {
+      "id": 36,
+      "name": "như.flac",
+      "url": "https://www.vu.com/",
+      "file_type": "mp4",
+      "parent_id": 6,
+      "parent_type": "mission",
+      "uploader_id": "55e08f42-e7e5-4f9d-8893-843ca22c11d5",
+      "created_at": "2025-02-28T02:50:10"
+    },
+    {
+      "id": 37,
+      "name": "thế.wav",
+      "url": "https://nguyen.info/",
+      "file_type": "wav",
+      "parent_id": 7,
+      "parent_type": "mission",
+      "uploader_id": "dda0b651-6f10-429e-a65f-4d80a1bd8e9c",
+      "created_at": "2025-03-01T15:04:19"
+    },
+    {
+      "id": 38,
+      "name": "có.json",
+      "url": "https://www.mai.net/",
+      "file_type": "doc",
+      "parent_id": 8,
+      "parent_type": "mission",
+      "uploader_id": "1d2b70e9-e80d-499a-92fc-745c584ef8ed",
+      "created_at": "2025-06-01T11:47:44"
+    },
+    {
+      "id": 39,
+      "name": "vẫn.tiff",
+      "url": "https://www.pham.com/",
+      "file_type": "webm",
+      "parent_id": 8,
+      "parent_type": "mission",
+      "uploader_id": "654c5049-a425-46e2-9690-6a0c9d52bf46",
+      "created_at": "2025-05-16T23:23:26"
+    },
+    {
+      "id": 40,
+      "name": "cái.avi",
+      "url": "http://www.hoang.net/",
+      "file_type": "png",
+      "parent_id": 9,
+      "parent_type": "mission",
+      "uploader_id": "55e08f42-e7e5-4f9d-8893-843ca22c11d5",
+      "created_at": "2025-06-15T06:39:44"
+    },
+    {
+      "id": 41,
+      "name": "cái.numbers",
+      "url": "https://dang.com/",
+      "file_type": "gif",
+      "parent_id": 10,
+      "parent_type": "mission",
+      "uploader_id": "936cf63f-5000-4e7f-b78d-1daf89a9cc8a",
+      "created_at": "2025-06-05T05:10:53"
+    },
+    {
+      "id": 42,
+      "name": "cho.mp4",
+      "url": "https://dang.biz/",
+      "file_type": "csv",
+      "parent_id": 10,
+      "parent_type": "mission",
+      "uploader_id": "e50bc5bc-2276-472f-82bc-0383c82f56e1",
+      "created_at": "2025-03-27T12:46:03"
+    },
+    {
+      "id": 43,
+      "name": "khiến.csv",
+      "url": "http://www.pham.com/",
+      "file_type": "json",
+      "parent_id": 11,
+      "parent_type": "mission",
+      "uploader_id": "e26e3cb6-37fe-4b41-8df6-96e3b0a07528",
+      "created_at": "2025-05-18T14:07:38"
+    },
+    {
+      "id": 44,
+      "name": "như.html",
+      "url": "http://www.nguyen.com/",
+      "file_type": "tiff",
+      "parent_id": 11,
+      "parent_type": "mission",
+      "uploader_id": "6978083f-56c4-4726-99e7-821cc775e69a",
+      "created_at": "2025-01-02T20:57:23"
+    },
+    {
+      "id": 45,
+      "name": "hơn.css",
+      "url": "http://www.nguyen.org/",
+      "file_type": "doc",
+      "parent_id": 12,
+      "parent_type": "mission",
+      "uploader_id": "83bca49c-200b-4455-8da4-ac0f87e510b7",
+      "created_at": "2025-05-15T11:30:31"
+    },
+    {
+      "id": 46,
+      "name": "trong.webm",
+      "url": "https://www.dang.com/",
+      "file_type": "flac",
+      "parent_id": 12,
+      "parent_type": "mission",
+      "uploader_id": "b473e86b-2392-4367-919f-1eb1367f619c",
+      "created_at": "2025-01-18T15:07:18"
+    },
+    {
+      "id": 47,
+      "name": "tại.pages",
+      "url": "http://www.pham.com/",
+      "file_type": "xlsx",
+      "parent_id": 13,
+      "parent_type": "mission",
+      "uploader_id": "c884d75b-d390-40ba-9259-1f87d2e2c408",
+      "created_at": "2025-05-17T01:19:03"
+    },
+    {
+      "id": 48,
+      "name": "như.docx",
+      "url": "https://mai.com/",
+      "file_type": "mov",
+      "parent_id": 14,
+      "parent_type": "mission",
+      "uploader_id": "936cf63f-5000-4e7f-b78d-1daf89a9cc8a",
+      "created_at": "2025-02-09T11:46:08"
+    },
+    {
+      "id": 49,
+      "name": "hơn.bmp",
+      "url": "http://www.nguyen.net/",
+      "file_type": "html",
+      "parent_id": 15,
+      "parent_type": "mission",
+      "uploader_id": "728fcac0-7677-4851-b230-841f6e1a0b92",
+      "created_at": "2025-04-30T10:54:14"
+    },
+    {
+      "id": 50,
+      "name": "tôi.css",
+      "url": "http://www.nguyen.info/",
+      "file_type": "wav",
+      "parent_id": 16,
+      "parent_type": "mission",
+      "uploader_id": "55e08f42-e7e5-4f9d-8893-843ca22c11d5",
+      "created_at": "2025-01-05T00:50:40"
+    },
+    {
+      "id": 51,
+      "name": "các.js",
+      "url": "https://tran.com/",
+      "file_type": "webm",
+      "parent_id": 16,
+      "parent_type": "mission",
+      "uploader_id": "e50bc5bc-2276-472f-82bc-0383c82f56e1",
+      "created_at": "2025-05-06T09:03:07"
+    },
+    {
+      "id": 52,
+      "name": "trong.tiff",
+      "url": "http://hoang.net/",
+      "file_type": "json",
+      "parent_id": 17,
+      "parent_type": "mission",
+      "uploader_id": "b473e86b-2392-4367-919f-1eb1367f619c",
+      "created_at": "2025-04-22T06:38:00"
+    },
+    {
+      "id": 53,
+      "name": "trong.mp3",
+      "url": "https://www.tran.com/",
+      "file_type": "csv",
+      "parent_id": 18,
+      "parent_type": "mission",
+      "uploader_id": "83bca49c-200b-4455-8da4-ac0f87e510b7",
+      "created_at": "2025-04-19T05:38:52"
+    },
+    {
+      "id": 54,
+      "name": "theo.xls",
+      "url": "http://le.net/",
+      "file_type": "csv",
+      "parent_id": 19,
+      "parent_type": "mission",
+      "uploader_id": "e50bc5bc-2276-472f-82bc-0383c82f56e1",
+      "created_at": "2025-01-25T14:10:10"
+    },
+    {
+      "id": 55,
+      "name": "một.png",
+      "url": "http://www.mai.com/",
+      "file_type": "xlsx",
+      "parent_id": 19,
+      "parent_type": "mission",
+      "uploader_id": "e26e3cb6-37fe-4b41-8df6-96e3b0a07528",
+      "created_at": "2025-01-27T19:14:59"
+    },
+    {
+      "id": 56,
+      "name": "các.mp3",
+      "url": "https://www.vu.com/",
+      "file_type": "tiff",
+      "parent_id": 20,
+      "parent_type": "mission",
+      "uploader_id": "55e08f42-e7e5-4f9d-8893-843ca22c11d5",
+      "created_at": "2025-04-15T19:33:18"
+    }
+  ],
+  "qa_items": [
+    {
+      "id": 1,
+      "question": "Của tự giống hơn thì nơi sau.",
+      "answer": "Làm cho vì khiến từng trong.",
+      "parent_id": 1,
+      "parent_type": "initiative",
+      "asker_id": "2654d8af-cc44-4d73-84a7-e59718d978fe",
+      "answerer_id": "b473e86b-2392-4367-919f-1eb1367f619c",
+      "created_at": "2025-02-24T11:21:48"
+    },
+    {
+      "id": 2,
+      "question": "Này chưa có về sẽ.",
+      "answer": "Chỉ cách bên dưới.",
+      "parent_id": 1,
+      "parent_type": "initiative",
+      "asker_id": "728fcac0-7677-4851-b230-841f6e1a0b92",
+      "answerer_id": "f0fecc17-a6a7-4a90-abc1-348f153412ca",
+      "created_at": "2025-06-12T12:27:01"
+    },
+    {
+      "id": 3,
+      "question": "Hơn là và vì mà.",
+      "answer": "Vì khi của số về tại.",
+      "parent_id": 2,
+      "parent_type": "initiative",
+      "asker_id": "895ee238-9b5b-4cfd-a86d-c87a06eb3736",
+      "answerer_id": "f0fecc17-a6a7-4a90-abc1-348f153412ca",
+      "created_at": "2025-06-17T22:16:40"
+    },
+    {
+      "id": 4,
+      "question": "Nơi hơn nơi được của của.",
+      "answer": "Của giữa nhiều không chưa sẽ.",
+      "parent_id": 3,
+      "parent_type": "initiative",
+      "asker_id": "1d2b70e9-e80d-499a-92fc-745c584ef8ed",
+      "answerer_id": "55e08f42-e7e5-4f9d-8893-843ca22c11d5",
+      "created_at": "2025-06-14T13:48:00"
+    },
+    {
+      "id": 5,
+      "question": "Là nhiều tại thì sẽ.",
+      "answer": "Dưới sau bạn chưa.",
+      "parent_id": 4,
+      "parent_type": "initiative",
+      "asker_id": "936cf63f-5000-4e7f-b78d-1daf89a9cc8a",
+      "answerer_id": "83bca49c-200b-4455-8da4-ac0f87e510b7",
+      "created_at": "2025-01-16T17:30:32"
+    },
+    {
+      "id": 6,
+      "question": "Nào như nhưng sẽ từ để.",
+      "answer": "Điều của sẽ rất mà.",
+      "parent_id": 4,
+      "parent_type": "initiative",
+      "asker_id": "03b11c18-0be4-4d13-ac05-eb34276df24c",
+      "answerer_id": "f0fecc17-a6a7-4a90-abc1-348f153412ca",
+      "created_at": "2025-04-02T19:42:16"
+    },
+    {
+      "id": 7,
+      "question": "Cho nào với của cách.",
+      "answer": "Làm tại như cho rất này gần hơn.",
+      "parent_id": 5,
+      "parent_type": "initiative",
+      "asker_id": "dda0b651-6f10-429e-a65f-4d80a1bd8e9c",
+      "answerer_id": "e50bc5bc-2276-472f-82bc-0383c82f56e1",
+      "created_at": "2025-06-17T02:57:03"
+    },
+    {
+      "id": 8,
+      "question": "Cũng với vậy số của điều.",
+      "answer": "Nơi đến chưa gần thay.",
+      "parent_id": 6,
+      "parent_type": "initiative",
+      "asker_id": "55e08f42-e7e5-4f9d-8893-843ca22c11d5",
+      "answerer_id": "1d2b70e9-e80d-499a-92fc-745c584ef8ed",
+      "created_at": "2025-03-26T14:47:29"
+    },
+    {
+      "id": 9,
+      "question": "Cũng nếu với bên cũng như một.",
+      "answer": "Giữa của đến chỉ.",
+      "parent_id": 6,
+      "parent_type": "initiative",
+      "asker_id": "f0fecc17-a6a7-4a90-abc1-348f153412ca",
+      "answerer_id": "bef7c7ca-bb8d-4538-b916-6cbb8ced5a18",
+      "created_at": "2025-03-05T06:28:55"
+    },
+    {
+      "id": 10,
+      "question": "Hơn bên này từ.",
+      "answer": "Bạn hơn từng có đến giống đó bên.",
+      "parent_id": 7,
+      "parent_type": "initiative",
+      "asker_id": "aaf11df4-02e9-40e0-b67e-e3f31cb0cfd1",
+      "answerer_id": "f0fecc17-a6a7-4a90-abc1-348f153412ca",
+      "created_at": "2025-05-13T21:29:57"
+    },
+    {
+      "id": 11,
+      "question": "Vài vì vài trong hoặc chưa vậy.",
+      "answer": "Như như vì sẽ cũng thay.",
+      "parent_id": 8,
+      "parent_type": "initiative",
+      "asker_id": "3f00c9ec-08e5-45a2-86c1-e54b77d2a0ae",
+      "answerer_id": "55e08f42-e7e5-4f9d-8893-843ca22c11d5",
+      "created_at": "2025-02-26T15:31:11"
+    },
+    {
+      "id": 12,
+      "question": "Có tại cái vì để nhiều đúng.",
+      "answer": "Gần các gần của giữa không là.",
+      "parent_id": 8,
+      "parent_type": "initiative",
+      "asker_id": "1d2b70e9-e80d-499a-92fc-745c584ef8ed",
+      "answerer_id": "bef7c7ca-bb8d-4538-b916-6cbb8ced5a18",
+      "created_at": "2025-01-06T15:14:58"
+    },
+    {
+      "id": 13,
+      "question": "Thay là của khi điều từ với cách.",
+      "answer": "Trong gần nơi bên làm.",
+      "parent_id": 9,
+      "parent_type": "initiative",
+      "asker_id": "03b11c18-0be4-4d13-ac05-eb34276df24c",
+      "answerer_id": "bef7c7ca-bb8d-4538-b916-6cbb8ced5a18",
+      "created_at": "2025-04-27T17:25:31"
+    },
+    {
+      "id": 14,
+      "question": "Cái như hơn bạn sẽ cho theo.",
+      "answer": "Và rất có trong vì vậy.",
+      "parent_id": 9,
+      "parent_type": "initiative",
+      "asker_id": "dda0b651-6f10-429e-a65f-4d80a1bd8e9c",
+      "answerer_id": "aaf11df4-02e9-40e0-b67e-e3f31cb0cfd1",
+      "created_at": "2025-04-19T02:13:14"
+    },
+    {
+      "id": 15,
+      "question": "Giữa của tôi.",
+      "answer": "Cách một của nhiều trong giữa như đúng.",
+      "parent_id": 10,
+      "parent_type": "initiative",
+      "asker_id": "e26e3cb6-37fe-4b41-8df6-96e3b0a07528",
+      "answerer_id": "e50bc5bc-2276-472f-82bc-0383c82f56e1",
+      "created_at": "2025-06-02T20:42:09"
+    },
+    {
+      "id": 16,
+      "question": "Của được các đã cho để với để.",
+      "answer": "Hơn có này bạn theo này.",
+      "parent_id": 11,
+      "parent_type": "initiative",
+      "asker_id": "55e08f42-e7e5-4f9d-8893-843ca22c11d5",
+      "answerer_id": "aaf11df4-02e9-40e0-b67e-e3f31cb0cfd1",
+      "created_at": "2025-01-15T11:14:21"
+    },
+    {
+      "id": 17,
+      "question": "Từng đến nhưng khiến.",
+      "answer": "Đã không nào tại chỉ người.",
+      "parent_id": 12,
+      "parent_type": "initiative",
+      "asker_id": "895ee238-9b5b-4cfd-a86d-c87a06eb3736",
+      "answerer_id": "e50bc5bc-2276-472f-82bc-0383c82f56e1",
+      "created_at": "2025-02-26T18:18:39"
+    },
+    {
+      "id": 18,
+      "question": "Cách cũng có bạn là sẽ.",
+      "answer": "Trong cho hoặc cũng khi này vì.",
+      "parent_id": 13,
+      "parent_type": "initiative",
+      "asker_id": "e50bc5bc-2276-472f-82bc-0383c82f56e1",
+      "answerer_id": "6978083f-56c4-4726-99e7-821cc775e69a",
+      "created_at": "2025-04-27T00:53:27"
+    },
+    {
+      "id": 19,
+      "question": "Đúng chưa nhiều hoặc.",
+      "answer": "Điều rất là vẫn tự và.",
+      "parent_id": 14,
+      "parent_type": "initiative",
+      "asker_id": "1d2b70e9-e80d-499a-92fc-745c584ef8ed",
+      "answerer_id": "83bca49c-200b-4455-8da4-ac0f87e510b7",
+      "created_at": "2025-04-01T05:34:18"
+    },
+    {
+      "id": 20,
+      "question": "Người khi tại của.",
+      "answer": "Vẫn khiến chỉ điều chưa để tôi nếu.",
+      "parent_id": 15,
+      "parent_type": "initiative",
+      "asker_id": "dda0b651-6f10-429e-a65f-4d80a1bd8e9c",
+      "answerer_id": "654c5049-a425-46e2-9690-6a0c9d52bf46",
+      "created_at": "2025-02-27T22:55:15"
+    },
+    {
+      "id": 21,
+      "question": "Đến lớn các lớn.",
+      "answer": "Nhiều tôi với lớn.",
+      "parent_id": 15,
+      "parent_type": "initiative",
+      "asker_id": "03b11c18-0be4-4d13-ac05-eb34276df24c",
+      "answerer_id": "aaf11df4-02e9-40e0-b67e-e3f31cb0cfd1",
+      "created_at": "2025-02-12T18:08:07"
+    },
+    {
+      "id": 22,
+      "question": "Một để để số vì đi đang.",
+      "answer": "Của không từng làm gần cho.",
+      "parent_id": 16,
+      "parent_type": "initiative",
+      "asker_id": "6978083f-56c4-4726-99e7-821cc775e69a",
+      "answerer_id": "55e08f42-e7e5-4f9d-8893-843ca22c11d5",
+      "created_at": "2025-01-03T03:05:03"
+    },
+    {
+      "id": 23,
+      "question": "Tại về như khiến vì nhưng đó.",
+      "answer": "Khiến để nhưng có từng dưới.",
+      "parent_id": 17,
+      "parent_type": "initiative",
+      "asker_id": "83bca49c-200b-4455-8da4-ac0f87e510b7",
+      "answerer_id": "b473e86b-2392-4367-919f-1eb1367f619c",
+      "created_at": "2025-01-13T15:33:58"
+    },
+    {
+      "id": 24,
+      "question": "Trong như cách mỗi sẽ với và.",
+      "answer": "Hơn thế với người thay cho thay.",
+      "parent_id": 18,
+      "parent_type": "initiative",
+      "asker_id": "b473e86b-2392-4367-919f-1eb1367f619c",
+      "answerer_id": "f0fecc17-a6a7-4a90-abc1-348f153412ca",
+      "created_at": "2025-04-29T08:43:13"
+    },
+    {
+      "id": 25,
+      "question": "Theo bên của tôi nhưng chưa.",
+      "answer": "Như chưa của của này để.",
+      "parent_id": 18,
+      "parent_type": "initiative",
+      "asker_id": "895ee238-9b5b-4cfd-a86d-c87a06eb3736",
+      "answerer_id": "83bca49c-200b-4455-8da4-ac0f87e510b7",
+      "created_at": "2025-03-22T10:54:36"
+    },
+    {
+      "id": 26,
+      "question": "Theo tự cái chưa từ cách với.",
+      "answer": "Điều bên giống nếu về cũng.",
+      "parent_id": 19,
+      "parent_type": "initiative",
+      "asker_id": "aaf11df4-02e9-40e0-b67e-e3f31cb0cfd1",
+      "answerer_id": "bef7c7ca-bb8d-4538-b916-6cbb8ced5a18",
+      "created_at": "2025-05-04T19:49:17"
+    },
+    {
+      "id": 27,
+      "question": "Cách trong không.",
+      "answer": "Thế cái khi dưới của vẫn tại.",
+      "parent_id": 20,
+      "parent_type": "initiative",
+      "asker_id": "42612742-1085-48ae-b86d-cdb5df6f575b",
+      "answerer_id": "728fcac0-7677-4851-b230-841f6e1a0b92",
+      "created_at": "2025-05-04T15:58:40"
+    },
+    {
+      "id": 28,
+      "question": "Bên bạn rất bạn.",
+      "answer": "Như gần với vậy tại như cũng sau.",
+      "parent_id": 20,
+      "parent_type": "initiative",
+      "asker_id": "f0fecc17-a6a7-4a90-abc1-348f153412ca",
+      "answerer_id": "e50bc5bc-2276-472f-82bc-0383c82f56e1",
+      "created_at": "2025-02-01T05:23:07"
+    },
+    {
+      "id": 29,
+      "question": "Đúng như như nếu của theo với.",
+      "answer": "Trong để tại thì hơn.",
+      "parent_id": 1,
+      "parent_type": "mission",
+      "asker_id": "55e08f42-e7e5-4f9d-8893-843ca22c11d5",
+      "answerer_id": "895ee238-9b5b-4cfd-a86d-c87a06eb3736",
+      "created_at": "2025-01-31T14:06:27"
+    },
+    {
+      "id": 30,
+      "question": "Nếu với dưới thay đến.",
+      "answer": "Của từ sau có.",
+      "parent_id": 2,
+      "parent_type": "mission",
+      "asker_id": "3f00c9ec-08e5-45a2-86c1-e54b77d2a0ae",
+      "answerer_id": "728fcac0-7677-4851-b230-841f6e1a0b92",
+      "created_at": "2025-03-31T15:05:20"
+    },
+    {
+      "id": 31,
+      "question": "Thì với chưa chưa thay người nào.",
+      "answer": "Như có của chỉ đi.",
+      "parent_id": 2,
+      "parent_type": "mission",
+      "asker_id": "728fcac0-7677-4851-b230-841f6e1a0b92",
+      "answerer_id": "bef7c7ca-bb8d-4538-b916-6cbb8ced5a18",
+      "created_at": "2025-01-22T12:12:17"
+    },
+    {
+      "id": 32,
+      "question": "Của để mà.",
+      "answer": "Giữa các từ khiến.",
+      "parent_id": 3,
+      "parent_type": "mission",
+      "asker_id": "936cf63f-5000-4e7f-b78d-1daf89a9cc8a",
+      "answerer_id": "654c5049-a425-46e2-9690-6a0c9d52bf46",
+      "created_at": "2025-05-18T05:30:46"
+    },
+    {
+      "id": 33,
+      "question": "Cho đó tại từng tự.",
+      "answer": "Như hơn nào của như thì.",
+      "parent_id": 4,
+      "parent_type": "mission",
+      "asker_id": "55e08f42-e7e5-4f9d-8893-843ca22c11d5",
+      "answerer_id": "aaf11df4-02e9-40e0-b67e-e3f31cb0cfd1",
+      "created_at": "2025-03-01T13:15:58"
+    },
+    {
+      "id": 34,
+      "question": "Và chỉ của và để.",
+      "answer": "Vài như lớn để không theo.",
+      "parent_id": 5,
+      "parent_type": "mission",
+      "asker_id": "bef7c7ca-bb8d-4538-b916-6cbb8ced5a18",
+      "answerer_id": "728fcac0-7677-4851-b230-841f6e1a0b92",
+      "created_at": "2025-05-09T21:15:55"
+    },
+    {
+      "id": 35,
+      "question": "Vậy tự để người giữa để.",
+      "answer": "Chưa từ mà sẽ.",
+      "parent_id": 5,
+      "parent_type": "mission",
+      "asker_id": "55e08f42-e7e5-4f9d-8893-843ca22c11d5",
+      "answerer_id": "55e08f42-e7e5-4f9d-8893-843ca22c11d5",
+      "created_at": "2025-06-11T14:15:39"
+    },
+    {
+      "id": 36,
+      "question": "Nhiều như nhiều vài đúng tự gần.",
+      "answer": "Làm là đang sau.",
+      "parent_id": 6,
+      "parent_type": "mission",
+      "asker_id": "b473e86b-2392-4367-919f-1eb1367f619c",
+      "answerer_id": "728fcac0-7677-4851-b230-841f6e1a0b92",
+      "created_at": "2025-03-25T04:29:47"
+    },
+    {
+      "id": 37,
+      "question": "Thế theo lớn hơn tự từng tôi.",
+      "answer": "Khiến để đi đúng không và tôi.",
+      "parent_id": 7,
+      "parent_type": "mission",
+      "asker_id": "936cf63f-5000-4e7f-b78d-1daf89a9cc8a",
+      "answerer_id": "aaf11df4-02e9-40e0-b67e-e3f31cb0cfd1",
+      "created_at": "2025-06-09T01:11:33"
+    },
+    {
+      "id": 38,
+      "question": "Có thì người nhiều vậy.",
+      "answer": "Người chỉ khi có vậy sẽ bên thế.",
+      "parent_id": 8,
+      "parent_type": "mission",
+      "asker_id": "aaf11df4-02e9-40e0-b67e-e3f31cb0cfd1",
+      "answerer_id": "936cf63f-5000-4e7f-b78d-1daf89a9cc8a",
+      "created_at": "2025-05-24T20:48:13"
+    },
+    {
+      "id": 39,
+      "question": "Bạn cho của từ gần trong.",
+      "answer": "Nào đã nơi đó như khiến như tôi.",
+      "parent_id": 8,
+      "parent_type": "mission",
+      "asker_id": "1d2b70e9-e80d-499a-92fc-745c584ef8ed",
+      "answerer_id": "6978083f-56c4-4726-99e7-821cc775e69a",
+      "created_at": "2025-05-12T00:12:56"
+    },
+    {
+      "id": 40,
+      "question": "Vẫn lớn hơn rất dưới vài giữa.",
+      "answer": "Thay có hơn sẽ về sẽ được.",
+      "parent_id": 9,
+      "parent_type": "mission",
+      "asker_id": "895ee238-9b5b-4cfd-a86d-c87a06eb3736",
+      "answerer_id": "936cf63f-5000-4e7f-b78d-1daf89a9cc8a",
+      "created_at": "2025-04-12T04:18:45"
+    },
+    {
+      "id": 41,
+      "question": "Đúng đã làm tôi.",
+      "answer": "Để hoặc hơn gần mỗi cũng đang.",
+      "parent_id": 9,
+      "parent_type": "mission",
+      "asker_id": "dda0b651-6f10-429e-a65f-4d80a1bd8e9c",
+      "answerer_id": "728fcac0-7677-4851-b230-841f6e1a0b92",
+      "created_at": "2025-01-01T11:11:07"
+    },
+    {
+      "id": 42,
+      "question": "Cách có của người theo rất.",
+      "answer": "Thế mà như từ thì.",
+      "parent_id": 10,
+      "parent_type": "mission",
+      "asker_id": "bef7c7ca-bb8d-4538-b916-6cbb8ced5a18",
+      "answerer_id": "6978083f-56c4-4726-99e7-821cc775e69a",
+      "created_at": "2025-05-06T23:12:34"
+    },
+    {
+      "id": 43,
+      "question": "Đã giữa cho chỉ cũng như đã.",
+      "answer": "Giữa làm đi cho có.",
+      "parent_id": 11,
+      "parent_type": "mission",
+      "asker_id": "1d2b70e9-e80d-499a-92fc-745c584ef8ed",
+      "answerer_id": "83bca49c-200b-4455-8da4-ac0f87e510b7",
+      "created_at": "2025-03-26T18:07:31"
+    },
+    {
+      "id": 44,
+      "question": "Giữa đó vậy đã thì.",
+      "answer": "Điều số đó của chưa tự.",
+      "parent_id": 11,
+      "parent_type": "mission",
+      "asker_id": "2654d8af-cc44-4d73-84a7-e59718d978fe",
+      "answerer_id": "3f00c9ec-08e5-45a2-86c1-e54b77d2a0ae",
+      "created_at": "2025-01-01T21:23:59"
+    },
+    {
+      "id": 45,
+      "question": "Này và cái vì giữa.",
+      "answer": "Cũng không số tôi.",
+      "parent_id": 12,
+      "parent_type": "mission",
+      "asker_id": "654c5049-a425-46e2-9690-6a0c9d52bf46",
+      "answerer_id": "dda0b651-6f10-429e-a65f-4d80a1bd8e9c",
+      "created_at": "2025-03-22T06:35:08"
+    },
+    {
+      "id": 46,
+      "question": "Tôi điều trong trong với.",
+      "answer": "Nhiều để thay nào tôi hoặc từ.",
+      "parent_id": 12,
+      "parent_type": "mission",
+      "asker_id": "3f00c9ec-08e5-45a2-86c1-e54b77d2a0ae",
+      "answerer_id": "2654d8af-cc44-4d73-84a7-e59718d978fe",
+      "created_at": "2025-05-26T15:43:59"
+    },
+    {
+      "id": 47,
+      "question": "Từng trong đúng đúng làm.",
+      "answer": "Từ cũng vậy nhưng này tại.",
+      "parent_id": 13,
+      "parent_type": "mission",
+      "asker_id": "b473e86b-2392-4367-919f-1eb1367f619c",
+      "answerer_id": "83bca49c-200b-4455-8da4-ac0f87e510b7",
+      "created_at": "2025-03-06T03:50:38"
+    },
+    {
+      "id": 48,
+      "question": "Như đã gần nào cũng hơn có.",
+      "answer": "Sau từ tại.",
+      "parent_id": 14,
+      "parent_type": "mission",
+      "asker_id": "728fcac0-7677-4851-b230-841f6e1a0b92",
+      "answerer_id": "e26e3cb6-37fe-4b41-8df6-96e3b0a07528",
+      "created_at": "2025-04-12T22:19:45"
+    },
+    {
+      "id": 49,
+      "question": "Từ khiến làm của từng thế hoặc.",
+      "answer": "Bên giống khi vẫn nhiều với.",
+      "parent_id": 14,
+      "parent_type": "mission",
+      "asker_id": "03b11c18-0be4-4d13-ac05-eb34276df24c",
+      "answerer_id": "dda0b651-6f10-429e-a65f-4d80a1bd8e9c",
+      "created_at": "2025-03-01T00:57:30"
+    },
+    {
+      "id": 50,
+      "question": "Từng mà từ vậy đến nếu.",
+      "answer": "Đã sau cách hoặc cũng làm.",
+      "parent_id": 15,
+      "parent_type": "mission",
+      "asker_id": "654c5049-a425-46e2-9690-6a0c9d52bf46",
+      "answerer_id": "895ee238-9b5b-4cfd-a86d-c87a06eb3736",
+      "created_at": "2025-04-06T04:29:59"
+    },
+    {
+      "id": 51,
+      "question": "Sau không vài số đến.",
+      "answer": "Để nơi của làm.",
+      "parent_id": 16,
+      "parent_type": "mission",
+      "asker_id": "bef7c7ca-bb8d-4538-b916-6cbb8ced5a18",
+      "answerer_id": "936cf63f-5000-4e7f-b78d-1daf89a9cc8a",
+      "created_at": "2025-01-10T12:16:28"
+    },
+    {
+      "id": 52,
+      "question": "Lớn này có thì nếu.",
+      "answer": "Và này nơi hơn số.",
+      "parent_id": 17,
+      "parent_type": "mission",
+      "asker_id": "55e08f42-e7e5-4f9d-8893-843ca22c11d5",
+      "answerer_id": "2654d8af-cc44-4d73-84a7-e59718d978fe",
+      "created_at": "2025-04-01T03:55:46"
+    },
+    {
+      "id": 53,
+      "question": "Gần để cũng số.",
+      "answer": "Và đã vậy khiến mỗi của rất.",
+      "parent_id": 17,
+      "parent_type": "mission",
+      "asker_id": "bef7c7ca-bb8d-4538-b916-6cbb8ced5a18",
+      "answerer_id": "e50bc5bc-2276-472f-82bc-0383c82f56e1",
+      "created_at": "2025-04-13T01:30:46"
+    },
+    {
+      "id": 54,
+      "question": "Nhiều của hơn rất nơi.",
+      "answer": "Theo tại nào như.",
+      "parent_id": 18,
+      "parent_type": "mission",
+      "asker_id": "1d2b70e9-e80d-499a-92fc-745c584ef8ed",
+      "answerer_id": "83bca49c-200b-4455-8da4-ac0f87e510b7",
+      "created_at": "2025-01-26T18:44:48"
+    },
+    {
+      "id": 55,
+      "question": "Điều người giữa đang như.",
+      "answer": "Nào để tại trong thì.",
+      "parent_id": 19,
+      "parent_type": "mission",
+      "asker_id": "654c5049-a425-46e2-9690-6a0c9d52bf46",
+      "answerer_id": "936cf63f-5000-4e7f-b78d-1daf89a9cc8a",
+      "created_at": "2025-03-17T06:50:47"
+    },
+    {
+      "id": 56,
+      "question": "Nếu thay giữa từ nếu với với.",
+      "answer": "Như mà dưới cho.",
+      "parent_id": 20,
+      "parent_type": "mission",
+      "asker_id": "03b11c18-0be4-4d13-ac05-eb34276df24c",
+      "answerer_id": "f0fecc17-a6a7-4a90-abc1-348f153412ca",
+      "created_at": "2025-02-26T19:04:58"
+    },
+    {
+      "id": 57,
+      "question": "Vẫn nơi của số nhưng từ trong.",
+      "answer": "Chỉ khiến thay sẽ.",
+      "parent_id": 20,
+      "parent_type": "mission",
+      "asker_id": "dda0b651-6f10-429e-a65f-4d80a1bd8e9c",
+      "answerer_id": "aaf11df4-02e9-40e0-b67e-e3f31cb0cfd1",
+      "created_at": "2025-02-13T02:52:15"
+    }
+  ]
+}
