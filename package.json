@@ -12,6 +12,7 @@
   "dependencies": {
     "@heroui/card": "^2.2.21",
     "@heroui/react": "^2.7.11",
+    "dotenv": "^16.5.0",
     "framer-motion": "^12.18.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
