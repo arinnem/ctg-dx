@@ -5,6 +5,7 @@ DO $$
 DECLARE
     tbl TEXT;
     tables TEXT[] := ARRAY[
+        'milestones', -- Added milestones table
         'role_permissions',
         'roles',
         'users',
@@ -78,9 +79,11 @@ CREATE TABLE divisions (
 
 CREATE TABLE statuses (
     id SERIAL PRIMARY KEY,
-    name VARCHAR(50) UNIQUE NOT NULL,
+    name VARCHAR(50) NOT NULL, -- Allow non-unique names if status_type differentiates them
     description TEXT,
-    color_code VARCHAR(7)
+    color_code VARCHAR(7),
+    status_type VARCHAR(50) DEFAULT 'GENERAL' NOT NULL, -- e.g., 'GENERAL', 'INITIATIVE', 'MILESTONE', 'TASK'
+    CONSTRAINT uq_status_name_type UNIQUE (name, status_type) -- Ensure name is unique within a type
 );
 
 CREATE TABLE missions (
@@ -109,6 +112,26 @@ CREATE TABLE initiatives (
     group_link TEXT,
     created_at TIMESTAMPTZ DEFAULT now(),
     updated_at TIMESTAMPTZ DEFAULT now()
+);
+
+-- New table for Milestones
+CREATE TABLE milestones (
+    id SERIAL PRIMARY KEY,
+    initiative_id INTEGER REFERENCES initiatives(id) ON DELETE CASCADE, -- Foreign key to initiatives
+    name VARCHAR(255) NOT NULL,
+    description TEXT,
+    start_date DATE,
+    end_date DATE,
+    status_id INTEGER REFERENCES statuses(id), -- Foreign key to statuses table
+    assignee_user_id UUID REFERENCES users(id) ON DELETE SET NULL, -- Assignee for the milestone
+    depends_on_milestone_id INTEGER REFERENCES milestones(id) ON DELETE SET NULL, -- For simple one-to-one dependency
+    created_at TIMESTAMPTZ DEFAULT now(),
+    updated_at TIMESTAMPTZ DEFAULT now(),
+    CONSTRAINT dates_check CHECK (start_date IS NULL OR end_date IS NULL OR start_date <= end_date), -- Allow null dates, but if both exist, check order
+    CONSTRAINT check_milestone_dependency_initiative CHECK (
+        (SELECT initiative_id FROM milestones m_dep WHERE m_dep.id = depends_on_milestone_id) IS NULL OR
+        (SELECT initiative_id FROM milestones m_dep WHERE m_dep.id = depends_on_milestone_id) = initiative_id
+    ) -- Ensures dependency is within the same initiative
 );
 
 CREATE TABLE categories (
@@ -250,6 +273,9 @@ CREATE POLICY "Allow all" ON divisions FOR ALL USING (true);
 ALTER TABLE statuses ENABLE ROW LEVEL SECURITY;
 CREATE POLICY "Allow all" ON statuses FOR ALL USING (true);
 
+ALTER TABLE milestones ENABLE ROW LEVEL SECURITY; -- Added RLS for milestones
+CREATE POLICY "Allow all" ON milestones FOR ALL USING (true); -- Added default permissive policy
+
 ALTER TABLE missions ENABLE ROW LEVEL SECURITY;
 CREATE POLICY "Allow all" ON missions FOR ALL USING (true);
 
@@ -301,7 +327,58 @@ CREATE POLICY "Allow all" ON documents FOR ALL USING (true);
 ALTER TABLE qa_items ENABLE ROW LEVEL SECURITY;
 CREATE POLICY "Allow all" ON qa_items FOR ALL USING (true);
 
--- 5. Example RLS Policies for Production (customize as needed)
+-- 5. Views Definition
+CREATE OR REPLACE VIEW initiative_milestones_with_status AS
+SELECT
+    m.id,
+    m.initiative_id,
+    m.name,
+    m.description,
+    m.start_date,
+    m.end_date,
+    m.status_id,
+    s.name AS status_name,
+    s.color_code AS status_color,
+    s.status_type,
+    m.assignee_user_id,
+    u.full_name AS assignee_full_name,
+    u.avatar_url AS assignee_avatar_url,
+    m.depends_on_milestone_id,
+    dep_m.name AS depends_on_milestone_name,
+    m.created_at,
+    m.updated_at
+FROM
+    milestones m
+JOIN
+    statuses s ON m.status_id = s.id
+LEFT JOIN
+    users u ON m.assignee_user_id = u.id
+LEFT JOIN
+    milestones dep_m ON m.depends_on_milestone_id = dep_m.id;
+
+-- Enable RLS for the view
+ALTER VIEW initiative_milestones_with_status OWNER TO postgres; -- Or your supabase admin role
+ALTER TABLE initiative_milestones_with_status ENABLE ROW LEVEL SECURITY;
+
+-- RLS Policy for the view - only initiative members or admins can see these milestones
+-- Note: View RLS often relies on underlying table RLS, but explicit is safer for views used in API.
+-- However, Supabase view RLS can be tricky if the user isn't the owner.
+-- An alternative is to ensure underlying table RLS is sufficient.
+-- For now, let's assume underlying table RLS on `milestones` will primarily enforce this.
+-- A simple policy for the view itself, if needed, could be:
+CREATE POLICY "Allow read for initiative members or admin on view" ON initiative_milestones_with_status FOR SELECT USING (
+  EXISTS (
+    SELECT 1 FROM initiative_members im
+    WHERE im.initiative_id = initiative_milestones_with_status.initiative_id AND im.user_id = auth.uid()
+  ) OR EXISTS (
+    SELECT 1 FROM users u_roles
+    WHERE u_roles.id = auth.uid() AND u_roles.role_id = (SELECT id FROM roles WHERE name = 'Admin')
+  )
+);
+
+
+-- 6. Example RLS Policies for Production (customize as needed)
+-- This section number is now 6.
 -- Replace 'Admin' with your actual admin role name if different.
 
 -- Helper: Admin check
@@ -338,6 +415,19 @@ DROP POLICY IF EXISTS "Allow all" ON statuses;
 CREATE POLICY "Read all statuses" ON statuses FOR SELECT USING (true);
 CREATE POLICY "Admin manage statuses" ON statuses FOR ALL USING (
   EXISTS (SELECT 1 FROM users WHERE id = auth.uid() AND role_id = (SELECT id FROM roles WHERE name = 'Admin'))
+);
+
+-- milestones (initiative members or admin)
+DROP POLICY IF EXISTS "Allow all" ON milestones;
+-- Policy for SELECT (Read) operations
+CREATE POLICY "Allow read for initiative members or admin" ON milestones FOR SELECT USING (
+  EXISTS (SELECT 1 FROM initiative_members WHERE initiative_id = milestones.initiative_id AND user_id = auth.uid())
+  OR EXISTS (SELECT 1 FROM users WHERE id = auth.uid() AND role_id = (SELECT id FROM roles WHERE name = 'Admin'))
+);
+-- Policy for INSERT, UPDATE, DELETE (Manage) operations
+CREATE POLICY "Allow manage for initiative members or admin" ON milestones FOR ALL USING (
+  EXISTS (SELECT 1 FROM initiative_members WHERE initiative_id = milestones.initiative_id AND user_id = auth.uid())
+  OR EXISTS (SELECT 1 FROM users WHERE id = auth.uid() AND role_id = (SELECT id FROM roles WHERE name = 'Admin'))
 );
 
 -- missions (reference table)
@@ -449,7 +539,8 @@ DROP POLICY IF EXISTS "Allow all" ON qa_items;
 CREATE POLICY "Read all qa_items" ON qa_items FOR SELECT USING (true);
 CREATE POLICY "Asker manage qa_items" ON qa_items FOR ALL USING (asker_id = auth.uid());
 
--- 6. Drop foreign key constraints referencing users(id)
+-- 7. Drop foreign key constraints referencing users(id)
+-- This section number is now 7.
 -- (You must do this for every table that references users.id)
 ALTER TABLE news_articles DROP CONSTRAINT IF EXISTS news_articles_author_id_fkey;
 ALTER TABLE recognition_posts DROP CONSTRAINT IF EXISTS recognition_posts_poster_id_fkey;
@@ -459,8 +550,10 @@ ALTER TABLE comments DROP CONSTRAINT IF EXISTS comments_user_id_fkey;
 ALTER TABLE documents DROP CONSTRAINT IF EXISTS documents_uploader_id_fkey;
 ALTER TABLE qa_items DROP CONSTRAINT IF EXISTS qa_items_asker_id_fkey;
 ALTER TABLE qa_items DROP CONSTRAINT IF EXISTS qa_items_answerer_id_fkey;
+ALTER TABLE milestones DROP CONSTRAINT IF EXISTS milestones_assignee_user_id_fkey; -- Added for milestones.assignee_user_id
 
--- 7. Re-add foreign key constraints
+-- 8. Re-add foreign key constraints
+-- This section number is now 8.
 ALTER TABLE news_articles ADD CONSTRAINT news_articles_author_id_fkey FOREIGN KEY (author_id) REFERENCES users(id);
 ALTER TABLE recognition_posts ADD CONSTRAINT recognition_posts_poster_id_fkey FOREIGN KEY (poster_id) REFERENCES users(id);
 ALTER TABLE initiative_members ADD CONSTRAINT initiative_members_user_id_fkey FOREIGN KEY (user_id) REFERENCES users(id);
@@ -468,4 +561,5 @@ ALTER TABLE likes ADD CONSTRAINT likes_user_id_fkey FOREIGN KEY (user_id) REFERE
 ALTER TABLE comments ADD CONSTRAINT comments_user_id_fkey FOREIGN KEY (user_id) REFERENCES users(id);
 ALTER TABLE documents ADD CONSTRAINT documents_uploader_id_fkey FOREIGN KEY (uploader_id) REFERENCES users(id);
 ALTER TABLE qa_items ADD CONSTRAINT qa_items_asker_id_fkey FOREIGN KEY (asker_id) REFERENCES users(id);
-ALTER TABLE qa_items ADD CONSTRAINT qa_items_answerer_id_fkey FOREIGN KEY (answerer_id) REFERENCES users(id); 
+ALTER TABLE qa_items ADD CONSTRAINT qa_items_answerer_id_fkey FOREIGN KEY (answerer_id) REFERENCES users(id);
+ALTER TABLE milestones ADD CONSTRAINT milestones_assignee_user_id_fkey FOREIGN KEY (assignee_user_id) REFERENCES users(id) ON DELETE SET NULL; -- Added for milestones.assignee_user_id
