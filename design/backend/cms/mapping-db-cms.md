@@ -83,6 +83,27 @@ This document provides a mapping between the CMS UI fields/components and the co
 
 ---
 
+## Recognition Post Management Page — UI to Database Mapping
+
+| UI Field/Component      | DB Table/Column(s)                | Notes/Relationship                                 |
+|------------------------ |-----------------------------------|----------------------------------------------------|
+| Poster                  | recognition_posts.poster_id         | Dropdown, links to users                           |
+| Content (Rich Text)     | recognition_posts.content           | Supports Markdown/HTML                             |
+| Honorees                | honorees                            | Multi-select, links to division/initiative/user, with type |
+| Honoree Type            | honorees.honoree_type               | 'division', 'initiative', or 'user'                |
+| Honoree Name            | honorees.honoree_id                 | Links to division, initiative, or user             |
+| File Attachments        | recognition_files (if exists)       | File/image upload                                  |
+| Date/Time               | recognition_posts.created_at         | Auto, can be overridden for scheduling             |
+| Likes                   | likes                               | View only, links to users                          |
+| Comments                | recognition_comments (if exists)    | View/moderate, links to users                      |
+| Draft/Published         | recognition_posts.published (if exists)| Toggle                                         |
+| Schedule Publication    | recognition_posts.published_at (if exists)| Date picker                                 |
+| Admin Notes             | recognition_posts.admin_notes (if exists)| Internal only                                 |
+| Created At              | recognition_posts.created_at         | Read-only                                          |
+| Updated At              | recognition_posts.updated_at         | Read-only                                          |
+
+---
+
 ## How to Use This Table
 - **UI Field/Component:** The label or function as seen in the CMS interface.
 - **DB Table/Column(s):** The exact table and column in the database where the data is stored or referenced.
