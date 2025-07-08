@@ -1,0 +1,87 @@
+import React, { useState, useEffect } from 'react';
+import Navbar from './components/Navbar';
+import { Boxes } from './components/ui/background-boxes';
+
+interface AnimatedElementProps {
+  children?: React.ReactNode;
+  delay: string;
+  className?: string;
+}
+
+const AnimatedElement = ({ children, delay, className }: AnimatedElementProps) => {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsLoaded(true), 100);
+    return () => clearTimeout(timer);
+  }, []);
+
+  return (
+    <div
+      className={`transform transition-all duration-1000 ease-out ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'} ${delay} ${className || ''}`}
+    >
+      {children}
+    </div>
+  );
+};
+
+export default function App() {
+  return (
+    <main className="bg-gray-900 min-h-screen w-screen overflow-hidden">
+      <div className="relative min-h-screen w-full">
+        {/* Background Media */}
+        <div className="absolute inset-0 z-0">
+          <Boxes />
+          <div className="absolute inset-0 bg-gray-900 [mask-image:radial-gradient(transparent_20%,white)] pointer-events-none"></div>
+        </div>
+
+        {/* Content */}
+        <div className="relative z-10 text-white min-h-screen flex flex-col">
+          <Navbar />
+
+          <div className="flex-grow flex items-center px-4 sm:px-8">
+            <div className="relative max-w-3xl pt-24 md:pt-32 pb-16">
+              <AnimatedElement delay="delay-200">
+                <h1 className="font-sora text-4xl sm:text-5xl lg:text-6xl font-semibold leading-tight tracking-tight">
+                  Định hướng Tương lai Số, Một cách Tự tin.
+                </h1>
+              </AnimatedElement>
+              <AnimatedElement delay="delay-500">
+                <p className="mt-4 font-manrope text-base sm:text-lg font-normal text-white/80">
+                  Chúng tôi hợp tác với các nhà lãnh đạo ngành để triển khai công nghệ tiên tiến, tối ưu hóa hoạt động và thúc đẩy tăng trưởng có thể đo lường.
+                </p>
+              </AnimatedElement>
+              <AnimatedElement delay="delay-700">
+                <button className="mt-8 bg-blue-500 text-white px-6 py-3 rounded-full font-manrope text-sm font-medium hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition-colors duration-300">
+                  Khám phá Giải pháp →
+                </button>
+              </AnimatedElement>
+            </div>
+          </div>
+
+          {/* Decorative Elements */}
+          <div className="absolute inset-0 z-0 pointer-events-none">
+            {/* Bottom-Left Label */}
+            <div className="absolute bottom-6 left-4 sm:bottom-8 sm:left-8 text-xs font-manrope text-white/80">
+              <AnimatedElement delay="delay-1000">✦ Thúc đẩy Đổi mới bằng Công nghệ.</AnimatedElement>
+            </div>
+
+            {/* Bottom-Right Label */}
+            <div className="absolute bottom-6 right-4 sm:bottom-8 sm:right-8 text-xs font-manrope text-white/80">
+              <AnimatedElement delay="delay-1000">Kiến tạo Tương lai.</AnimatedElement>
+            </div>
+            
+            {/* Vertical Right Label */}
+            <div className="hidden lg:flex absolute top-0 right-8 h-full items-center">
+              <AnimatedElement delay="delay-1000" className="h-full flex items-center">
+                <p className="vertical-rl transform rotate-180 text-sm uppercase tracking-widest text-white/40 font-manrope">
+                  CHIẾN LƯỢC • AI & HỌC MÁY • ĐÁM MÂY • PHÂN TÍCH DỮ LIỆU
+                </p>
+              </AnimatedElement>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  );
+}

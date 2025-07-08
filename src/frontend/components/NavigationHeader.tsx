@@ -78,15 +78,25 @@ const recognitionMenu: { title: string; href: string; description: string }[] = 
 // --- Các thành phần con ---
 
 // Component cho mỗi mục trong menu dropdown
-const ListItem: React.FC<React.PropsWithChildren<{ href: string; title: string }>> = ({ children, href, title }) => {
+const ListItem: React.FC<React.PropsWithChildren<{ href: string; title: string; isDark?: boolean }>> = ({ children, href, title, isDark = false }) => {
     return (
       <li>
         <Link
           to={href}
-          className="block select-none space-y-1 rounded-md p-4 leading-none no-underline outline-none transition-all duration-200 hover:bg-blue-50 hover:shadow-sm focus:bg-blue-50 focus:shadow-sm"
+          className={`block select-none space-y-1 rounded-md p-4 leading-none no-underline outline-none transition-all duration-200 hover:shadow-sm focus:shadow-sm ${
+            isDark 
+              ? 'hover:bg-gray-800 focus:bg-gray-800' 
+              : 'hover:bg-blue-50 focus:bg-blue-50'
+          }`}
         >
-          <div className="text-sm font-semibold leading-none text-gray-800 hover:text-blue-600 transition-colors">{title}</div>
-          <p className="line-clamp-2 text-sm leading-snug text-gray-500">
+          <div className={`text-sm font-semibold leading-none transition-colors ${
+            isDark 
+              ? 'text-white hover:text-blue-400' 
+              : 'text-gray-800 hover:text-blue-600'
+          }`}>{title}</div>
+          <p className={`line-clamp-2 text-sm leading-snug ${
+            isDark ? 'text-gray-300' : 'text-gray-500'
+          }`}>
             {children}
           </p>
         </Link>
@@ -96,7 +106,7 @@ const ListItem: React.FC<React.PropsWithChildren<{ href: string; title: string }
 
 
 // Component cho một mục menu có dropdown
-const DropdownMenuItem: React.FC<React.PropsWithChildren<{ trigger: React.ReactNode }>> = ({ trigger, children }) => {
+const DropdownMenuItem: React.FC<React.PropsWithChildren<{ trigger: React.ReactNode; isDark?: boolean }>> = ({ trigger, children, isDark = false }) => {
     const [isOpen, setIsOpen] = useState(false);
     const [timeoutId, setTimeoutId] = useState<number | null>(null);
 
@@ -121,14 +131,22 @@ const DropdownMenuItem: React.FC<React.PropsWithChildren<{ trigger: React.ReactN
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
         >
-            <button className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors py-2 px-3 rounded-md">
+            <button className={`flex items-center space-x-1 transition-colors py-2 px-3 rounded-md ${
+                isDark 
+                  ? 'text-white hover:text-blue-400' 
+                  : 'text-gray-700 hover:text-blue-600'
+            }`}>
                 {trigger}
                 <ChevronDownIcon className={`transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
             </button>
             <div
                 className={`absolute top-full left-0 mt-0 w-max transition-all duration-200 transform ${isOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2 pointer-events-none'}`}
             >
-                <div className="bg-white rounded-lg shadow-2xl border border-gray-100 pt-2 pb-1">
+                <div className={`rounded-lg shadow-2xl border pt-2 pb-1 ${
+                    isDark 
+                      ? 'bg-gray-900 border-gray-700' 
+                      : 'bg-white border-gray-100'
+                }`}>
                     {children}
                 </div>
             </div>
@@ -139,9 +157,13 @@ const DropdownMenuItem: React.FC<React.PropsWithChildren<{ trigger: React.ReactN
 
 // --- Component chính ---
 
-export function NavigationHeader() {
+interface NavigationHeaderProps {
+  isDark?: boolean;
+}
+
+export function NavigationHeader({ isDark = false }: NavigationHeaderProps) {
   return (
-    <nav className="bg-white shadow-md sticky top-0 z-50">
+    <nav className={`sticky top-0 z-50 ${isDark ? 'bg-transparent' : 'bg-white shadow-md'}`}>
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           
@@ -153,13 +175,17 @@ export function NavigationHeader() {
             </Link>
             
             <div className="hidden md:flex items-center space-x-2">
-                <Link to="/" className="text-gray-700 hover:text-blue-600 transition-colors py-2 px-3 rounded-md font-medium">Trang chủ</Link>
+                <Link to="/" className={`transition-colors py-2 px-3 rounded-md font-medium ${
+                    isDark 
+                      ? 'text-white hover:text-blue-400' 
+                      : 'text-gray-700 hover:text-blue-600'
+                }`}>Trang chủ</Link>
                 
                 {/* Menu Sáng kiến */}
-                <DropdownMenuItem trigger={<span>Sáng kiến</span>}>
+                <DropdownMenuItem trigger={<span>Sáng kiến</span>} isDark={isDark}>
                     <ul className="grid w-[450px] gap-3 p-4">
                         {initiativesMenu.map((item) => (
-                            <ListItem key={item.title} title={item.title} href={item.href}>
+                            <ListItem key={item.title} title={item.title} href={item.href} isDark={isDark}>
                                 {item.description}
                             </ListItem>
                         ))}
@@ -167,10 +193,10 @@ export function NavigationHeader() {
                 </DropdownMenuItem>
 
                 {/* Menu Thi đua */}
-                <DropdownMenuItem trigger={<span>Thi đua</span>}>
+                <DropdownMenuItem trigger={<span>Thi đua</span>} isDark={isDark}>
                     <ul className="grid w-[450px] gap-3 p-4">
                         {missionsMenu.map((item) => (
-                            <ListItem key={item.title} title={item.title} href={item.href}>
+                            <ListItem key={item.title} title={item.title} href={item.href} isDark={isDark}>
                                 {item.description}
                             </ListItem>
                         ))}
@@ -178,10 +204,10 @@ export function NavigationHeader() {
                 </DropdownMenuItem>
 
                 {/* Menu Tin tức */}
-                <DropdownMenuItem trigger={<span>Tin tức</span>}>
+                <DropdownMenuItem trigger={<span>Tin tức</span>} isDark={isDark}>
                     <ul className="grid w-[450px] gap-3 p-4">
                         {newsMenu.map((item) => (
-                            <ListItem key={item.title} title={item.title} href={item.href}>
+                            <ListItem key={item.title} title={item.title} href={item.href} isDark={isDark}>
                                 {item.description}
                             </ListItem>
                         ))}
@@ -189,10 +215,10 @@ export function NavigationHeader() {
                 </DropdownMenuItem>
 
                 {/* Menu Vinh danh */}
-                <DropdownMenuItem trigger={<span>Vinh danh</span>}>
+                <DropdownMenuItem trigger={<span>Vinh danh</span>} isDark={isDark}>
                     <ul className="grid w-[450px] gap-3 p-4">
                         {recognitionMenu.map((item) => (
-                            <ListItem key={item.title} title={item.title} href={item.href}>
+                            <ListItem key={item.title} title={item.title} href={item.href} isDark={isDark}>
                                 {item.description}
                             </ListItem>
                         ))}
