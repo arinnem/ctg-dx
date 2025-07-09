@@ -10,6 +10,7 @@ import InitiativeDashboard from './components/InitiativeDashboard';
 import { NavigationHeader } from './components/NavigationHeader';
 import { AnimatedElement } from './components/ui/animated-element';
 import HomeMainContentPage from './pages/HomeMainContentPage';
+import { BoxesContainer } from './components/ui/boxes-container';
 
 function HomePage() {
   const navigate = useNavigate(); // Hook để điều hướng
@@ -25,16 +26,8 @@ function HomePage() {
       <div className="relative min-h-screen w-full bg-gray-900">
         {/* Background Media */}
         <div className="absolute inset-0 w-full h-full z-0 overflow-hidden">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="absolute inset-0 w-full h-full object-cover"
-          >
-            <source src="./src/frontend/components/media/background_globe.mp4" type="video/mp4" />
-          </video>
-          <div className="absolute inset-0 w-full h-full bg-slate-900/50 z-10 pointer-events-none" />
+          <div className="absolute inset-0 w-full h-full bg-slate-900 z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
+          <BoxesContainer />
         </div>
 
         {/* Hero Content */}
